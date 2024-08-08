@@ -5,9 +5,24 @@ using UnityEngine;
 public class ScriptCollisionJero : MonoBehaviour
 {
     public GameObject Pared;
+    public HealthBarScript healthbar;
+    int random;
+    public int daño;
+    public GameObject jero;
+
+    private void Update()
+    {
+        if (healthbar.hp == 0)
+        {
+            jero.SetActive(false);
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         Pared.SetActive(true);
+        random = Random.Range(0, daño);
+        healthbar.hp -= random;
     }
 
     private void OnTriggerExit(Collider other)
