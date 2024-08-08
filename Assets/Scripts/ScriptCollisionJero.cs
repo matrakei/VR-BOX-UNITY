@@ -12,7 +12,7 @@ public class ScriptCollisionJero : MonoBehaviour
 
     private void Update()
     {
-        if (healthbar.hp == 0)
+        if (healthbar.hp <= 0)
         {
             jero.SetActive(false);
         }
@@ -23,6 +23,10 @@ public class ScriptCollisionJero : MonoBehaviour
         Pared.SetActive(true);
         random = Random.Range(0, daño);
         healthbar.hp -= random;
+        if (healthbar.hp < 0)
+        {
+            healthbar.hp = 0;
+        }
     }
 
     private void OnTriggerExit(Collider other)

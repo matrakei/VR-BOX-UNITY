@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class HealthBarScript : MonoBehaviour
 {
     public Slider healthbar;
+    public GameObject bar;
     public int maxhp = 100;
     public int hp;
-    public Text texthp;
+    public TMP_Text texthp;
 
     // Start is called before the first frame update
     void Start()
@@ -22,8 +24,15 @@ public class HealthBarScript : MonoBehaviour
     {
         if (healthbar.value != hp)
         {
-            healthbar.value = hp;
-            texthp.text = hp.ToString();
+            if (hp <= 0)
+            {
+                healthbar.value = 0;
+            }
+            else
+            {
+                healthbar.value = hp;
+                texthp.text = hp.ToString();
+            }
         }
     }
 }
