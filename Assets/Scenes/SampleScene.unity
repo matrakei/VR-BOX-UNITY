@@ -574,7 +574,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64179f11fd830964ab8f3dda436c1ece, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthbar: {fileID: 0}
+  healthbar: {fileID: 723615110}
+  bar: {fileID: 723615108}
   maxhp: 100
   hp: 0
   texthp: {fileID: 1278178783}
@@ -2269,7 +2270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pared: {fileID: 510853480}
-  healthbar: {fileID: 0}
+  healthbar: {fileID: 723615111}
   "da\xF1o": 15
   jero: {fileID: 1291066009}
 --- !u!1 &1498994263

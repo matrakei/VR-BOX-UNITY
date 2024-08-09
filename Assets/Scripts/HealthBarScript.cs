@@ -27,6 +27,8 @@ public class HealthBarScript : MonoBehaviour
             if (hp <= 0)
             {
                 healthbar.value = 0;
+                texthp.text = "0";
+                bar.SetActive(false);
             }
             else
             {

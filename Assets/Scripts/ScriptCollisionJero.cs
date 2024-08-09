@@ -26,6 +26,7 @@ public class ScriptCollisionJero : MonoBehaviour
         if (healthbar.hp < 0)
         {
             healthbar.hp = 0;
+            Pared.SetActive(false);
         }
     }
 
