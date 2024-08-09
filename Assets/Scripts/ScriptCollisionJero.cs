@@ -21,7 +21,7 @@ public class ScriptCollisionJero : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Pared.SetActive(true);
-        random = Random.Range(0, daño);
+        random = Random.Range(1, daño);
         healthbar.hp -= random;
         if (healthbar.hp < 0)
         {
