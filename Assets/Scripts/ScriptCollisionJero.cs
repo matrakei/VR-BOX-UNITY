@@ -6,7 +6,6 @@ public class ScriptCollisionJero : MonoBehaviour
 {
     public GameObject Pared;
     public HealthBarScript healthbar;
-    int random;
     public int daño;
     public GameObject jero;
 
@@ -17,24 +16,23 @@ public class ScriptCollisionJero : MonoBehaviour
             jero.SetActive(false);
         }
     }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "GUANTES")
         {
             Pared.SetActive(true);
-            random = Random.Range(1, daño);
-            healthbar.hp -= random;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "GUANTES")
+        {
             if (healthbar.hp < 0)
             {
                 healthbar.hp = 0;
                 Pared.SetActive(false);
             }
+            Pared.SetActive(false);
         }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        Pared.SetActive(false);
     }
 }

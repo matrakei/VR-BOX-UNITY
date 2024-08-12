@@ -171,6 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   otherObjectCollider: {fileID: 1291066013}
   "DA\xD1O": {fileID: 1259174618}
+  healthbar: {fileID: 723615111}
 --- !u!64 &156039608
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -292,6 +293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   otherObjectCollider: {fileID: 1291066013}
   "DA\xD1O": {fileID: 1259174618}
+  healthbar: {fileID: 723615111}
 --- !u!64 &198720222
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1976,7 +1978,7 @@ Transform:
   m_GameObject: {fileID: 931920983}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.70710677, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.378, y: 0.298, z: 0.192}
+  m_LocalPosition: {x: -0.378, y: 0.298, z: 0.077}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

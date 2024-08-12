@@ -9,6 +9,9 @@ public class CollisionCalculator : MonoBehaviour
     public Collider otherObjectCollider;
     float intersectionPercentagemax;
     public TMP_Text DAÑO;
+    public HealthBarScript healthbar;
+    int daño;
+    int dañomax = 10;
     // Método llamado cuando comienza la colisión
 
     private void OnTriggerStay(Collider other)
@@ -59,6 +62,9 @@ public class CollisionCalculator : MonoBehaviour
         {
             Debug.Log("El porcentaje de intersección máximo es: " + intersectionPercentagemax + "%");
             DAÑO.text = "Daño: " + intersectionPercentagemax;
+
+            daño = CalculateDamage((int)intersectionPercentagemax);
+            healthbar.hp -= daño;
             intersectionPercentagemax = 0;
         }
     }
@@ -69,5 +75,22 @@ public class CollisionCalculator : MonoBehaviour
         Vector3 minPoint = Vector3.Max(planeBounds.min, otherBounds.min);
         Vector3 maxPoint = Vector3.Min(planeBounds.max, otherBounds.max);
         return new Bounds((minPoint + maxPoint) / 2, maxPoint - minPoint);
+    }
+
+    private int CalculateDamage(int intersectionPercentage)
+    {
+        if (intersectionPercentage >= 100)
+        {
+            return 10; // Daño máximo
+        }
+        else if (intersectionPercentage >= 50)
+        {
+            // Proporcionalidad entre 1 y 10 en el rango de 50% a 100%
+            return 1 + 9 * ((intersectionPercentage - 50) / 50);
+        }
+        else
+        {
+            return 1; // Daño mínimo
+        }
     }
 }
