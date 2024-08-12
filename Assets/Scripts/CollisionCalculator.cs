@@ -2,16 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.Mathematics;
+using System;
 
 public class CollisionCalculator : MonoBehaviour
 {
     // El Collider del otro objeto con el que el Plane está colisionando
     public Collider otherObjectCollider;
     float intersectionPercentagemax;
-    public TMP_Text DAÑO;
+    public TMP_Text PORCENTAJE;
     public HealthBarScript healthbar;
-    int daño;
-    int dañomax = 10;
+    public TMP_Text DAÑO;
+    float daño;
+    
+
     // Método llamado cuando comienza la colisión
 
     private void OnTriggerStay(Collider other)
@@ -61,10 +65,12 @@ public class CollisionCalculator : MonoBehaviour
         if (other == otherObjectCollider)
         {
             Debug.Log("El porcentaje de intersección máximo es: " + intersectionPercentagemax + "%");
-            DAÑO.text = "Daño: " + intersectionPercentagemax;
+            PORCENTAJE.text = "%%%: " + intersectionPercentagemax + "%";
 
-            daño = CalculateDamage((int)intersectionPercentagemax);
+
+            daño = CalculateDamage(Convert.ToInt32(intersectionPercentagemax));
             healthbar.hp -= daño;
+            DAÑO.text = "Daño: " + daño;
             intersectionPercentagemax = 0;
         }
     }
@@ -77,20 +83,20 @@ public class CollisionCalculator : MonoBehaviour
         return new Bounds((minPoint + maxPoint) / 2, maxPoint - minPoint);
     }
 
-    private int CalculateDamage(int intersectionPercentage)
+    private float CalculateDamage(int intersectionPercentage)
     {
-        if (intersectionPercentage >= 100)
+        if (intersectionPercentage >= 100f)
         {
-            return 10; // Daño máximo
+            return 10f; // Daño máximo
         }
-        else if (intersectionPercentage >= 50)
+        else if (intersectionPercentage >= 50f)
         {
             // Proporcionalidad entre 1 y 10 en el rango de 50% a 100%
-            return 1 + 9 * ((intersectionPercentage - 50) / 50);
+            return 1f + 9f * ((intersectionPercentage - 50f) / 50f);
         }
         else
         {
-            return 1; // Daño mínimo
+            return 1f; // Daño mínimo
         }
     }
 }

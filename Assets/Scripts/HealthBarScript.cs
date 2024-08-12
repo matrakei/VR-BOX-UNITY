@@ -9,7 +9,7 @@ public class HealthBarScript : MonoBehaviour
     public Slider healthbar;
     public GameObject bar;
     public int maxhp = 100;
-    public int hp;
+    public float hp;
     public TMP_Text texthp;
 
     // Start is called before the first frame update
