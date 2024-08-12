@@ -20,13 +20,16 @@ public class ScriptCollisionJero : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Pared.SetActive(true);
-        random = Random.Range(1, daño);
-        healthbar.hp -= random;
-        if (healthbar.hp < 0)
+        if (other.gameObject.tag == "GUANTES")
         {
-            healthbar.hp = 0;
-            Pared.SetActive(false);
+            Pared.SetActive(true);
+            random = Random.Range(1, daño);
+            healthbar.hp -= random;
+            if (healthbar.hp < 0)
+            {
+                healthbar.hp = 0;
+                Pared.SetActive(false);
+            }
         }
     }
 
