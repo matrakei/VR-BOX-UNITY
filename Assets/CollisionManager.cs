@@ -5,6 +5,8 @@ using UnityEngine;
 public class CollisionManager : MonoBehaviour
 {
 
+    public GameObject PERSONAJE;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -16,43 +18,40 @@ public class CollisionManager : MonoBehaviour
     {
         
     }
-    
-    void OnCollisionEnter(Collision collision)
+
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("colisionó con el puño");
-        // Chequea si el objeto que colisionó es el puño
-        if (collision.gameObject.CompareTag("GUANTES"))
-        {
-            DetectarLado(collision);
-        }
+        // Comprueba si el objeto que colisionó es una mano
+        Debug.Log("DETECCION");
+            DetectarLado(other);
+        
     }
 
-    private void DetectarLado(Collision collision)
+    private void DetectarLado(Collider manoCollider)
     {
-        // Obtén la posición del punto de contacto más cercano
-        ContactPoint contactPoint = collision.GetContact(0);
-        Debug.Log("Punto de contacto: " + contactPoint.point);
+        Debug.Log("DETECCION 2");
 
-        // Calcula la dirección de la colisión
-        Vector3 direction = contactPoint.point - gameObject.transform.position;
-        Debug.Log(direction.sqrMagnitude);
+        // Obtén la posición del colisionador de la mano
+        Vector3 manoPosition = manoCollider.transform.position;
 
+        Debug.Log("DETECCION 3");
+        // Calcula la dirección desde el personaje hacia la mano
+        Vector3 direction = manoPosition - PERSONAJE.transform.position;
+        Debug.Log("DETECCION 4");
         // Proyecta la dirección en el plano horizontal del personaje
         Vector3 projection = Vector3.ProjectOnPlane(direction, Vector3.up);
-        Debug.Log(projection.sqrMagnitude);
-
+        Debug.Log("DETECCION 5");
         // Obtiene el ángulo en relación con el frente del personaje
-        float angle = Vector3.SignedAngle(gameObject.transform.forward, projection, Vector3.up);
-        Debug.Log(angle);
-
+        float angle = Vector3.SignedAngle(PERSONAJE.transform.forward, projection, Vector3.up);
+        Debug.Log("DETECCION 6");
         // Determina el lado de la colisión basado en el ángulo
         if (angle > 0)
         {
-            Debug.Log("La colisión provino del lado derecho.");
+            Debug.Log("La mano colisionó desde el lado derecho.");
         }
         else
         {
-            Debug.Log("La colisión provino del lado izquierdo.");
+            Debug.Log("La mano colisionó desde el lado izquierdo.");
         }
     }
 }
