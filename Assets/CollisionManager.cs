@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using System;
 
 public class CollisionManager : MonoBehaviour
 {
 
     public GameObject PERSONAJE;
+    public TMP_Text debug;
 
     // Start is called before the first frame update
     void Awake()
@@ -19,39 +22,27 @@ public class CollisionManager : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        // Comprueba si el objeto que colisionó es una mano
-        Debug.Log("DETECCION");
-            DetectarLado(other);
-        
+        Debug.Log("COLISION");
+        Vector3 objectCenter = transform.position;
+        Vector3 collisionPoint = collision.contacts[0].point;
+        Debug.DrawLine(objectCenter, collisionPoint, Color.red, 2.0f);
+        debug.text = "CENTRO:"+objectCenter+"\r\nCOLISION:"+collisionPoint;
+        Debug.Log("CENTRO:"+objectCenter+"\r\nCOLISION:"+collisionPoint);
+        DetectarLado(objectCenter, collisionPoint);
     }
 
-    private void DetectarLado(Collider manoCollider)
+    private void DetectarLado(Vector3 CENTRO, Vector3 CONTACTO)
     {
-        Debug.Log("DETECCION 2");
-
-        // Obtén la posición del colisionador de la mano
-        Vector3 manoPosition = manoCollider.transform.position;
-
-        Debug.Log("DETECCION 3");
-        // Calcula la dirección desde el personaje hacia la mano
-        Vector3 direction = manoPosition - PERSONAJE.transform.position;
-        Debug.Log("DETECCION 4");
-        // Proyecta la dirección en el plano horizontal del personaje
-        Vector3 projection = Vector3.ProjectOnPlane(direction, Vector3.up);
-        Debug.Log("DETECCION 5");
-        // Obtiene el ángulo en relación con el frente del personaje
-        float angle = Vector3.SignedAngle(PERSONAJE.transform.forward, projection, Vector3.up);
-        Debug.Log("DETECCION 6");
-        // Determina el lado de la colisión basado en el ángulo
-        if (angle > 0)
+        
+        if (CENTRO.x > CONTACTO.x)
         {
-            Debug.Log("La mano colisionó desde el lado derecho.");
+
         }
         else
         {
-            Debug.Log("La mano colisionó desde el lado izquierdo.");
+            
         }
     }
 }
