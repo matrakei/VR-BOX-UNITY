@@ -19,14 +19,14 @@ public class CollisionManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "DERECHA")
+        if (gameObject.tag == "DERECHA")
         {
             //Golpe de derecha
             IZQUIERDA.layer = 6;
             FRENTE.layer = 6;
             jeroAnimations.anim.SetBool("IsRigthHeadHit", true);
         }
-        else if (other.gameObject.tag == "IZQUIERDA")
+        else if (gameObject.tag == "IZQUIERDA")
         {
             //Golpe de izquierda
             FRENTE.layer = 6;
