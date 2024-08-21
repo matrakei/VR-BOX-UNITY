@@ -20,10 +20,11 @@ public class CollisionCalculator : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        otherObjectCollider = other;
-        
+        if (other.gameObject.tag == "DERECHA" || other.gameObject.tag == "IZQUIERDA" || other.gameObject.tag == "FRENTE")
+        {
+            otherObjectCollider = other;
             CalculateIntersectionPercentage();
-        
+        }
     }
 
     // Método para calcular el porcentaje de intersección
