@@ -6,7 +6,6 @@ public class ScriptCollisionJero : MonoBehaviour
 {
     public GameObject Pared;
     public HealthBarScript healthbar;
-    public int daño;
     public GameObject jero;
 
     private void Update()

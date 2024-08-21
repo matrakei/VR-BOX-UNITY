@@ -8,7 +8,7 @@ using System;
 public class CollisionCalculator : MonoBehaviour
 {
     // El Collider del otro objeto con el que el Plane está colisionando
-    public Collider otherObjectCollider;
+    Collider otherObjectCollider;
     float intersectionPercentagemax;
     public TMP_Text PORCENTAJE;
     public HealthBarScript healthbar;
@@ -20,10 +20,10 @@ public class CollisionCalculator : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other == otherObjectCollider)
-        {
+        otherObjectCollider = other;
+        
             CalculateIntersectionPercentage();
-        }
+        
     }
 
     // Método para calcular el porcentaje de intersección
