@@ -9,6 +9,7 @@ TagManager:
   - IZQUIERDA
   - DERECHA
   - FRENTE
+  - Boton Jugar
   layers:
   - Default
   - TransparentFX
