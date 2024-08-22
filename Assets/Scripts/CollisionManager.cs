@@ -10,6 +10,8 @@ public class CollisionManager : MonoBehaviour
     public GameObject DERECHA;
     public GameObject IZQUIERDA;
     public GameObject FRENTE;
+    public GameObject IZQUIERDAABAJO;
+    public GameObject DERECHAABAJO;
 
     // Start is called before the first frame update
     void Awake()
@@ -24,6 +26,9 @@ public class CollisionManager : MonoBehaviour
             //Golpe de derecha
             IZQUIERDA.layer = 6;
             FRENTE.layer = 6;
+            DERECHAABAJO.layer = 6;
+            IZQUIERDAABAJO.layer = 6;
+
             jeroAnimations.anim.SetBool("IsRightHeadHit", true);
         }
         else if (gameObject.tag == "IZQUIERDA")
@@ -31,14 +36,34 @@ public class CollisionManager : MonoBehaviour
             //Golpe de izquierda
             FRENTE.layer = 6;
             DERECHA.layer = 6;
+            DERECHAABAJO.layer = 6;
+            IZQUIERDAABAJO.layer = 6;
             jeroAnimations.anim.SetBool("IsLeftHeadHit", true);
         }
-        else
+        else if (gameObject.tag == "FRENTE")
         {
             //Golpe de frente
             DERECHA.layer = 6;
             IZQUIERDA.layer = 6;
+            DERECHAABAJO.layer = 6;
+            IZQUIERDAABAJO.layer = 6;
             jeroAnimations.anim.SetBool("IsFrontHeadHit", true);
+        }
+        else if (gameObject.tag == "IZQUIERDA ABAJO")
+        {
+            DERECHA.layer = 6;
+            IZQUIERDA.layer = 6;
+            FRENTE.layer = 6;
+            DERECHAABAJO.layer = 6;
+            jeroAnimations.anim.SetBool("IsDownLeftHit", true);
+        }
+        else if (gameObject.tag == "DERECHA ABAJO")
+        {
+            DERECHA.layer = 6;
+            IZQUIERDA.layer = 6;
+            FRENTE.layer = 6;
+            IZQUIERDAABAJO.layer = 6;
+            jeroAnimations.anim.SetBool("IsDownRightHit", true);
         }
     }
 
@@ -50,6 +75,8 @@ public class CollisionManager : MonoBehaviour
         jeroAnimations.anim.SetBool("IsRightHeadHit", false);
         jeroAnimations.anim.SetBool("IsLeftHeadHit", false);
         jeroAnimations.anim.SetBool("IsFrontHeadHit", false);
+        jeroAnimations.anim.SetBool("IsDownRightHit", false);
+        jeroAnimations.anim.SetBool("IsDownLeftHit", false);
     }
 
     // Update is called once per frame

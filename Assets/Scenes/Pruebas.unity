@@ -710,7 +710,7 @@ GameObject:
   - component: {fileID: 862072453}
   m_Layer: 0
   m_Name: DERECHA ABAJO
-  m_TagString: Untagged
+  m_TagString: DERECHA ABAJO
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -731,6 +731,8 @@ MonoBehaviour:
   DERECHA: {fileID: 0}
   IZQUIERDA: {fileID: 0}
   FRENTE: {fileID: 0}
+  IZQUIERDAABAJO: {fileID: 0}
+  DERECHAABAJO: {fileID: 0}
 --- !u!64 &862072454
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -987,6 +989,8 @@ MonoBehaviour:
   DERECHA: {fileID: 0}
   IZQUIERDA: {fileID: 0}
   FRENTE: {fileID: 0}
+  IZQUIERDAABAJO: {fileID: 0}
+  DERECHAABAJO: {fileID: 0}
 --- !u!64 &1030504565
 MeshCollider:
   m_ObjectHideFlags: 0
