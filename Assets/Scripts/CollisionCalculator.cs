@@ -7,7 +7,6 @@ using System;
 
 public class CollisionCalculator : MonoBehaviour
 {
-    public GameManager gameManager;
     // El Collider del otro objeto con el que el Plane está colisionando
     Collider otherObjectCollider;
     float intersectionPercentagemax;
@@ -17,14 +16,7 @@ public class CollisionCalculator : MonoBehaviour
     float daño;
 
 
-    // Método llamado cuando comienza la colisión
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Boton Jugar")
-        {
-            GameManager.Instance.ChangeScene("SampleScene");
-        }
-    }
+    // Método llamado cuando comienza la colisió
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "DERECHA" || other.gameObject.tag == "IZQUIERDA" || other.gameObject.tag == "FRENTE")
