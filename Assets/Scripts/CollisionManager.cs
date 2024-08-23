@@ -72,6 +72,8 @@ public class CollisionManager : MonoBehaviour
         IZQUIERDA.layer = 0;
         DERECHA.layer = 0;
         FRENTE.layer = 0;
+        DERECHAABAJO.layer = 0;
+        IZQUIERDAABAJO.layer = 0;
         jeroAnimations.anim.SetBool("IsRightHeadHit", false);
         jeroAnimations.anim.SetBool("IsLeftHeadHit", false);
         jeroAnimations.anim.SetBool("IsFrontHeadHit", false);
