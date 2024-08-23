@@ -7,7 +7,7 @@ public class BotonesScript : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (gameObject.tag == "Boton Jugar")
+        if (gameObject.name == "Boton Jugar")
         {
             GameManager.Instance.ChangeScene("SampleScene");
         }
