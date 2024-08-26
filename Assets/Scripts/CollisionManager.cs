@@ -13,12 +13,6 @@ public class CollisionManager : MonoBehaviour
     public GameObject IZQUIERDAABAJO;
     public GameObject DERECHAABAJO;
 
-    // Start is called before the first frame update
-    void Awake()
-    {
-        
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (gameObject.tag == "DERECHA")
@@ -55,7 +49,7 @@ public class CollisionManager : MonoBehaviour
             IZQUIERDA.layer = 6;
             FRENTE.layer = 6;
             DERECHAABAJO.layer = 6;
-            jeroAnimations.anim.SetBool("IsDownLeftHit", true);
+            jeroAnimations.anim.SetBool("IsTorsoLeftHit", true);
         }
         else if (gameObject.tag == "DERECHA ABAJO")
         {
@@ -63,7 +57,7 @@ public class CollisionManager : MonoBehaviour
             IZQUIERDA.layer = 6;
             FRENTE.layer = 6;
             IZQUIERDAABAJO.layer = 6;
-            jeroAnimations.anim.SetBool("IsDownRightHit", true);
+            jeroAnimations.anim.SetBool("IsTorsoRightHit", true);
         }
     }
 
@@ -77,13 +71,7 @@ public class CollisionManager : MonoBehaviour
         jeroAnimations.anim.SetBool("IsRightHeadHit", false);
         jeroAnimations.anim.SetBool("IsLeftHeadHit", false);
         jeroAnimations.anim.SetBool("IsFrontHeadHit", false);
-        jeroAnimations.anim.SetBool("IsDownRightHit", false);
-        jeroAnimations.anim.SetBool("IsDownLeftHit", false);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        jeroAnimations.anim.SetBool("IsTorsoRightHit", false);
+        jeroAnimations.anim.SetBool("IsTorsoLeftHit", false);
     }
 }

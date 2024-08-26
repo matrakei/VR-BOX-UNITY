@@ -14,6 +14,7 @@ public class CollisionCalculator : MonoBehaviour
     public HealthBarScript healthbar;
     public TMP_Text DAÑO;
     float daño;
+    public GameObject jero;
 
 
     // Método llamado cuando comienza la colisió
@@ -97,6 +98,14 @@ public class CollisionCalculator : MonoBehaviour
         else
         {
             return 1f; // Daño mínimo
+        }
+    }
+
+    private void Update()
+    {
+        if (healthbar.hp <= 0)
+        {
+            jero.SetActive(false);
         }
     }
 }
