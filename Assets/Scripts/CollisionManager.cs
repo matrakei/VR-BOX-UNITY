@@ -59,19 +59,42 @@ public class CollisionManager : MonoBehaviour
             IZQUIERDAABAJO.layer = 6;
             jeroAnimations.anim.SetBool("IsTorsoRightHit", true);
         }
+        else if (gameObject.name == "BRAZO DERECHO")
+        {
+            DERECHA.layer = 6;
+            IZQUIERDA.layer = 6;
+            FRENTE.layer = 6;
+            IZQUIERDAABAJO.layer = 6;
+            DERECHAABAJO.layer = 6;
+            //posible animacion
+            //jeroAnimations.anim.SetBool("IsArmsHitted", true);
+        }
+        else if (gameObject.name == "BRAZO IZQUIERDO")
+        {
+            DERECHA.layer = 6;
+            IZQUIERDA.layer = 6;
+            FRENTE.layer = 6;
+            IZQUIERDAABAJO.layer = 6;
+            DERECHAABAJO.layer = 6;
+            //posible animacion
+            //jeroAnimations.anim.SetBool("IsArmsHitted", true);
+        }
     }
 
     private void OnTriggerExit()
     {
-        IZQUIERDA.layer = 0;
-        DERECHA.layer = 0;
-        FRENTE.layer = 0;
-        DERECHAABAJO.layer = 0;
-        IZQUIERDAABAJO.layer = 0;
-        jeroAnimations.anim.SetBool("IsRightHeadHit", false);
-        jeroAnimations.anim.SetBool("IsLeftHeadHit", false);
-        jeroAnimations.anim.SetBool("IsFrontHeadHit", false);
-        jeroAnimations.anim.SetBool("IsTorsoRightHit", false);
-        jeroAnimations.anim.SetBool("IsTorsoLeftHit", false);
+        if (gameObject.name == "Exit HitBox")
+        {
+            IZQUIERDA.layer = 0;
+            DERECHA.layer = 0;
+            FRENTE.layer = 0;
+            DERECHAABAJO.layer = 0;
+            IZQUIERDAABAJO.layer = 0;
+            jeroAnimations.anim.SetBool("IsRightHeadHit", false);
+            jeroAnimations.anim.SetBool("IsLeftHeadHit", false);
+            jeroAnimations.anim.SetBool("IsFrontHeadHit", false);
+            jeroAnimations.anim.SetBool("IsTorsoRightHit", false);
+            jeroAnimations.anim.SetBool("IsTorsoLeftHit", false);
+        }
     }
 }
