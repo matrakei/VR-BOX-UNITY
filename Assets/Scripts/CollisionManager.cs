@@ -17,7 +17,7 @@ public class CollisionManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (gameObject.tag == "DERECHA")
+        if (gameObject.name == "DERECHA")
         {
             //Golpe de derecha
             IZQUIERDA.layer = 6;
@@ -30,7 +30,7 @@ public class CollisionManager : MonoBehaviour
             jeroAnimations.anim.SetBool("IsRightHeadHit", true);
 
         }
-        else if (gameObject.tag == "IZQUIERDA")
+        else if (gameObject.name == "IZQUIERDA")
         {
             //Golpe de izquierda
             FRENTE.layer = 6;
@@ -41,7 +41,7 @@ public class CollisionManager : MonoBehaviour
             BRAZOIZQUIERDO.layer = 6;
             jeroAnimations.anim.SetBool("IsLeftHeadHit", true);
         }
-        else if (gameObject.tag == "FRENTE")
+        else if (gameObject.name == "FRENTE")
         {
             //Golpe de frente
             DERECHA.layer = 6;
@@ -52,7 +52,7 @@ public class CollisionManager : MonoBehaviour
             BRAZOIZQUIERDO.layer = 6;
             jeroAnimations.anim.SetBool("IsFrontHeadHit", true);
         }
-        else if (gameObject.tag == "IZQUIERDA ABAJO")
+        else if (gameObject.name == "IZQUIERDA ABAJO")
         {
             DERECHA.layer = 6;
             IZQUIERDA.layer = 6;
@@ -62,7 +62,7 @@ public class CollisionManager : MonoBehaviour
             BRAZOIZQUIERDO.layer = 6;
             jeroAnimations.anim.SetBool("IsTorsoLeftHit", true);
         }
-        else if (gameObject.tag == "DERECHA ABAJO")
+        else if (gameObject.name == "DERECHA ABAJO")
         {
             DERECHA.layer = 6;
             IZQUIERDA.layer = 6;
