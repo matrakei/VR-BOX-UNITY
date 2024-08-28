@@ -28,6 +28,7 @@ public class CollisionManager : MonoBehaviour
             BRAZOIZQUIERDO.layer = 6;
 
             jeroAnimations.anim.SetBool("IsRightHeadHit", true);
+
         }
         else if (gameObject.tag == "IZQUIERDA")
         {
@@ -80,7 +81,7 @@ public class CollisionManager : MonoBehaviour
             DERECHAABAJO.layer = 6;
             BRAZOIZQUIERDO.layer = 6;
             //posible animacion
-            //jeroAnimations.anim.SetBool("IsArmsHitted", true);
+            jeroAnimations.anim.SetBool("IsRightHeadHit", true);
         }
         else if (gameObject.name == "BRAZO IZQUIERDO")
         {
@@ -91,7 +92,7 @@ public class CollisionManager : MonoBehaviour
             DERECHAABAJO.layer = 6;
             BRAZODERECHO.layer = 6;
             //posible animacion
-            //jeroAnimations.anim.SetBool("IsArmsHitted", true);
+            jeroAnimations.anim.SetBool("IsRightHeadHit", true);
         }
     }
 
@@ -99,20 +100,20 @@ public class CollisionManager : MonoBehaviour
     {
         if (gameObject.name == "Exit HitBox")
         {
-            IZQUIERDA.layer = 0;
-            DERECHA.layer = 0;
-            FRENTE.layer = 0;
-            DERECHAABAJO.layer = 0;
-            IZQUIERDAABAJO.layer = 0;
-            BRAZODERECHO.layer = 0;
-            BRAZOIZQUIERDO.layer = 0;
+                IZQUIERDA.layer = 0;
+                DERECHA.layer = 0;
+                FRENTE.layer = 0;
+                DERECHAABAJO.layer = 0;
+                IZQUIERDAABAJO.layer = 0;
+                BRAZODERECHO.layer = 0;
+                BRAZOIZQUIERDO.layer = 0;
 
-            //lo de abajo no se si esta bien onda  la forma de terminar la animacion
-            jeroAnimations.anim.SetBool("IsRightHeadHit", false);
-            jeroAnimations.anim.SetBool("IsLeftHeadHit", false);
-            jeroAnimations.anim.SetBool("IsFrontHeadHit", false);
-            jeroAnimations.anim.SetBool("IsTorsoRightHit", false);
-            jeroAnimations.anim.SetBool("IsTorsoLeftHit", false);
+                //lo de abajo no se si esta bien onda  la forma de terminar la animacion
+                jeroAnimations.anim.SetBool("IsRightHeadHit", false);
+                jeroAnimations.anim.SetBool("IsLeftHeadHit", false);
+                jeroAnimations.anim.SetBool("IsFrontHeadHit", false);
+                jeroAnimations.anim.SetBool("IsTorsoRightHit", false);
+                jeroAnimations.anim.SetBool("IsTorsoLeftHit", false);
         }
     }
 }
