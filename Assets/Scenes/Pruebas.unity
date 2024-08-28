@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 62740934}
   - component: {fileID: 62740933}
   - component: {fileID: 62740932}
+  - component: {fileID: 62740936}
   m_Layer: 0
   m_Name: BRAZO DERECHO
   m_TagString: Untagged
@@ -229,6 +230,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1654608128}
   m_LocalEulerAnglesHint: {x: -23.711, y: -1.691, z: -25.165}
+--- !u!114 &62740936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62740931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 999cf529ebd767c4c8dfaf3e55436a66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jeroAnimations: {fileID: 0}
+  DERECHA: {fileID: 461427593}
+  IZQUIERDA: {fileID: 461427592}
+  FRENTE: {fileID: 461427591}
+  IZQUIERDAABAJO: {fileID: 461427590}
+  DERECHAABAJO: {fileID: 461427589}
+  BRAZODERECHO: {fileID: 62740931}
+  BRAZOIZQUIERDO: {fileID: 62740931}
 --- !u!1 &64463184
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,6 +550,7 @@ GameObject:
   - component: {fileID: 246381354}
   - component: {fileID: 246381353}
   - component: {fileID: 246381352}
+  - component: {fileID: 246381355}
   m_Layer: 0
   m_Name: BRAZO IZQUIERDO
   m_TagString: Untagged
@@ -624,6 +646,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 246381350}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &246381355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246381350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 999cf529ebd767c4c8dfaf3e55436a66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jeroAnimations: {fileID: 0}
+  DERECHA: {fileID: 461427593}
+  IZQUIERDA: {fileID: 461427592}
+  FRENTE: {fileID: 461427591}
+  IZQUIERDAABAJO: {fileID: 461427590}
+  DERECHAABAJO: {fileID: 461427589}
+  BRAZODERECHO: {fileID: 62740931}
+  BRAZOIZQUIERDO: {fileID: 62740931}
 --- !u!1 &272065637
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,6 +919,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4323659232540196955, guid: 14f4cdca5f2296f4fa82d508054d2cc2, type: 3}
+      propertyPath: BRAZODERECHO
+      value: 
+      objectReference: {fileID: 62740931}
+    - target: {fileID: 4323659232540196955, guid: 14f4cdca5f2296f4fa82d508054d2cc2, type: 3}
+      propertyPath: BRAZOIZQUIERDO
+      value: 
+      objectReference: {fileID: 246381350}
+    - target: {fileID: 6029352419013161286, guid: 14f4cdca5f2296f4fa82d508054d2cc2, type: 3}
+      propertyPath: BRAZODERECHO
+      value: 
+      objectReference: {fileID: 62740931}
+    - target: {fileID: 6029352419013161286, guid: 14f4cdca5f2296f4fa82d508054d2cc2, type: 3}
+      propertyPath: BRAZOIZQUIERDO
+      value: 
+      objectReference: {fileID: 246381350}
+    - target: {fileID: 7215823028437301768, guid: 14f4cdca5f2296f4fa82d508054d2cc2, type: 3}
+      propertyPath: BRAZODERECHO
+      value: 
+      objectReference: {fileID: 62740931}
+    - target: {fileID: 7215823028437301768, guid: 14f4cdca5f2296f4fa82d508054d2cc2, type: 3}
+      propertyPath: BRAZOIZQUIERDO
+      value: 
+      objectReference: {fileID: 246381350}
+    - target: {fileID: 7908069520404328777, guid: 14f4cdca5f2296f4fa82d508054d2cc2, type: 3}
+      propertyPath: BRAZODERECHO
+      value: 
+      objectReference: {fileID: 62740931}
+    - target: {fileID: 7908069520404328777, guid: 14f4cdca5f2296f4fa82d508054d2cc2, type: 3}
+      propertyPath: BRAZOIZQUIERDO
+      value: 
+      objectReference: {fileID: 246381350}
     - target: {fileID: 7908069520404328777, guid: 14f4cdca5f2296f4fa82d508054d2cc2, type: 3}
       propertyPath: jeroAnimations
       value: 
@@ -889,6 +963,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9149005170270746182, guid: 14f4cdca5f2296f4fa82d508054d2cc2, type: 3}
+      propertyPath: BRAZODERECHO
+      value: 
+      objectReference: {fileID: 62740931}
+    - target: {fileID: 9149005170270746182, guid: 14f4cdca5f2296f4fa82d508054d2cc2, type: 3}
+      propertyPath: BRAZOIZQUIERDO
+      value: 
+      objectReference: {fileID: 246381350}
     - target: {fileID: 9149005170270746182, guid: 14f4cdca5f2296f4fa82d508054d2cc2, type: 3}
       propertyPath: jeroAnimations
       value: 
@@ -947,6 +1029,31 @@ PrefabInstance:
       addedObject: {fileID: 477273217}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14f4cdca5f2296f4fa82d508054d2cc2, type: 3}
+--- !u!1 &461427589 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6042582726127493810, guid: 14f4cdca5f2296f4fa82d508054d2cc2, type: 3}
+  m_PrefabInstance: {fileID: 461427588}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &461427590 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7888995177723781358, guid: 14f4cdca5f2296f4fa82d508054d2cc2, type: 3}
+  m_PrefabInstance: {fileID: 461427588}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &461427591 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4053918090221157817, guid: 14f4cdca5f2296f4fa82d508054d2cc2, type: 3}
+  m_PrefabInstance: {fileID: 461427588}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &461427592 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8216658411443558215, guid: 14f4cdca5f2296f4fa82d508054d2cc2, type: 3}
+  m_PrefabInstance: {fileID: 461427588}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &461427593 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8397228673671059583, guid: 14f4cdca5f2296f4fa82d508054d2cc2, type: 3}
+  m_PrefabInstance: {fileID: 461427588}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &477273216
 GameObject:
   m_ObjectHideFlags: 0
@@ -1353,8 +1460,8 @@ Transform:
   m_GameObject: {fileID: 1407661618}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.7385, z: -0.0592}
-  m_LocalScale: {x: 1, y: 1.6926491, z: 0.59455377}
+  m_LocalPosition: {x: -0, y: 0.7385, z: 0.0367}
+  m_LocalScale: {x: 1, y: 1.6926491, z: 0.7863065}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1047533165}

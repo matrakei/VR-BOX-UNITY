@@ -3,7 +3,13 @@ guid: 999cf529ebd767c4c8dfaf3e55436a66
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - jeroAnimations: {instanceID: 0}
+  - DERECHA: {instanceID: 0}
+  - IZQUIERDA: {instanceID: 0}
+  - FRENTE: {instanceID: 0}
+  - IZQUIERDAABAJO: {instanceID: 0}
+  - DERECHAABAJO: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
