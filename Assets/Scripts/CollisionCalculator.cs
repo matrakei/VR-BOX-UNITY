@@ -14,13 +14,12 @@ public class CollisionCalculator : MonoBehaviour
     public HealthBarScript healthbar;
     public TMP_Text DAÑO;
     float daño;
-    public GameObject jero;
 
 
     // Método llamado cuando comienza la colisió
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "DERECHA" || other.gameObject.tag == "IZQUIERDA" || other.gameObject.tag == "FRENTE")
+        if (other.gameObject.name == "DERECHA" || other.gameObject.name == "IZQUIERDA" || other.gameObject.name == "FRENTE" || other.gameObject.name == "IZQUIERDA ABAJO" || other.gameObject.name == "DERECHA ABAJO" || other.gameObject.name == "BRAZO DERECHO" || other.gameObject.name == "BRAZO IZQUIERDO")
         {
             otherObjectCollider = other;
             CalculateIntersectionPercentage();
@@ -103,9 +102,6 @@ public class CollisionCalculator : MonoBehaviour
 
     private void Update()
     {
-        if (healthbar.hp <= 0)
-        {
-            jero.SetActive(false);
-        }
+
     }
 }

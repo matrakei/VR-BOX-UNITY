@@ -444,6 +444,7 @@ MonoBehaviour:
   maxhp: 100
   hp: 0
   texthp: {fileID: 1278178783}
+  jero: {fileID: 0}
 --- !u!4 &750008485 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 796616662745913714, guid: 9905095255644254e80a9242981128d0, type: 3}
