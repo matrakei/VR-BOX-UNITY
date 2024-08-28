@@ -21,6 +21,7 @@ public class CollisionManager : MonoBehaviour
         {
             //Golpe de derecha
             IZQUIERDA.layer = 6;
+            DERECHA.layer = 6;
             FRENTE.layer = 6;
             DERECHAABAJO.layer = 6;
             IZQUIERDAABAJO.layer = 6;
@@ -33,8 +34,9 @@ public class CollisionManager : MonoBehaviour
         else if (gameObject.name == "IZQUIERDA")
         {
             //Golpe de izquierda
-            FRENTE.layer = 6;
+            IZQUIERDA.layer = 6;
             DERECHA.layer = 6;
+            FRENTE.layer = 6;
             DERECHAABAJO.layer = 6;
             IZQUIERDAABAJO.layer = 6;
             BRAZODERECHO.layer = 6;
@@ -44,8 +46,9 @@ public class CollisionManager : MonoBehaviour
         else if (gameObject.name == "FRENTE")
         {
             //Golpe de frente
-            DERECHA.layer = 6;
             IZQUIERDA.layer = 6;
+            DERECHA.layer = 6;
+            FRENTE.layer = 6;
             DERECHAABAJO.layer = 6;
             IZQUIERDAABAJO.layer = 6;
             BRAZODERECHO.layer = 6;
@@ -54,19 +57,21 @@ public class CollisionManager : MonoBehaviour
         }
         else if (gameObject.name == "IZQUIERDA ABAJO")
         {
-            DERECHA.layer = 6;
             IZQUIERDA.layer = 6;
+            DERECHA.layer = 6;
             FRENTE.layer = 6;
             DERECHAABAJO.layer = 6;
+            IZQUIERDAABAJO.layer = 6;
             BRAZODERECHO.layer = 6;
             BRAZOIZQUIERDO.layer = 6;
             jeroAnimations.anim.SetBool("IsTorsoLeftHit", true);
         }
         else if (gameObject.name == "DERECHA ABAJO")
         {
-            DERECHA.layer = 6;
             IZQUIERDA.layer = 6;
+            DERECHA.layer = 6;
             FRENTE.layer = 6;
+            DERECHAABAJO.layer = 6;
             IZQUIERDAABAJO.layer = 6;
             BRAZODERECHO.layer = 6;
             BRAZOIZQUIERDO.layer = 6;
@@ -74,23 +79,25 @@ public class CollisionManager : MonoBehaviour
         }
         else if (gameObject.name == "BRAZO DERECHO")
         {
-            DERECHA.layer = 6;
             IZQUIERDA.layer = 6;
+            DERECHA.layer = 6;
             FRENTE.layer = 6;
-            IZQUIERDAABAJO.layer = 6;
             DERECHAABAJO.layer = 6;
+            IZQUIERDAABAJO.layer = 6;
+            BRAZODERECHO.layer = 6;
             BRAZOIZQUIERDO.layer = 6;
             //posible animacion
             jeroAnimations.anim.SetBool("IsRightHeadHit", true);
         }
         else if (gameObject.name == "BRAZO IZQUIERDO")
         {
-            DERECHA.layer = 6;
             IZQUIERDA.layer = 6;
+            DERECHA.layer = 6;
             FRENTE.layer = 6;
-            IZQUIERDAABAJO.layer = 6;
             DERECHAABAJO.layer = 6;
+            IZQUIERDAABAJO.layer = 6;
             BRAZODERECHO.layer = 6;
+            BRAZOIZQUIERDO.layer = 6;
             //posible animacion
             jeroAnimations.anim.SetBool("IsRightHeadHit", true);
         }
