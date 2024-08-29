@@ -6,14 +6,12 @@ TagManager:
   tags:
   - GUANTES
   - "Pu\xF1o"
-  - IZQUIERDA
-  - DERECHA
-  - FRENTE
-  - DERECHA ABAJO
-  - IZQUIERDA ABAJO
   - Boton
-  - Boton Jugar
   - Enemigo
+  - DERECHA ABAJO
+  - DERECHA
+  - IZQUIERDA
+  - FRENTE
   layers:
   - Default
   - TransparentFX
@@ -22,10 +20,10 @@ TagManager:
   - Water
   - UI
   - No Collision
-  - 
-  - 
-  - 
-  - 
+  - Atack Layer
+  - Defense Layer
+  - Player Defense Layer
+  - Player Attack Layer
   - 
   - 
   - 
