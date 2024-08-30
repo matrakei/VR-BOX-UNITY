@@ -3934,6 +3934,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GuanteIzquierdo
       objectReference: {fileID: 0}
+    - target: {fileID: 6590200658252295291, guid: 21c32ca2a6683944f96155c88569f94c, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 506190824479054247, guid: 21c32ca2a6683944f96155c88569f94c, type: 3}
     m_RemovedGameObjects: []
@@ -3951,6 +3955,10 @@ PrefabInstance:
     - target: {fileID: 19692316865381320, guid: 9905095255644254e80a9242981128d0, type: 3}
       propertyPath: m_Name
       value: GuanteDerecho
+      objectReference: {fileID: 0}
+    - target: {fileID: 19692316865381320, guid: 9905095255644254e80a9242981128d0, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 796616662745913714, guid: 9905095255644254e80a9242981128d0, type: 3}
       propertyPath: m_LocalPosition.x
