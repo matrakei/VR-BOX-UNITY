@@ -15,6 +15,7 @@ public class CollisionManager : MonoBehaviour
     public GameObject BRAZODERECHO;
     public GameObject BRAZOIZQUIERDO;
     public HealthBarScript healthbar;
+    List<GameObject> list = new List<GameObject>();
 
 
     private void DeactivateAll()
@@ -27,58 +28,92 @@ public class CollisionManager : MonoBehaviour
         BRAZODERECHO.layer = 6;
         BRAZOIZQUIERDO.layer = 6;
     }
+
+    private void Update()
+    {
+        if (list.Count > 0)
+        {
+            DeactivateAll();
+            if (list[0] == DERECHA)
+            {
+                list.Clear();
+                jeroAnimations.anim.SetTrigger("IsRightHeadHit");
+                healthbar.hp -= 10;
+                Debug.Log("Golpe de derecha");
+            }
+            else if (list[0] == IZQUIERDA)
+            {
+                list.Clear();
+                jeroAnimations.anim.SetTrigger("IsLeftHeadHit");
+                healthbar.hp -= 10;
+                Debug.Log("Golpe de izquierda");
+            }
+            else if (list[0] == FRENTE)
+            {
+                list.Clear();
+                jeroAnimations.anim.SetTrigger("IsFrontHeadHit");
+                healthbar.hp -= 7;
+                Debug.Log("Golpe de frente");
+            }
+            else if (list[0] == DERECHAABAJO)
+            {
+                list.Clear();
+                jeroAnimations.anim.SetTrigger("IsTorsoRightHit");
+                healthbar.hp -= 15;
+                Debug.Log("Golpe de derecha abajo");
+            }
+            else if (list[0] == IZQUIERDAABAJO)
+            {
+                list.Clear();
+                //jeroAnimations.anim.SetTrigger("IsTorsoLeftHit");
+                healthbar.hp -= 15;
+                Debug.Log("Golpe de izquierda abajo");
+            }
+            else if (list[0] == BRAZODERECHO)
+            {
+                list.Clear();
+                //jeroAnimations.anim.SetTrigger("IsRightArmHit");
+                healthbar.hp -= 2;
+                Debug.Log("Golpe de brazo derecho");
+            }
+            else if (list[0] == BRAZOIZQUIERDO)
+            {
+                list.Clear();
+                //jeroAnimations.anim.SetTrigger("IsLeftArmHit");
+                healthbar.hp -= 2;
+                Debug.Log("Golpe de brazo izquierdo");
+            }
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (gameObject.name == "DERECHA")
         {
-            //Golpe de derecha
-            DeactivateAll();
-            healthbar.hp -= 10;
-            jeroAnimations.anim.SetBool("IsRightHeadHit", true);
-
+            list.Add(DERECHA);
         }
         else if (gameObject.name == "IZQUIERDA")
         {
-            //Golpe de izquierda
-            DeactivateAll();
-            healthbar.hp -= 10;
-            jeroAnimations.anim.SetBool("IsLeftHeadHit", true);
+            list.Add(IZQUIERDA);
         }
         else if (gameObject.name == "FRENTE")
         {
-            //Golpe de frente
-            DeactivateAll();
-            healthbar.hp -= 7;
-            jeroAnimations.anim.SetBool("IsFrontHeadHit", true);
+            list.Add(FRENTE);
         }
         else if (gameObject.name == "IZQUIERDA ABAJO")
         {
-            //Golpe de izquierda abajo
-            DeactivateAll();
-            healthbar.hp -= 15;
-            //falta la animacion
-            //jeroAnimations.anim.SetBool("IsTorsoLeftHit", true);
+            list.Add(IZQUIERDAABAJO);
         }
         else if (gameObject.name == "DERECHA ABAJO")
         {
-            //Golpe de derecha abajo
-            DeactivateAll();
-            healthbar.hp -= 15;
-            jeroAnimations.anim.SetBool("IsTorsoRightHit", true);
+            list.Add(DERECHAABAJO);
         }
         else if (gameObject.name == "BRAZO DERECHO")
         {
-            //Golpe de brazo derecho
-            DeactivateAll();
-            healthbar.hp -= 2;
-            //posible animacion
+            list.Add(BRAZODERECHO);
         }
         else if (gameObject.name == "BRAZO IZQUIERDO")
         {
-            //Golpe de brazo izquierdo
-            DeactivateAll();
-            healthbar.hp -= 2;
-            //posible animacion
+            list.Add(BRAZOIZQUIERDO);
         }
     }
 
@@ -86,21 +121,19 @@ public class CollisionManager : MonoBehaviour
     {
         if (gameObject.name == "Exit HitBox")
         {
-            IZQUIERDA.layer = 8;
-            DERECHA.layer = 8;
-            FRENTE.layer = 8;
-            DERECHAABAJO.layer = 8;
-            IZQUIERDAABAJO.layer = 8;
-            BRAZODERECHO.layer = 8;
-            BRAZOIZQUIERDO.layer = 8;
-
-            //lo de abajo no se si esta bien onda  la forma de terminar la animacion
-            jeroAnimations.anim.SetBool("IsRightHeadHit", false);
-            jeroAnimations.anim.SetBool("IsLeftHeadHit", false);
-            jeroAnimations.anim.SetBool("IsFrontHeadHit", false);
-            jeroAnimations.anim.SetBool("IsTorsoRightHit", false);
-            //falta la animacion
-            //jeroAnimations.anim.SetBool("IsTorsoLeftHit", false);
+            Debug.Log("Exit HitBox");
+            ActivateAll();
         }
+    }
+
+    private void ActivateAll()
+    {
+        IZQUIERDA.layer = 8;
+        DERECHA.layer = 8;
+        FRENTE.layer = 8;
+        DERECHAABAJO.layer = 8;
+        IZQUIERDAABAJO.layer = 8;
+        BRAZODERECHO.layer = 8;
+        BRAZOIZQUIERDO.layer = 8;
     }
 }

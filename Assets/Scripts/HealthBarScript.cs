@@ -8,10 +8,10 @@ public class HealthBarScript : MonoBehaviour
 {
     public Slider healthbar;
     public GameObject bar;
-    public int maxhp = 100;
+    public int maxhp = 1000;
     public float hp;
     public TMP_Text texthp;
-    public GameObject jero;
+    public GameObject personaje;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +31,7 @@ public class HealthBarScript : MonoBehaviour
                 healthbar.value = 0;
                 texthp.text = "0";
                 bar.SetActive(false);
-                jero.SetActive(false);
+                personaje.SetActive(false);
             }
             else
             {

@@ -147,7 +147,7 @@ MonoBehaviour:
   DERECHAABAJO: {fileID: 217599898}
   BRAZODERECHO: {fileID: 603533900}
   BRAZOIZQUIERDO: {fileID: 1372147944}
-  healthbar: {fileID: 0}
+  healthbar: {fileID: 723615111}
 --- !u!1 &139332582 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3399245223463711890, guid: 12ae85cae353df740893e191946ece99, type: 3}
@@ -560,7 +560,7 @@ MonoBehaviour:
   maxhp: 100
   hp: 0
   texthp: {fileID: 2099583113}
-  jero: {fileID: 2026927361}
+  personaje: {fileID: 437878383}
 --- !u!114 &602426676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -898,7 +898,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 1000
   m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
@@ -918,10 +918,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthbar: {fileID: 723615110}
   bar: {fileID: 723615108}
-  maxhp: 100
+  maxhp: 1000
   hp: 0
   texthp: {fileID: 1278178783}
-  jero: {fileID: 2026927361}
+  personaje: {fileID: 2026927361}
 --- !u!4 &750008485 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 796616662745913714, guid: 9905095255644254e80a9242981128d0, type: 3}
@@ -2728,7 +2728,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100
+  m_text: 1000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
