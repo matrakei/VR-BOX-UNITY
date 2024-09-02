@@ -15,7 +15,6 @@ public class CollisionManager : MonoBehaviour
     public GameObject BRAZODERECHO;
     public GameObject BRAZOIZQUIERDO;
     public HealthBarScript healthbar;
-    
 
 
     private void DeactivateAll()
@@ -90,35 +89,47 @@ public class CollisionManager : MonoBehaviour
         if (gameObject.name == "DERECHA")
         {
             GameManager.Instance.list.Add(DERECHA);
+            GameManager.Instance.golpeRecibido = true;
         }
         else if (gameObject.name == "IZQUIERDA")
         {
             GameManager.Instance.list.Add(IZQUIERDA);
+            GameManager.Instance.golpeRecibido = true;
         }
         else if (gameObject.name == "FRENTE")
         {
             GameManager.Instance.list.Add(FRENTE);
+            GameManager.Instance.golpeRecibido = true;
         }
         else if (gameObject.name == "IZQUIERDA ABAJO")
         {
             GameManager.Instance.list.Add(IZQUIERDAABAJO);
+            GameManager.Instance.golpeRecibido = true;
         }
         else if (gameObject.name == "DERECHA ABAJO")
         {
             GameManager.Instance.list.Add(DERECHAABAJO);
+            GameManager.Instance.golpeRecibido = true;
         }
         else if (gameObject.name == "BRAZO DERECHO")
         {
             GameManager.Instance.list.Add(BRAZODERECHO);
+            GameManager.Instance.golpeRecibido = true;
         }
         else if (gameObject.name == "BRAZO IZQUIERDO")
         {
             GameManager.Instance.list.Add(BRAZOIZQUIERDO);
+            GameManager.Instance.golpeRecibido = true;
         }
     }
-    private void CHEATS()
+    public bool HaRecibidoGolpe()
     {
-        
+        if (GameManager.Instance.golpeRecibido)
+        {
+            GameManager.Instance.golpeRecibido = false;  // Resetear el estado después de detectar el golpe
+            return true;
+        }
+        return false;
     }
     private void OnTriggerExit()
     {
