@@ -15,7 +15,7 @@ public class CollisionManager : MonoBehaviour
     public GameObject BRAZODERECHO;
     public GameObject BRAZOIZQUIERDO;
     public HealthBarScript healthbar;
-    List<GameObject> list = new List<GameObject>();
+    
 
 
     private void DeactivateAll()
@@ -31,54 +31,54 @@ public class CollisionManager : MonoBehaviour
 
     private void Update()
     {
-        if (list.Count > 0)
+        if (GameManager.Instance.list.Count > 0)
         {
             DeactivateAll();
-            if (list[0] == DERECHA)
+            if (GameManager.Instance.list[0] == DERECHA)
             {
-                list.Clear();
+                GameManager.Instance.list.Clear();
                 jeroAnimations.anim.SetTrigger("IsRightHeadHit");
                 healthbar.hp -= 10;
                 Debug.Log("Golpe de derecha");
             }
-            else if (list[0] == IZQUIERDA)
+            else if (GameManager.Instance.list[0] == IZQUIERDA)
             {
-                list.Clear();
+                GameManager.Instance.list.Clear();
                 jeroAnimations.anim.SetTrigger("IsLeftHeadHit");
                 healthbar.hp -= 10;
                 Debug.Log("Golpe de izquierda");
             }
-            else if (list[0] == FRENTE)
+            else if (GameManager.Instance.list[0] == FRENTE)
             {
-                list.Clear();
+                GameManager.Instance.list.Clear();
                 jeroAnimations.anim.SetTrigger("IsFrontHeadHit");
                 healthbar.hp -= 7;
                 Debug.Log("Golpe de frente");
             }
-            else if (list[0] == DERECHAABAJO)
+            else if (GameManager.Instance.list[0] == DERECHAABAJO)
             {
-                list.Clear();
+                GameManager.Instance.list.Clear();
                 jeroAnimations.anim.SetTrigger("IsTorsoRightHit");
                 healthbar.hp -= 15;
                 Debug.Log("Golpe de derecha abajo");
             }
-            else if (list[0] == IZQUIERDAABAJO)
+            else if (GameManager.Instance.list[0] == IZQUIERDAABAJO)
             {
-                list.Clear();
+                GameManager.Instance.list.Clear();
                 //jeroAnimations.anim.SetTrigger("IsTorsoLeftHit");
                 healthbar.hp -= 15;
                 Debug.Log("Golpe de izquierda abajo");
             }
-            else if (list[0] == BRAZODERECHO)
+            else if (GameManager.Instance.list[0] == BRAZODERECHO)
             {
-                list.Clear();
+                GameManager.Instance.list.Clear();
                 //jeroAnimations.anim.SetTrigger("IsRightArmHit");
                 healthbar.hp -= 2;
                 Debug.Log("Golpe de brazo derecho");
             }
-            else if (list[0] == BRAZOIZQUIERDO)
+            else if (GameManager.Instance.list[0] == BRAZOIZQUIERDO)
             {
-                list.Clear();
+                GameManager.Instance.list.Clear();
                 //jeroAnimations.anim.SetTrigger("IsLeftArmHit");
                 healthbar.hp -= 2;
                 Debug.Log("Golpe de brazo izquierdo");
@@ -89,40 +89,49 @@ public class CollisionManager : MonoBehaviour
     {
         if (gameObject.name == "DERECHA")
         {
-            list.Add(DERECHA);
+            GameManager.Instance.list.Add(DERECHA);
         }
         else if (gameObject.name == "IZQUIERDA")
         {
-            list.Add(IZQUIERDA);
+            GameManager.Instance.list.Add(IZQUIERDA);
         }
         else if (gameObject.name == "FRENTE")
         {
-            list.Add(FRENTE);
+            GameManager.Instance.list.Add(FRENTE);
         }
         else if (gameObject.name == "IZQUIERDA ABAJO")
         {
-            list.Add(IZQUIERDAABAJO);
+            GameManager.Instance.list.Add(IZQUIERDAABAJO);
         }
         else if (gameObject.name == "DERECHA ABAJO")
         {
-            list.Add(DERECHAABAJO);
+            GameManager.Instance.list.Add(DERECHAABAJO);
         }
         else if (gameObject.name == "BRAZO DERECHO")
         {
-            list.Add(BRAZODERECHO);
+            GameManager.Instance.list.Add(BRAZODERECHO);
         }
         else if (gameObject.name == "BRAZO IZQUIERDO")
         {
-            list.Add(BRAZOIZQUIERDO);
+            GameManager.Instance.list.Add(BRAZOIZQUIERDO);
         }
     }
-
+    private void CHEATS()
+    {
+        
+    }
     private void OnTriggerExit()
     {
         if (gameObject.name == "Exit HitBox")
         {
             Debug.Log("Exit HitBox");
-            ActivateAll();
+            IZQUIERDA.layer = 8;
+            DERECHA.layer = 8;
+            FRENTE.layer = 8;
+            DERECHAABAJO.layer = 8;
+            IZQUIERDAABAJO.layer = 8;
+            BRAZODERECHO.layer = 8;
+            BRAZOIZQUIERDO.layer = 8;
         }
     }
 

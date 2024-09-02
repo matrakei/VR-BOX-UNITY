@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
 
     public static GameManager Instance;
+    public List<GameObject> list = new List<GameObject>();
 
     // Start is called before the first frame update
     void Awake()
