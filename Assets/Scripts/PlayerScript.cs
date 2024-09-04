@@ -116,7 +116,7 @@ public class PlayerScript : MonoBehaviour
     }
     private void OnTriggerExit()
     {
-        if (gameObject.name == "Exit HitBox")
+        if (gameObject.name == "Exit Player HitBox")
         {
             IZQUIERDA.layer = 9;
             DERECHA.layer = 9;
