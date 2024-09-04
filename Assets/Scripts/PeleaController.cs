@@ -11,7 +11,7 @@ public class PeleaController : MonoBehaviour
     int UltimoAtaque;
 
 
-    private string[] ataques = { "GolpeFrente", "GolpeTorsoIzquierdo", "GolpeTorsoDerecho", "GolpeIzquierdo", "GolpeDerecho" };
+    private string[] ataques = { "GolpeFrente", "GolpeTorsoIzquierdo", "GolpeTorsoDerecho", "GolpeIzquierdo" };
     //FALTA ATAQUE GOLPE FRENTE 2 (DE DERECHA O IZQUIERDA)
     //FALTA ATAQUE GOLPE DERECHA
     private string[] defensas = { "CubrirIzquierda", "CubrirDerecha", "CubrirFrente", "CubrirTorsoIzquierdo", "CubrirTorsoDerecho" };
@@ -31,13 +31,14 @@ public class PeleaController : MonoBehaviour
             {
                 Atacar();
                 esperandoRespuesta = true;
-                yield return new WaitForSeconds(tiempoEspera);
             }
             else
             {
+                Debug.Log("1");
                 // Verificar si Jero ha recibido un golpe
-                if (GameManager.Instance.HaRecibidoGolpe())
+                if (GameManager.Instance.HaRecibidoGolpe() == true)
                 {
+                    Debug.Log("Animacion: " + GameManager.Instance.IsFinished);
                     if (GameManager.Instance.IsFinished == true)
                     {
                         esperandoRespuesta = false;
@@ -46,7 +47,12 @@ public class PeleaController : MonoBehaviour
                 }
                 else
                 {
-                    esperandoRespuesta = false;
+                    if (GameManager.Instance.IsFinished2 == true)
+                    {
+                        yield return new WaitForSeconds(tiempoEspera);
+                        esperandoRespuesta = false;
+                        GameManager.Instance.IsFinished2 = false;
+                    }
                 }
             }
             yield return null;
@@ -60,6 +66,7 @@ public class PeleaController : MonoBehaviour
             indiceAtaque = Random.Range(0, ataques.Length);
         }
         animator.SetTrigger(ataques[indiceAtaque]);
+        
         UltimoAtaque = indiceAtaque;
     }
 }

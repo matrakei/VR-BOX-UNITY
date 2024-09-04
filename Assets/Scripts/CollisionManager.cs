@@ -38,50 +38,43 @@ public class CollisionManager : MonoBehaviour
             {
                 GameManager.Instance.list.Clear();
                 jeroAnimations.anim.SetTrigger("IsRightHeadHit");
-                healthbar.hp -= 10;
-                Debug.Log("Golpe de derecha");
+                healthbar.hp -= 10;;
             }
             else if (GameManager.Instance.list[0] == IZQUIERDA)
             {
                 GameManager.Instance.list.Clear();
                 jeroAnimations.anim.SetTrigger("IsLeftHeadHit");
                 healthbar.hp -= 10;
-                Debug.Log("Golpe de izquierda");
             }
             else if (GameManager.Instance.list[0] == FRENTE)
             {
                 GameManager.Instance.list.Clear();
                 jeroAnimations.anim.SetTrigger("IsFrontHeadHit");
                 healthbar.hp -= 7;
-                Debug.Log("Golpe de frente");
             }
             else if (GameManager.Instance.list[0] == DERECHAABAJO)
             {
                 GameManager.Instance.list.Clear();
                 jeroAnimations.anim.SetTrigger("IsTorsoRightHit");
                 healthbar.hp -= 15;
-                Debug.Log("Golpe de derecha abajo");
             }
             else if (GameManager.Instance.list[0] == IZQUIERDAABAJO)
             {
                 GameManager.Instance.list.Clear();
                 jeroAnimations.anim.SetTrigger("IsTorsoLeftHit");
                 healthbar.hp -= 15;
-                Debug.Log("Golpe de izquierda abajo");
             }
             else if (GameManager.Instance.list[0] == BRAZODERECHO)
             {
                 GameManager.Instance.list.Clear();
                 //jeroAnimations.anim.SetTrigger("IsRightArmHit");
                 healthbar.hp -= 2;
-                Debug.Log("Golpe de brazo derecho");
             }
             else if (GameManager.Instance.list[0] == BRAZOIZQUIERDO)
             {
                 GameManager.Instance.list.Clear();
                 //jeroAnimations.anim.SetTrigger("IsLeftArmHit");
                 healthbar.hp -= 2;
-                Debug.Log("Golpe de brazo izquierdo");
             }
         }
     }
@@ -127,7 +120,6 @@ public class CollisionManager : MonoBehaviour
     {
         if (gameObject.name == "Exit HitBox")
         {
-            Debug.Log("Exit HitBox");
             IZQUIERDA.layer = 8;
             DERECHA.layer = 8;
             FRENTE.layer = 8;

@@ -3153,7 +3153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthbar: {fileID: 602426675}
   DERECHA: {fileID: 427543468}
-  IZQUIERDA: {fileID: 427543468}
+  IZQUIERDA: {fileID: 770635143}
   FRENTE: {fileID: 1802783465}
   IZQUIERDAABAJO: {fileID: 1944778436}
   DERECHAABAJO: {fileID: 981516415}
