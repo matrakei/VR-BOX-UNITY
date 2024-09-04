@@ -126,7 +126,10 @@ public class CollisionManager : MonoBehaviour
     {
         if (GameManager.Instance.golpeRecibido)
         {
-            GameManager.Instance.golpeRecibido = false;  // Resetear el estado después de detectar el golpe
+            if (GameManager.Instance.IsFinished == true)
+            {
+                GameManager.Instance.golpeRecibido = false;  // Resetear el estado después de detectar el golpe
+            }
             return true;
         }
         return false;

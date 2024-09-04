@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public bool golpeRecibido = false;
     public static GameManager Instance;
     public List<GameObject> list = new List<GameObject>();
+    public bool IsFinished = false;
 
     // Start is called before the first frame update
     void Awake()

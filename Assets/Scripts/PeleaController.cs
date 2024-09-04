@@ -36,7 +36,11 @@ public class PeleaController : MonoBehaviour
                 // Verificar si Jero ha recibido un golpe
                 if (collisionManager.HaRecibidoGolpe())
                 {
-                    esperandoRespuesta = false;
+                    if (GameManager.Instance.IsFinished == true)
+                    {
+                        esperandoRespuesta = false;
+                        GameManager.Instance.IsFinished = false;
+                    }
                 }
                 else
                 {
