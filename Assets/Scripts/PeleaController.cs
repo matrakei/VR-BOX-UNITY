@@ -11,7 +11,9 @@ public class PeleaController : MonoBehaviour
     int UltimoAtaque;
 
 
-    private string[] ataques = { "JabIzquierdo", "JabDerecho", "GanchoIzquierdo", "GanchoDerecho", "GolpeBajoIzquierdo", "GolpeBajoDerecho" };
+    private string[] ataques = { "GolpeFrente", "GolpeTorsoIzquierdo", "GolpeTorsoDerecho", "GolpeIzquierdo", "GolpeDerecho" };
+    //FALTA ATAQUE GOLPE FRENTE 2 (DE DERECHA O IZQUIERDA)
+    //FALTA ATAQUE GOLPE DERECHA
     private string[] defensas = { "CubrirIzquierda", "CubrirDerecha", "CubrirFrente", "CubrirTorsoIzquierdo", "CubrirTorsoDerecho" };
 
     private bool esperandoRespuesta = false;

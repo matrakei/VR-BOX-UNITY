@@ -64,7 +64,7 @@ public class CollisionManager : MonoBehaviour
             else if (GameManager.Instance.list[0] == IZQUIERDAABAJO)
             {
                 GameManager.Instance.list.Clear();
-                //jeroAnimations.anim.SetTrigger("IsTorsoLeftHit");
+                jeroAnimations.anim.SetTrigger("IsTorsoLeftHit");
                 healthbar.hp -= 15;
                 Debug.Log("Golpe de izquierda abajo");
             }
