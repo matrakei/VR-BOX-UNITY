@@ -28,4 +28,17 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+
+    public bool HaRecibidoGolpe()
+    {
+        if (golpeRecibido)
+        {
+            if (IsFinished == true)
+            {
+                golpeRecibido = false;  // Resetear el estado después de detectar el golpe
+            }
+            return true;
+        }
+        return false;
+    }
 }

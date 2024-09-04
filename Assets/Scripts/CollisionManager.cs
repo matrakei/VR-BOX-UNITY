@@ -6,6 +6,7 @@ using System;
 
 public class CollisionManager : MonoBehaviour
 {
+
     public JeroAnimations jeroAnimations;
     public GameObject DERECHA;
     public GameObject IZQUIERDA;
@@ -121,18 +122,6 @@ public class CollisionManager : MonoBehaviour
             GameManager.Instance.list.Add(BRAZOIZQUIERDO);
             GameManager.Instance.golpeRecibido = true;
         }
-    }
-    public bool HaRecibidoGolpe()
-    {
-        if (GameManager.Instance.golpeRecibido)
-        {
-            if (GameManager.Instance.IsFinished == true)
-            {
-                GameManager.Instance.golpeRecibido = false;  // Resetear el estado después de detectar el golpe
-            }
-            return true;
-        }
-        return false;
     }
     private void OnTriggerExit()
     {
