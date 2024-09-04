@@ -31,6 +31,7 @@ public class HealthBarScript : MonoBehaviour
                 healthbar.value = 0;
                 texthp.text = "0";
                 bar.SetActive(false);
+                personaje.SetActive(false);
             }
             else
             {
