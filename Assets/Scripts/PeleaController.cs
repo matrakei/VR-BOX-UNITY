@@ -69,4 +69,9 @@ public class PeleaController : MonoBehaviour
         
         UltimoAtaque = indiceAtaque;
     }
+
+    void IsAttacking()
+    {
+
+    }
 }

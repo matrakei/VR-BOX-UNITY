@@ -13,8 +13,6 @@ public class CollisionManager : MonoBehaviour
     public GameObject FRENTE;
     public GameObject IZQUIERDAABAJO;
     public GameObject DERECHAABAJO;
-    public GameObject BRAZODERECHO;
-    public GameObject BRAZOIZQUIERDO;
     public HealthBarScript healthbar;
 
 
@@ -25,8 +23,6 @@ public class CollisionManager : MonoBehaviour
         FRENTE.layer = 6;
         DERECHAABAJO.layer = 6;
         IZQUIERDAABAJO.layer = 6;
-        BRAZODERECHO.layer = 6;
-        BRAZOIZQUIERDO.layer = 6;
     }
 
     private void Update()
@@ -64,18 +60,6 @@ public class CollisionManager : MonoBehaviour
                 jeroAnimations.anim.SetTrigger("IsTorsoLeftHit");
                 healthbar.hp -= 15;
             }
-            else if (GameManager.Instance.list[0] == BRAZODERECHO)
-            {
-                GameManager.Instance.list.Clear();
-                //jeroAnimations.anim.SetTrigger("IsRightArmHit");
-                healthbar.hp -= 2;
-            }
-            else if (GameManager.Instance.list[0] == BRAZOIZQUIERDO)
-            {
-                GameManager.Instance.list.Clear();
-                //jeroAnimations.anim.SetTrigger("IsLeftArmHit");
-                healthbar.hp -= 2;
-            }
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -105,28 +89,12 @@ public class CollisionManager : MonoBehaviour
             GameManager.Instance.list.Add(DERECHAABAJO);
             GameManager.Instance.golpeRecibido = true;
         }
-        else if (gameObject.name == "BRAZO DERECHO")
-        {
-            GameManager.Instance.list.Add(BRAZODERECHO);
-            GameManager.Instance.golpeRecibido = true;
-        }
-        else if (gameObject.name == "BRAZO IZQUIERDO")
-        {
-            GameManager.Instance.list.Add(BRAZOIZQUIERDO);
-            GameManager.Instance.golpeRecibido = true;
-        }
     }
     private void OnTriggerExit()
     {
         if (gameObject.name == "Exit HitBox")
         {
-            IZQUIERDA.layer = 8;
-            DERECHA.layer = 8;
-            FRENTE.layer = 8;
-            DERECHAABAJO.layer = 8;
-            IZQUIERDAABAJO.layer = 8;
-            BRAZODERECHO.layer = 8;
-            BRAZOIZQUIERDO.layer = 8;
+            ActivateAll();
         }
     }
 
@@ -137,7 +105,5 @@ public class CollisionManager : MonoBehaviour
         FRENTE.layer = 8;
         DERECHAABAJO.layer = 8;
         IZQUIERDAABAJO.layer = 8;
-        BRAZODERECHO.layer = 8;
-        BRAZOIZQUIERDO.layer = 8;
     }
 }
