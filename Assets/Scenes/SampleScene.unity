@@ -145,8 +145,6 @@ MonoBehaviour:
   FRENTE: {fileID: 2029299539}
   IZQUIERDAABAJO: {fileID: 1149746542}
   DERECHAABAJO: {fileID: 217599898}
-  BRAZODERECHO: {fileID: 603533900}
-  BRAZOIZQUIERDO: {fileID: 1372147944}
   healthbar: {fileID: 723615111}
 --- !u!1 &139332582 stripped
 GameObject:
@@ -640,11 +638,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &603533900 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9008331215118052700, guid: 12ae85cae353df740893e191946ece99, type: 3}
-  m_PrefabInstance: {fileID: 2026927359}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1689,8 +1682,6 @@ MonoBehaviour:
   FRENTE: {fileID: 2029299539}
   IZQUIERDAABAJO: {fileID: 1149746542}
   DERECHAABAJO: {fileID: 217599898}
-  BRAZODERECHO: {fileID: 603533900}
-  BRAZOIZQUIERDO: {fileID: 1372147944}
   healthbar: {fileID: 723615111}
 --- !u!1 &881571142
 GameObject:
@@ -3683,15 +3674,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3936999995852359684, guid: 12ae85cae353df740893e191946ece99, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.8311231
+      value: 0.3494474
       objectReference: {fileID: 0}
     - target: {fileID: 3936999995852359684, guid: 12ae85cae353df740893e191946ece99, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3936999995852359684, guid: 12ae85cae353df740893e191946ece99, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.059
+      value: -0.0142
       objectReference: {fileID: 0}
     - target: {fileID: 4046177966525407894, guid: 12ae85cae353df740893e191946ece99, type: 3}
       propertyPath: healthbar
@@ -4034,8 +4025,6 @@ MonoBehaviour:
   FRENTE: {fileID: 2029299539}
   IZQUIERDAABAJO: {fileID: 1149746542}
   DERECHAABAJO: {fileID: 217599898}
-  BRAZODERECHO: {fileID: 603533900}
-  BRAZOIZQUIERDO: {fileID: 1372147944}
   healthbar: {fileID: 723615111}
 --- !u!1001 &292662666104885415
 PrefabInstance:
