@@ -7,7 +7,7 @@ public class PeleaController : MonoBehaviour
 {
     public Animator animator;    
     // Falta comunicarse on el CollisionManager para saber si Jero ha recibido un golpe
-    public float tiempoEspera = 2.0f;
+    public float tiempoEspera = 5.0f;
     int UltimoAtaque;
 
 
@@ -34,11 +34,10 @@ public class PeleaController : MonoBehaviour
             }
             else
             {
-                Debug.Log("1");
+                
                 // Verificar si Jero ha recibido un golpe
                 if (GameManager.Instance.HaRecibidoGolpe() == true)
                 {
-                    Debug.Log("Animacion: " + GameManager.Instance.IsFinished);
                     if (GameManager.Instance.IsFinished == true)
                     {
                         esperandoRespuesta = false;

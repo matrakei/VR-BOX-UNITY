@@ -3689,6 +3689,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemigo
       objectReference: {fileID: 0}
+    - target: {fileID: 1616675396281225143, guid: 12ae85cae353df740893e191946ece99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1767656943926426898, guid: 12ae85cae353df740893e191946ece99, type: 3}
       propertyPath: m_Name
       value: "PU\xD1O IZQUIERDO DEFENSA"
@@ -3708,6 +3712,10 @@ PrefabInstance:
     - target: {fileID: 2384095785368408386, guid: 12ae85cae353df740893e191946ece99, type: 3}
       propertyPath: m_TagString
       value: Enemigo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384095785368408386, guid: 12ae85cae353df740893e191946ece99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2441345342656317666, guid: 12ae85cae353df740893e191946ece99, type: 3}
       propertyPath: healthbar
@@ -3729,13 +3737,21 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemigo
       objectReference: {fileID: 0}
+    - target: {fileID: 3399245223463711890, guid: 12ae85cae353df740893e191946ece99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3936999995852359684, guid: 12ae85cae353df740893e191946ece99, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6179272
+      objectReference: {fileID: 0}
     - target: {fileID: 3936999995852359684, guid: 12ae85cae353df740893e191946ece99, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.3494474
       objectReference: {fileID: 0}
     - target: {fileID: 3936999995852359684, guid: 12ae85cae353df740893e191946ece99, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0.028
       objectReference: {fileID: 0}
     - target: {fileID: 3936999995852359684, guid: 12ae85cae353df740893e191946ece99, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3761,9 +3777,17 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemigo
       objectReference: {fileID: 0}
+    - target: {fileID: 5644257002789526588, guid: 12ae85cae353df740893e191946ece99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6187708209588784855, guid: 12ae85cae353df740893e191946ece99, type: 3}
       propertyPath: m_TagString
       value: Enemigo
+      objectReference: {fileID: 0}
+    - target: {fileID: 6187708209588784855, guid: 12ae85cae353df740893e191946ece99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6258175653504523678, guid: 12ae85cae353df740893e191946ece99, type: 3}
       propertyPath: m_LocalScale.y
@@ -3868,6 +3892,10 @@ PrefabInstance:
     - target: {fileID: 9061101069477457598, guid: 12ae85cae353df740893e191946ece99, type: 3}
       propertyPath: m_TagString
       value: Enemigo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061101069477457598, guid: 12ae85cae353df740893e191946ece99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
