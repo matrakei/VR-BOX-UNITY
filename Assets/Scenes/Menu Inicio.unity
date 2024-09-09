@@ -942,7 +942,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5922dca6e98d67d458b00755faadeb07, type: 2}
+  - {fileID: 2100000, guid: dddd3f99199afa04497ac5a34e9aa334, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1047,7 +1047,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 21c32ca2a6683944f96155c88569f94c, type: 3}
 --- !u!4 &567227840 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 5782279121062868673, guid: 21c32ca2a6683944f96155c88569f94c, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5614470029495742649, guid: 21c32ca2a6683944f96155c88569f94c, type: 3}
   m_PrefabInstance: {fileID: 567227839}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &710895321
@@ -1907,6 +1907,7 @@ MonoBehaviour:
   golpeRecibido: 0
   list: []
   IsFinished: 0
+  IsFinished2: 0
 --- !u!4 &1458264538
 Transform:
   m_ObjectHideFlags: 0
@@ -2160,7 +2161,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 9905095255644254e80a9242981128d0, type: 3}
 --- !u!4 &1840113227 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 796616662745913714, guid: 9905095255644254e80a9242981128d0, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8213612683185885656, guid: 9905095255644254e80a9242981128d0, type: 3}
   m_PrefabInstance: {fileID: 1840113226}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
