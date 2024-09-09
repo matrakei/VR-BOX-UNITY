@@ -12,6 +12,7 @@ TagManager:
   - DERECHA
   - IZQUIERDA
   - FRENTE
+  - Guante
   layers:
   - Default
   - TransparentFX

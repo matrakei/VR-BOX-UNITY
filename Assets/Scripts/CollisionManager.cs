@@ -64,30 +64,33 @@ public class CollisionManager : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (gameObject.name == "DERECHA")
+        if (other.gameObject.tag == "Guante")
         {
-            GameManager.Instance.list.Add(DERECHA);
-            GameManager.Instance.golpeRecibido = true;
-        }
-        else if (gameObject.name == "IZQUIERDA")
-        {
-            GameManager.Instance.list.Add(IZQUIERDA);
-            GameManager.Instance.golpeRecibido = true;
-        }
-        else if (gameObject.name == "FRENTE")
-        {
-            GameManager.Instance.list.Add(FRENTE);
-            GameManager.Instance.golpeRecibido = true;
-        }
-        else if (gameObject.name == "IZQUIERDA ABAJO")
-        {
-            GameManager.Instance.list.Add(IZQUIERDAABAJO);
-            GameManager.Instance.golpeRecibido = true;
-        }
-        else if (gameObject.name == "DERECHA ABAJO")
-        {
-            GameManager.Instance.list.Add(DERECHAABAJO);
-            GameManager.Instance.golpeRecibido = true;
+            if (gameObject.name == "DERECHA")
+            {
+                GameManager.Instance.list.Add(DERECHA);
+                GameManager.Instance.golpeRecibido = true;
+            }
+            else if (gameObject.name == "IZQUIERDA")
+            {
+                GameManager.Instance.list.Add(IZQUIERDA);
+                GameManager.Instance.golpeRecibido = true;
+            }
+            else if (gameObject.name == "FRENTE")
+            {
+                GameManager.Instance.list.Add(FRENTE);
+                GameManager.Instance.golpeRecibido = true;
+            }
+            else if (gameObject.name == "IZQUIERDA ABAJO")
+            {
+                GameManager.Instance.list.Add(IZQUIERDAABAJO);
+                GameManager.Instance.golpeRecibido = true;
+            }
+            else if (gameObject.name == "DERECHA ABAJO")
+            {
+                GameManager.Instance.list.Add(DERECHAABAJO);
+                GameManager.Instance.golpeRecibido = true;
+            }
         }
     }
     private void OnTriggerExit()
