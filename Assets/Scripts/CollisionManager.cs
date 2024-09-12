@@ -6,7 +6,7 @@ using System;
 
 public class CollisionManager : MonoBehaviour
 {
-
+    public float MinVelocity = 0.1f;
     public JeroAnimations jeroAnimations;
     public GameObject DERECHA;
     public GameObject IZQUIERDA;
@@ -16,6 +16,10 @@ public class CollisionManager : MonoBehaviour
     public HealthBarScript healthbar;
 
 
+    private void Start()
+    {
+
+    }
     private void DeactivateAll()
     {
         IZQUIERDA.layer = 6;
@@ -27,6 +31,12 @@ public class CollisionManager : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Instance.stuned == true)
+        {
+            FRENTE.layer = 6;
+            DERECHA.layer = 6;
+            IZQUIERDA.layer = 6;
+        }
         if (GameManager.Instance.list.Count > 0)
         {
             DeactivateAll();
@@ -34,7 +44,7 @@ public class CollisionManager : MonoBehaviour
             {
                 GameManager.Instance.list.Clear();
                 jeroAnimations.anim.SetTrigger("IsRightHeadHit");
-                healthbar.hp -= 10;;
+                healthbar.hp -= 10; ;
             }
             else if (GameManager.Instance.list[0] == IZQUIERDA)
             {
@@ -64,6 +74,12 @@ public class CollisionManager : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        if (GameManager.Instance.stuned == false)
+        {
+            FRENTE.layer = 8;
+            DERECHA.layer = 8;
+            IZQUIERDA.layer = 8;
+        }
         if (other.gameObject.tag == "Guante")
         {
             if (gameObject.name == "DERECHA")
@@ -91,6 +107,7 @@ public class CollisionManager : MonoBehaviour
                 GameManager.Instance.list.Add(DERECHAABAJO);
                 GameManager.Instance.golpeRecibido = true;
             }
+
         }
     }
     private void OnTriggerExit()

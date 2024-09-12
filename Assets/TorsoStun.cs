@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimationBehaviour : StateMachineBehaviour
+public class TorsoStun : StateMachineBehaviour
 {
-    // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
+    public GameObject frente;
+    public GameObject derecha;
+    public GameObject izquierda;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        GameManager.Instance.IsFinished = false;
+        GameManager.Instance.stuned = true;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -15,10 +17,9 @@ public class AnimationBehaviour : StateMachineBehaviour
     //{
     //    
     //}
-
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        GameManager.Instance.IsFinished = true;
+        GameManager.Instance.stuned = false;
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

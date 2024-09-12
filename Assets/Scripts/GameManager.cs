@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> list = new List<GameObject>();
     public bool IsFinished = false;
     public bool IsFinished2 = false;
+    public bool stuned = false;
 
     // Start is called before the first frame update
     void Awake()
