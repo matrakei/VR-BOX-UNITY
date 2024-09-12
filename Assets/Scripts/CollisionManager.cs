@@ -14,12 +14,11 @@ public class CollisionManager : MonoBehaviour
     public GameObject IZQUIERDAABAJO;
     public GameObject DERECHAABAJO;
     public HealthBarScript healthbar;
+    public float VelocityX;
+    public float VelocityY;
+    public float VelocityZ;
+    public float velocitymagnitude;
 
-
-    private void Start()
-    {
-
-    }
     private void DeactivateAll()
     {
         IZQUIERDA.layer = 6;
@@ -44,7 +43,7 @@ public class CollisionManager : MonoBehaviour
             {
                 GameManager.Instance.list.Clear();
                 jeroAnimations.anim.SetTrigger("IsRightHeadHit");
-                healthbar.hp -= 10; ;
+                healthbar.hp -= 10;
             }
             else if (GameManager.Instance.list[0] == IZQUIERDA)
             {
@@ -70,6 +69,7 @@ public class CollisionManager : MonoBehaviour
                 jeroAnimations.anim.SetTrigger("IsTorsoLeftHit");
                 healthbar.hp -= 15;
             }
+            SoundManager.Instance.BasicPunchSFX();
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -82,32 +82,34 @@ public class CollisionManager : MonoBehaviour
         }
         if (other.gameObject.tag == "Guante")
         {
-            if (gameObject.name == "DERECHA")
-            {
-                GameManager.Instance.list.Add(DERECHA);
-                GameManager.Instance.golpeRecibido = true;
-            }
-            else if (gameObject.name == "IZQUIERDA")
-            {
-                GameManager.Instance.list.Add(IZQUIERDA);
-                GameManager.Instance.golpeRecibido = true;
-            }
-            else if (gameObject.name == "FRENTE")
-            {
-                GameManager.Instance.list.Add(FRENTE);
-                GameManager.Instance.golpeRecibido = true;
-            }
-            else if (gameObject.name == "IZQUIERDA ABAJO")
-            {
-                GameManager.Instance.list.Add(IZQUIERDAABAJO);
-                GameManager.Instance.golpeRecibido = true;
-            }
-            else if (gameObject.name == "DERECHA ABAJO")
-            {
-                GameManager.Instance.list.Add(DERECHAABAJO);
-                GameManager.Instance.golpeRecibido = true;
-            }
-
+            //if (PuñoController.EsGolpeValido())
+            //{
+                if (gameObject.name == "DERECHA")
+                {
+                    GameManager.Instance.list.Add(DERECHA);
+                    GameManager.Instance.golpeRecibido = true;
+                }
+                else if (gameObject.name == "IZQUIERDA")
+                {
+                    GameManager.Instance.list.Add(IZQUIERDA);
+                    GameManager.Instance.golpeRecibido = true;
+                }
+                else if (gameObject.name == "FRENTE")
+                {
+                    GameManager.Instance.list.Add(FRENTE);
+                    GameManager.Instance.golpeRecibido = true;
+                }
+                else if (gameObject.name == "IZQUIERDA ABAJO")
+                {
+                    GameManager.Instance.list.Add(IZQUIERDAABAJO);
+                    GameManager.Instance.golpeRecibido = true;
+                }
+                else if (gameObject.name == "DERECHA ABAJO")
+                {
+                    GameManager.Instance.list.Add(DERECHAABAJO);
+                    GameManager.Instance.golpeRecibido = true;
+                }
+            //}
         }
     }
     private void OnTriggerExit()

@@ -8,6 +8,7 @@ public class SoundManager : MonoBehaviour
     public static SoundManager Instance;
     public AudioSource Audios;
     public AudioSource SFX;
+    public AudioClip BasicPunch;
 
     // Start is called before the first frame update
     void Awake()
@@ -33,5 +34,9 @@ public class SoundManager : MonoBehaviour
     private void PlaySound(AudioClip clip)
     {
         SFX.PlayOneShot(clip);
+    }
+    public void BasicPunchSFX()
+    {
+        SFX.PlayOneShot(BasicPunch);
     }
 }
