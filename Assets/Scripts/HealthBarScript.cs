@@ -25,12 +25,12 @@ public class HealthBarScript : MonoBehaviour
     {
         if (healthbar.value != hp)
         {
-            Debug.Log(healthbar.value);
             if (hp <= 0)
             {
                 healthbar.value = 0;
                 texthp.text = "0";
                 bar.SetActive(false);
+                personaje.SetActive(false);
             }
             else
             {

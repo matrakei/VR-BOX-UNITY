@@ -27,7 +27,6 @@ public class PlayerScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Colision");
 
         if (gameObject.name == "DERECHA")
         {

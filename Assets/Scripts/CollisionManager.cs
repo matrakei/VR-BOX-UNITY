@@ -6,7 +6,6 @@ using System;
 
 public class CollisionManager : MonoBehaviour
 {
-    public float MinVelocity = 0.1f;
     public JeroAnimations jeroAnimations;
     public GameObject DERECHA;
     public GameObject IZQUIERDA;
@@ -14,10 +13,6 @@ public class CollisionManager : MonoBehaviour
     public GameObject IZQUIERDAABAJO;
     public GameObject DERECHAABAJO;
     public HealthBarScript healthbar;
-    public float VelocityX;
-    public float VelocityY;
-    public float VelocityZ;
-    public float velocitymagnitude;
 
     private void DeactivateAll()
     {
@@ -26,6 +21,7 @@ public class CollisionManager : MonoBehaviour
         FRENTE.layer = 6;
         DERECHAABAJO.layer = 6;
         IZQUIERDAABAJO.layer = 6;
+        Debug.Log("DESACTIVADOS");
     }
 
     private void Update()
@@ -74,16 +70,16 @@ public class CollisionManager : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (GameManager.Instance.stuned == false)
+        if (gameObject.name != "Exit HitBox")
         {
-            FRENTE.layer = 8;
-            DERECHA.layer = 8;
-            IZQUIERDA.layer = 8;
-        }
-        if (other.gameObject.tag == "Guante")
-        {
-            //if (PuñoController.EsGolpeValido())
-            //{
+            if (GameManager.Instance.stuned == false)
+            {
+                FRENTE.layer = 8;
+                DERECHA.layer = 8;
+                IZQUIERDA.layer = 8;
+            }
+            if (other.gameObject.tag == "Guante")
+            {
                 if (gameObject.name == "DERECHA")
                 {
                     GameManager.Instance.list.Add(DERECHA);
@@ -109,7 +105,7 @@ public class CollisionManager : MonoBehaviour
                     GameManager.Instance.list.Add(DERECHAABAJO);
                     GameManager.Instance.golpeRecibido = true;
                 }
-            //}
+            }
         }
     }
     private void OnTriggerExit()
@@ -127,5 +123,6 @@ public class CollisionManager : MonoBehaviour
         FRENTE.layer = 8;
         DERECHAABAJO.layer = 8;
         IZQUIERDAABAJO.layer = 8;
+        Debug.Log("ACTIVADOS");
     }
 }
