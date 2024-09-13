@@ -13,7 +13,8 @@ public class CollisionManager : MonoBehaviour
     public GameObject IZQUIERDAABAJO;
     public GameObject DERECHAABAJO;
     public HealthBarScript healthbar;
-
+    public ParticleSystem DERECHAParticles;
+    public ParticleSystem IZQUIERDAParticles;
     private void DeactivateAll()
     {
         IZQUIERDA.layer = 6;
@@ -39,12 +40,14 @@ public class CollisionManager : MonoBehaviour
             {
                 GameManager.Instance.list.Clear();
                 jeroAnimations.anim.SetTrigger("IsRightHeadHit");
+                DERECHAParticles.Play();
                 healthbar.hp -= 10;
             }
             else if (GameManager.Instance.list[0] == IZQUIERDA)
             {
                 GameManager.Instance.list.Clear();
                 jeroAnimations.anim.SetTrigger("IsLeftHeadHit");
+                IZQUIERDAParticles.Play();
                 healthbar.hp -= 10;
             }
             else if (GameManager.Instance.list[0] == FRENTE)
@@ -80,6 +83,8 @@ public class CollisionManager : MonoBehaviour
             }
             if (other.gameObject.tag == "Guante")
             {
+                Debug.Log(gameObject.name);
+                Debug.Log(gameObject.layer);
                 if (gameObject.name == "DERECHA")
                 {
                     GameManager.Instance.list.Add(DERECHA);
@@ -124,5 +129,6 @@ public class CollisionManager : MonoBehaviour
         DERECHAABAJO.layer = 8;
         IZQUIERDAABAJO.layer = 8;
         Debug.Log("ACTIVADOS");
+        
     }
 }
