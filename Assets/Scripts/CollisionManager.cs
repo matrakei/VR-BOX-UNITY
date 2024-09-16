@@ -6,15 +6,25 @@ using System;
 
 public class CollisionManager : MonoBehaviour
 {
-    public JeroAnimations jeroAnimations;
-    public GameObject DERECHA;
-    public GameObject IZQUIERDA;
-    public GameObject FRENTE;
-    public GameObject IZQUIERDAABAJO;
-    public GameObject DERECHAABAJO;
-    public HealthBarScript healthbar;
-    public ParticleSystem DERECHAParticles;
-    public ParticleSystem IZQUIERDAParticles;
+    JeroAnimations jeroAnimations;
+    GameObject DERECHA;
+    GameObject IZQUIERDA;
+    GameObject FRENTE;
+    GameObject IZQUIERDAABAJO;
+    GameObject DERECHAABAJO;
+    HealthBarScript healthbar;
+
+
+    private void Awake()
+    {
+        DERECHA = GameObject.Find("DERECHA");
+        IZQUIERDA = GameObject.Find("IZQUIERDA");
+        FRENTE = GameObject.Find("FRENTE");
+        IZQUIERDAABAJO = GameObject.Find("IZQUIERDA ABAJO");
+        DERECHAABAJO = GameObject.Find("DERECHA ABAJO");
+        jeroAnimations = GameObject.Find("Jero").GetComponent<JeroAnimations>();
+        healthbar = GameObject.Find("HealthBar").GetComponent<HealthBarScript>();
+    }
     private void DeactivateAll()
     {
         IZQUIERDA.layer = 6;
@@ -40,14 +50,12 @@ public class CollisionManager : MonoBehaviour
             {
                 GameManager.Instance.list.Clear();
                 jeroAnimations.anim.SetTrigger("IsRightHeadHit");
-                DERECHAParticles.Play();
                 healthbar.hp -= 10;
             }
             else if (GameManager.Instance.list[0] == IZQUIERDA)
             {
                 GameManager.Instance.list.Clear();
                 jeroAnimations.anim.SetTrigger("IsLeftHeadHit");
-                IZQUIERDAParticles.Play();
                 healthbar.hp -= 10;
             }
             else if (GameManager.Instance.list[0] == FRENTE)
