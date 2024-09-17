@@ -17,6 +17,7 @@ public class HealthBarScript : MonoBehaviour
     void Start()
     {
         hp = maxhp;
+        healthbar.value = maxhp;
         texthp.text = maxhp.ToString();
     }
 
@@ -25,6 +26,7 @@ public class HealthBarScript : MonoBehaviour
     {
         if (healthbar.value != hp)
         {
+            Debug.Log("HP CAMBIO");
             if (hp <= 0)
             {
                 healthbar.value = 0;

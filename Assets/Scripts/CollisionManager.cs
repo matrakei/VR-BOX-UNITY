@@ -24,6 +24,10 @@ public class CollisionManager : MonoBehaviour
         DERECHAABAJO = GameObject.Find("DERECHA ABAJO");
         jeroAnimations = GameObject.Find("Jero").GetComponent<JeroAnimations>();
         healthbar = GameObject.Find("HealthBar").GetComponent<HealthBarScript>();
+        if (healthbar == null)
+        {
+            Debug.LogError("HealthBarScript no encontrado");
+        }
     }
     private void DeactivateAll()
     {
@@ -76,6 +80,7 @@ public class CollisionManager : MonoBehaviour
                 jeroAnimations.anim.SetTrigger("IsTorsoLeftHit");
                 healthbar.hp -= 15;
             }
+            Debug.Log(healthbar.hp);
             SoundManager.Instance.BasicPunchSFX();
         }
     }
