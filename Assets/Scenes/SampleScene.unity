@@ -328,6 +328,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 999cf529ebd767c4c8dfaf3e55436a66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sweatParticlesPrefab: {fileID: 3952021587056005103, guid: 16682afc1392d4b4ea31d23e824362e3, type: 3}
+  particleLifetime: 2
 --- !u!64 &205273431
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -508,6 +510,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 999cf529ebd767c4c8dfaf3e55436a66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sweatParticlesPrefab: {fileID: 3952021587056005103, guid: 16682afc1392d4b4ea31d23e824362e3, type: 3}
+  particleLifetime: 2
 --- !u!64 &276717950
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -812,6 +816,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 999cf529ebd767c4c8dfaf3e55436a66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sweatParticlesPrefab: {fileID: 0}
+  particleLifetime: 2
 --- !u!65 &450643152
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2941,6 +2947,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 999cf529ebd767c4c8dfaf3e55436a66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sweatParticlesPrefab: {fileID: 3952021587056005103, guid: 16682afc1392d4b4ea31d23e824362e3, type: 3}
+  particleLifetime: 2
 --- !u!64 &987684027
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3560,6 +3568,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 999cf529ebd767c4c8dfaf3e55436a66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sweatParticlesPrefab: {fileID: 3952021587056005103, guid: 16682afc1392d4b4ea31d23e824362e3, type: 3}
+  particleLifetime: 2
 --- !u!1 &1498994263
 GameObject:
   m_ObjectHideFlags: 0
@@ -3850,6 +3860,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 999cf529ebd767c4c8dfaf3e55436a66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sweatParticlesPrefab: {fileID: 3952021587056005103, guid: 16682afc1392d4b4ea31d23e824362e3, type: 3}
+  particleLifetime: 2
 --- !u!64 &1683230221
 MeshCollider:
   m_ObjectHideFlags: 0
