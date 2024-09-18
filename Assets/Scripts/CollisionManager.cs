@@ -14,7 +14,7 @@ public class CollisionManager : MonoBehaviour
     GameObject DERECHAABAJO;
     HealthBarScript healthbar;
     public GameObject sweatParticlesPrefab;  // Prefab de las partículas de sudor
-    public float particleLifetime = 2.0f;
+    public float particleLifetime = 1.0f;
 
 
     private void Awake()
@@ -127,8 +127,11 @@ public class CollisionManager : MonoBehaviour
                 // Obtener el punto de contacto aproximado usando la posición del otro objeto (puño)
                 Vector3 contactPoint = other.ClosestPoint(transform.position);
 
+                // Obtener la dirección del golpe (desde el puño hacia el punto de contacto)
+                Vector3 hitDirection = (contactPoint - other.transform.position).normalized;
+
                 // Instanciar las partículas en el punto de contacto
-                GameObject particles = Instantiate(sweatParticlesPrefab, contactPoint, Quaternion.identity);
+                GameObject particles = Instantiate(sweatParticlesPrefab, contactPoint, Quaternion.LookRotation(hitDirection));
 
                 // Destruir las partículas después de un tiempo
                 Destroy(particles, particleLifetime);
