@@ -10,7 +10,7 @@ public class BotonesScript : MonoBehaviour
     {
         if (gameObject.name == "Boton Jugar")
         {
-            GameManager.Instance.ChangeScene("SampleScene");
+            GameManager.Instance.ChangeScene("Level");
             SoundManager.Instance.PlayMusic(CROWD);
         }
     }
