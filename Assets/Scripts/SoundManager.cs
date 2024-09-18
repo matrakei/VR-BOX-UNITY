@@ -12,6 +12,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource OTHERSFX;
     public AudioClip[] Kicks;
     public AudioClip gameMusic;
+    public AudioClip menuMusic;
     int random;
 
     // Start is called before the first frame update
@@ -29,6 +30,10 @@ public class SoundManager : MonoBehaviour
         if (Audios.clip != gameMusic && SceneManager.GetActiveScene().name == "SampleScene")
         {
             Audios.clip = gameMusic;
+        }
+        else if (Audios.clip != menuMusic && SceneManager.GetActiveScene().name == "Menu Inicio")
+        {
+            Audios.clip = menuMusic;
         }
     }
 

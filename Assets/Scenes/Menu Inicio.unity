@@ -993,15 +993,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: f46116987c3e2ab45907cd39f5b34e97, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f46116987c3e2ab45907cd39f5b34e97, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.15
+      value: 1.819
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f46116987c3e2ab45907cd39f5b34e97, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.566
+      value: 0.591
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f46116987c3e2ab45907cd39f5b34e97, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1013,11 +1013,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f46116987c3e2ab45907cd39f5b34e97, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f46116987c3e2ab45907cd39f5b34e97, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f46116987c3e2ab45907cd39f5b34e97, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2036,6 +2036,10 @@ PrefabInstance:
       value: Boton Jugar
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f46116987c3e2ab45907cd39f5b34e97, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f46116987c3e2ab45907cd39f5b34e97, type: 3}
       propertyPath: m_TagString
       value: Boton
       objectReference: {fileID: 0}
@@ -2286,6 +2290,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SOUNDMANAGER
       objectReference: {fileID: 0}
+    - target: {fileID: 8196019595932741424, guid: fb1d9e25bd152c04b8a2237e3adb3b41, type: 3}
+      propertyPath: gameMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 7a44a3ad395606a429f31e68909b6302, type: 3}
+    - target: {fileID: 8196019595932741424, guid: fb1d9e25bd152c04b8a2237e3adb3b41, type: 3}
+      propertyPath: menuMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 93af6247f9d98fd41a0f620023654e30, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
