@@ -27,6 +27,7 @@ public class HealthBarScript : MonoBehaviour
         if (healthbar.value != hp)
         {
             Debug.Log("HP CAMBIO");
+            Debug.Log(hp);
             if (hp <= 0)
             {
                 healthbar.value = 0;

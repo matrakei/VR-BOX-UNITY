@@ -80,7 +80,6 @@ public class CollisionManager : MonoBehaviour
                 jeroAnimations.anim.SetTrigger("IsTorsoLeftHit");
                 healthbar.hp -= 15;
             }
-            Debug.Log(healthbar.hp);
             SoundManager.Instance.BasicPunchSFX();
         }
     }
