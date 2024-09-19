@@ -3093,6 +3093,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1327301368060480011, guid: 2844ddebaa806244589a24955013e172, type: 3}
+      propertyPath: sweatParticlesPrefab
+      value: 
+      objectReference: {fileID: 7004854843411235408, guid: b048395fee7f8904aa4a235f12fe5075, type: 3}
     - target: {fileID: 2703536987674287807, guid: 2844ddebaa806244589a24955013e172, type: 3}
       propertyPath: m_Name
       value: Jero
@@ -3137,6 +3141,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374400841780868723, guid: 2844ddebaa806244589a24955013e172, type: 3}
+      propertyPath: sweatParticlesPrefab
+      value: 
+      objectReference: {fileID: 7004854843411235408, guid: b048395fee7f8904aa4a235f12fe5075, type: 3}
+    - target: {fileID: 5640039353881510283, guid: 2844ddebaa806244589a24955013e172, type: 3}
+      propertyPath: sweatParticlesPrefab
+      value: 
+      objectReference: {fileID: 7004854843411235408, guid: b048395fee7f8904aa4a235f12fe5075, type: 3}
+    - target: {fileID: 5734928359726683815, guid: 2844ddebaa806244589a24955013e172, type: 3}
+      propertyPath: sweatParticlesPrefab
+      value: 
+      objectReference: {fileID: 7004854843411235408, guid: b048395fee7f8904aa4a235f12fe5075, type: 3}
+    - target: {fileID: 7095933488000587041, guid: 2844ddebaa806244589a24955013e172, type: 3}
+      propertyPath: sweatParticlesPrefab
+      value: 
+      objectReference: {fileID: 7004854843411235408, guid: b048395fee7f8904aa4a235f12fe5075, type: 3}
     - target: {fileID: 9194046421264810464, guid: 2844ddebaa806244589a24955013e172, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
