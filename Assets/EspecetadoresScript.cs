@@ -1,6 +1,7 @@
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EspecetadoresScript : MonoBehaviour
 {
@@ -53,7 +54,10 @@ public class EspecetadoresScript : MonoBehaviour
     }
     IEnumerator MoveCircleConstantly()
     {
-        yield return new WaitForSeconds(10);
+        if (SceneManager.GetActiveScene().name == "Menu Inicio")
+        {
+            yield return new WaitForSeconds(10);
+        }
         initialPosition = transform.position;
         while (true)
         {

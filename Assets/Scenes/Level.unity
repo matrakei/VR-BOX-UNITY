@@ -130,55 +130,55 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3224854744613543373, guid: b7595764afa25284bbea5153b5d0df8b, type: 3}
-      propertyPath: m_Name
-      value: ESCENARIO
-      objectReference: {fileID: 0}
-    - target: {fileID: 4284957013128280245, guid: b7595764afa25284bbea5153b5d0df8b, type: 3}
+    - target: {fileID: 5917940897785179118, guid: ad7ff3612a934fe4e9c687a1bf6f7533, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4284957013128280245, guid: b7595764afa25284bbea5153b5d0df8b, type: 3}
+    - target: {fileID: 5917940897785179118, guid: ad7ff3612a934fe4e9c687a1bf6f7533, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4284957013128280245, guid: b7595764afa25284bbea5153b5d0df8b, type: 3}
+    - target: {fileID: 5917940897785179118, guid: ad7ff3612a934fe4e9c687a1bf6f7533, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4284957013128280245, guid: b7595764afa25284bbea5153b5d0df8b, type: 3}
+    - target: {fileID: 5917940897785179118, guid: ad7ff3612a934fe4e9c687a1bf6f7533, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4284957013128280245, guid: b7595764afa25284bbea5153b5d0df8b, type: 3}
+    - target: {fileID: 5917940897785179118, guid: ad7ff3612a934fe4e9c687a1bf6f7533, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4284957013128280245, guid: b7595764afa25284bbea5153b5d0df8b, type: 3}
+    - target: {fileID: 5917940897785179118, guid: ad7ff3612a934fe4e9c687a1bf6f7533, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4284957013128280245, guid: b7595764afa25284bbea5153b5d0df8b, type: 3}
+    - target: {fileID: 5917940897785179118, guid: ad7ff3612a934fe4e9c687a1bf6f7533, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4284957013128280245, guid: b7595764afa25284bbea5153b5d0df8b, type: 3}
+    - target: {fileID: 5917940897785179118, guid: ad7ff3612a934fe4e9c687a1bf6f7533, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4284957013128280245, guid: b7595764afa25284bbea5153b5d0df8b, type: 3}
+    - target: {fileID: 5917940897785179118, guid: ad7ff3612a934fe4e9c687a1bf6f7533, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4284957013128280245, guid: b7595764afa25284bbea5153b5d0df8b, type: 3}
+    - target: {fileID: 5917940897785179118, guid: ad7ff3612a934fe4e9c687a1bf6f7533, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7521032806607297403, guid: ad7ff3612a934fe4e9c687a1bf6f7533, type: 3}
+      propertyPath: m_Name
+      value: ESCENARIO
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b7595764afa25284bbea5153b5d0df8b, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: ad7ff3612a934fe4e9c687a1bf6f7533, type: 3}
 --- !u!1001 &217157850
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -190,6 +190,10 @@ PrefabInstance:
     - target: {fileID: 2969081214726950059, guid: 877222d26339de24b9efc57e4568b4de, type: 3}
       propertyPath: m_Name
       value: GAMEMANAGER
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969081214726950059, guid: 877222d26339de24b9efc57e4568b4de, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3387122075751040543, guid: 877222d26339de24b9efc57e4568b4de, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2540,7 +2544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6556414416411937919, guid: fb1d9e25bd152c04b8a2237e3adb3b41, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8196019595932741424, guid: fb1d9e25bd152c04b8a2237e3adb3b41, type: 3}
       propertyPath: gameMusic
