@@ -13,31 +13,31 @@ public class EspecetadoresScript : MonoBehaviour
     //falta modificar la lista de colores si es que hace falta
     Color[] pastelColors = new Color[]
 {
-    new Color(0.82f, 0.95f, 0.76f), // Verde claro
-    new Color(0.87f, 0.93f, 0.74f), // Lima suave
-    new Color(0.89f, 0.94f, 0.81f), // Verde menta suave
-    new Color(0.94f, 0.90f, 0.74f), // Amarillo pastel
-    new Color(0.96f, 0.94f, 0.76f), // Amarillo vainilla
-    new Color(0.94f, 0.84f, 0.77f), // Melocotón suave
-    new Color(0.95f, 0.88f, 0.79f), // Salmón suave
-    new Color(0.98f, 0.92f, 0.82f), // Naranja pastel claro
-    new Color(0.96f, 0.79f, 0.76f), // Coral suave
-    new Color(0.90f, 0.80f, 0.77f), // Rosa palo
-    new Color(0.93f, 0.79f, 0.90f), // Lila suave
-    new Color(0.94f, 0.85f, 0.92f), // Rosa pastel suave
-    new Color(0.86f, 0.82f, 0.97f), // Lavanda claro
-    new Color(0.83f, 0.85f, 0.97f), // Azul lavanda claro
-    new Color(0.76f, 0.88f, 0.97f), // Celeste pastel
-    new Color(0.77f, 0.91f, 0.93f), // Cian claro pastel
-    new Color(0.75f, 0.92f, 0.89f), // Aguamarina suave
-    new Color(0.81f, 0.92f, 0.89f), // Verde agua suave
-    new Color(0.84f, 0.93f, 0.85f), // Verde musgo suave
-    new Color(0.89f, 0.96f, 0.88f), // Verde
+        new Color(0.82f, 0.95f, 0.76f), // Verde claro
+        new Color(0.87f, 0.93f, 0.74f), // Lima suave
+        new Color(0.89f, 0.94f, 0.81f), // Verde menta suave
+        new Color(0.94f, 0.90f, 0.74f), // Amarillo pastel
+        new Color(0.96f, 0.94f, 0.76f), // Amarillo vainilla
+        new Color(0.94f, 0.84f, 0.77f), // Melocotón suave
+        new Color(0.95f, 0.88f, 0.79f), // Salmón suave
+        new Color(0.98f, 0.92f, 0.82f), // Naranja pastel claro
+        new Color(0.96f, 0.79f, 0.76f), // Coral suave
+        new Color(0.90f, 0.80f, 0.77f), // Rosa palo
+        new Color(0.93f, 0.79f, 0.90f), // Lila suave
+        new Color(0.94f, 0.85f, 0.92f), // Rosa pastel suave
+        new Color(0.86f, 0.82f, 0.97f), // Lavanda claro
+        new Color(0.83f, 0.85f, 0.97f), // Azul lavanda claro
+        new Color(0.76f, 0.88f, 0.97f), // Celeste pastel
+        new Color(0.77f, 0.91f, 0.93f), // Cian claro pastel
+        new Color(0.75f, 0.92f, 0.89f), // Aguamarina suave
+        new Color(0.81f, 0.92f, 0.89f), // Verde agua suave
+        new Color(0.84f, 0.93f, 0.85f), // Verde musgo suave
+        new Color(0.89f, 0.96f, 0.88f), // Verde
 };
     int color = 0;
 
     private Vector3 initialPosition; // Guardar la posición original del círculo
-    private void Awake()
+    private void Update()
     {
 
     }
@@ -53,13 +53,13 @@ public class EspecetadoresScript : MonoBehaviour
     }
     IEnumerator MoveCircleConstantly()
     {
-        yield return new WaitForSeconds(10.25f);
+        yield return new WaitForSeconds(10);
         initialPosition = transform.position;
         while (true)
         {
             speed = Random.Range(speedMin, speedMax); // Velocidad aleatoria
             height = Random.Range(minHeight, maxHeight); // Altura aleatoria
-            // Subir progresivamente a la altura máxima
+                                                         // Subir progresivamente a la altura máxima
             yield return StartCoroutine(MoveToPosition(new Vector3(initialPosition.x, initialPosition.y + height, initialPosition.z)));
 
             // Bajar progresivamente a la altura mínima
