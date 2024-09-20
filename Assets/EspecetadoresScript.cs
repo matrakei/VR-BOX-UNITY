@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class CircleController : MonoBehaviour
+public class EspecetadoresScript : MonoBehaviour
 {
     public float minHeight = 0.5f; // Altura mínima a la que bajará el círculo
     public float maxHeight = 2.0f; // Altura máxima a la que subirá el círculo
