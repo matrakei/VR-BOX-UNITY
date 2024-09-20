@@ -8,9 +8,16 @@ public class EscenarioScript : MonoBehaviour
     public float velocidad;
     public float duracionMovimiento;
 
+    private void Awake()
+    {
+
+    }
     void Start()
     {
-        StartCoroutine(MoverYDetenerDespuesDeTiempo(duracionMovimiento));
+        if(gameObject.tag != "Espectador")
+        {
+            StartCoroutine(MoverYDetenerDespuesDeTiempo(duracionMovimiento));
+        }
     }
 
     IEnumerator MoverYDetenerDespuesDeTiempo(float duracion)

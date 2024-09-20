@@ -49,3 +49,9 @@ MonoBehaviour:
   IsFinished: 0
   IsFinished2: 0
   stuned: 0
+  SpectadoresMaxHeight: 2
+  SpectadoresMinHeight: 1
+  SpectadoresSpeedMax: 18
+  SpectadoresSpeedMin: 16
+  escenarioSpeed: 1
+  duracionMovimiento: 10.25

@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EspecetadoresScript : MonoBehaviour
@@ -36,7 +37,10 @@ public class EspecetadoresScript : MonoBehaviour
     int color = 0;
 
     private Vector3 initialPosition; // Guardar la posición original del círculo
+    private void Awake()
+    {
 
+    }
     void Start()
     {
         color = Random.Range(0, pastelColors.Length);
@@ -44,15 +48,13 @@ public class EspecetadoresScript : MonoBehaviour
         Renderer renderer = GetComponent<Renderer>();
         renderer.material.color = pastelColors[color];
 
-        // Guardar la posición original del círculo
-        initialPosition = transform.position;
-
         // Iniciar el movimiento cíclico de subida y bajada constante
         StartCoroutine(MoveCircleConstantly());
     }
-
     IEnumerator MoveCircleConstantly()
     {
+        yield return new WaitForSeconds(10.25f);
+        initialPosition = transform.position;
         while (true)
         {
             speed = Random.Range(speedMin, speedMax); // Velocidad aleatoria
