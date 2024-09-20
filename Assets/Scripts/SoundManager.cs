@@ -28,13 +28,18 @@ public class SoundManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(this);
         }
-        if (Audios.clip != gameMusic && SceneManager.GetActiveScene().name == "SampleScene")
+        if (Audios.clip != gameMusic && SceneManager.GetActiveScene().name == "Level")
         {
             Audios.clip = gameMusic;
+            Audios.Play();
         }
         else if (Audios.clip != menuMusic && SceneManager.GetActiveScene().name == "Menu Inicio")
         {
+            Debug.Log("Menu Music");
             Audios.clip = menuMusic;
+            SFX.clip = menucheer;
+            Audios.Play();
+            SFX.Play();
         }
     }
 

@@ -2683,6 +2683,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SOUNDMANAGER
       objectReference: {fileID: 0}
+    - target: {fileID: 6556414416411937919, guid: fb1d9e25bd152c04b8a2237e3adb3b41, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8196019595932741424, guid: fb1d9e25bd152c04b8a2237e3adb3b41, type: 3}
       propertyPath: gameMusic
       value: 
@@ -2691,6 +2695,10 @@ PrefabInstance:
       propertyPath: menuMusic
       value: 
       objectReference: {fileID: 8300000, guid: 93af6247f9d98fd41a0f620023654e30, type: 3}
+    - target: {fileID: 8196019595932741424, guid: fb1d9e25bd152c04b8a2237e3adb3b41, type: 3}
+      propertyPath: menucheer
+      value: 
+      objectReference: {fileID: 8300000, guid: d1b548c464afe46408e55c0cb9900299, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

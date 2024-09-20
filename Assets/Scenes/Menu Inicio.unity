@@ -2246,6 +2246,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1891421605562915112, guid: fb1d9e25bd152c04b8a2237e3adb3b41, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3962781429916288973, guid: fb1d9e25bd152c04b8a2237e3adb3b41, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.2692237
@@ -2286,6 +2290,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4481320167752816693, guid: fb1d9e25bd152c04b8a2237e3adb3b41, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648309997160296835, guid: fb1d9e25bd152c04b8a2237e3adb3b41, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648309997160296835, guid: fb1d9e25bd152c04b8a2237e3adb3b41, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6556414416411937919, guid: fb1d9e25bd152c04b8a2237e3adb3b41, type: 3}
       propertyPath: m_Name
       value: SOUNDMANAGER
@@ -2298,6 +2314,10 @@ PrefabInstance:
       propertyPath: menuMusic
       value: 
       objectReference: {fileID: 8300000, guid: 93af6247f9d98fd41a0f620023654e30, type: 3}
+    - target: {fileID: 8196019595932741424, guid: fb1d9e25bd152c04b8a2237e3adb3b41, type: 3}
+      propertyPath: menucheer
+      value: 
+      objectReference: {fileID: 8300000, guid: d1b548c464afe46408e55c0cb9900299, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
