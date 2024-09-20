@@ -60,7 +60,7 @@ public class EspecetadoresScript : MonoBehaviour
             speed = Random.Range(speedMin, speedMax); // Velocidad aleatoria
             height = Random.Range(minHeight, maxHeight); // Altura aleatoria
             // Subir progresivamente a la altura máxima
-            yield return StartCoroutine(MoveToPosition(new Vector3(initialPosition.x, height, initialPosition.z)));
+            yield return StartCoroutine(MoveToPosition(new Vector3(initialPosition.x, initialPosition.y + height, initialPosition.z)));
 
             // Bajar progresivamente a la altura mínima
             yield return StartCoroutine(MoveToPosition(new Vector3(initialPosition.x, initialPosition.y, initialPosition.z)));
