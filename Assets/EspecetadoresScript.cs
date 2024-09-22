@@ -35,6 +35,30 @@ public class EspecetadoresScript : MonoBehaviour
         new Color(0.84f, 0.93f, 0.85f), // Verde musgo suave
         new Color(0.89f, 0.96f, 0.88f), // Verde
 };
+    Color[] vibrantColors = new Color[]
+{
+    new Color(0.13f, 0.55f, 0.13f), // Verde oscuro
+    new Color(0.18f, 0.80f, 0.44f), // Verde esmeralda
+    new Color(0.24f, 0.70f, 0.44f), // Verde selva
+    new Color(0.25f, 0.88f, 0.82f), // Turquesa
+    new Color(0.00f, 0.75f, 1.00f), // Cian
+    new Color(0.00f, 0.50f, 1.00f), // Azul brillante
+    new Color(0.53f, 0.81f, 0.98f), // Azul cielo
+    new Color(0.25f, 0.41f, 0.88f), // Azul real
+    new Color(0.29f, 0.00f, 0.51f), // Índigo
+    new Color(0.50f, 0.00f, 0.50f), // Púrpura
+    new Color(0.54f, 0.17f, 0.89f), // Violeta
+    new Color(0.67f, 0.31f, 0.32f), // Marrón terroso
+    new Color(0.60f, 0.40f, 0.20f), // Ocre
+    new Color(0.82f, 0.70f, 0.23f), // Dorado
+    new Color(1.00f, 0.84f, 0.00f), // Amarillo oro
+    new Color(0.85f, 0.65f, 0.13f), // Amarillo mostaza
+    new Color(1.00f, 0.65f, 0.00f), // Naranja fuerte
+    new Color(1.00f, 0.55f, 0.00f), // Naranja quemado
+    new Color(0.93f, 0.51f, 0.93f), // Violeta suave
+    new Color(0.50f, 0.50f, 0.00f), // Oliva
+};
+
     int color = 0;
 
     private Vector3 initialPosition; // Guardar la posición original del círculo
@@ -44,10 +68,10 @@ public class EspecetadoresScript : MonoBehaviour
     }
     void Start()
     {
-        color = Random.Range(0, pastelColors.Length);
+        color = Random.Range(0, vibrantColors.Length);
         // Asignar un color aleatorio al círculo
         Renderer renderer = GetComponent<Renderer>();
-        renderer.material.color = pastelColors[color];
+        renderer.material.color = vibrantColors[color];
 
         // Iniciar el movimiento cíclico de subida y bajada constante
         StartCoroutine(MoveCircleConstantly());
