@@ -78,11 +78,11 @@ public class EspecetadoresScript : MonoBehaviour
     }
     IEnumerator MoveCircleConstantly()
     {
-        if (SceneManager.GetActiveScene().name == "Menu Inicio")
-        {
-            yield return new WaitForSeconds(10);
-        }
-        initialPosition = transform.position;
+        //if (SceneManager.GetActiveScene().name == "Menu Inicio")
+        //{
+        //    yield return new WaitForSeconds(10);
+        //}
+        initialPosition = transform.localPosition;
         while (true)
         {
             speed = Random.Range(speedMin, speedMax); // Velocidad aleatoria
@@ -98,13 +98,13 @@ public class EspecetadoresScript : MonoBehaviour
     IEnumerator MoveToPosition(Vector3 targetPosition)
     {
         // Movimiento progresivo hacia la posición de destino
-        while (Vector3.Distance(transform.position, targetPosition) > 0.01f)
+        while (Vector3.Distance(transform.localPosition, targetPosition) > 0.01f)
         {
-            transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * speed);
+            transform.localPosition = Vector3.Lerp(transform.localPosition, targetPosition, Time.deltaTime * speed);
             yield return null; // Esperar al siguiente frame
         }
 
         // Asegurarse de que la posición final sea exacta
-        transform.position = targetPosition;
+        transform.localPosition = targetPosition;
     }
 }
