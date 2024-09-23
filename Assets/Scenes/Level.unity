@@ -2946,6 +2946,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4020390724768620721, guid: 2844ddebaa806244589a24955013e172, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5374400841780868723, guid: 2844ddebaa806244589a24955013e172, type: 3}
       propertyPath: sweatParticlesPrefab
       value: 
