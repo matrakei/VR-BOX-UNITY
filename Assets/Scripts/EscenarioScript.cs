@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EscenarioScript : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class EscenarioScript : MonoBehaviour
     }
     void Start()
     {
-        if(gameObject.tag != "Espectador")
+        if(gameObject.tag != "Espectador" && SceneManager.GetActiveScene().name == "Menu Inicio")
         {
             StartCoroutine(MoverYDetenerDespuesDeTiempo(duracionMovimiento));
         }

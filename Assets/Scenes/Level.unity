@@ -174,10 +174,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 927389816100354331, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
-      propertyPath: m_Name
-      value: ESCENARIO
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2898,6 +2894,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1115967808452982898, guid: 2844ddebaa806244589a24955013e172, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1327301368060480011, guid: 2844ddebaa806244589a24955013e172, type: 3}
       propertyPath: sweatParticlesPrefab
       value: 
@@ -2962,6 +2962,10 @@ PrefabInstance:
       propertyPath: sweatParticlesPrefab
       value: 
       objectReference: {fileID: 7004854843411235408, guid: b048395fee7f8904aa4a235f12fe5075, type: 3}
+    - target: {fileID: 7181578942636634478, guid: 2844ddebaa806244589a24955013e172, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9194046421264810464, guid: 2844ddebaa806244589a24955013e172, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
