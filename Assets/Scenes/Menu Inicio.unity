@@ -2010,9 +2010,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 98871600763507532, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 927389816100354331, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_Name
       value: ESCENARIO
+      objectReference: {fileID: 0}
+    - target: {fileID: 2004010045322322599, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2107438125306009377, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_Intensity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3724698319354209012, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2065,6 +2077,10 @@ PrefabInstance:
     - target: {fileID: 4602191815122963092, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_LocalPosition.z
       value: -14.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307583423791360311, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_Intensity
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
