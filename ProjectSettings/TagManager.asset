@@ -15,6 +15,7 @@ TagManager:
   - Guante
   - Espectador
   - Lights
+  - BotonesGuantes
   layers:
   - Default
   - TransparentFX

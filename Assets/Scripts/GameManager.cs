@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public bool IsFinished = false;
     public bool IsFinished2 = false;
     public bool stuned = false;
+    public bool dead = false;
 
     // Start is called before the first frame update
     void Awake()

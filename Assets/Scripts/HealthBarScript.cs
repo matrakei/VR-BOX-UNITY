@@ -12,12 +12,16 @@ public class HealthBarScript : MonoBehaviour
     public float hp;
     public TMP_Text texthp;
     public GameObject personaje;
+    public GameObject PlayAgainButton;
+    public GameObject Congrats;
+    public GameObject BotonSalir;
 
     // Start is called before the first frame update
     void Start()
     {
         hp = maxhp;
         healthbar.value = maxhp;
+        healthbar.maxValue = maxhp;
         texthp.text = maxhp.ToString();
     }
 
@@ -30,8 +34,11 @@ public class HealthBarScript : MonoBehaviour
             {
                 healthbar.value = 0;
                 texthp.text = "0";
+                GameManager.Instance.dead = true;
                 bar.SetActive(false);
                 personaje.SetActive(false);
+                Congrats.SetActive(true);
+
             }
             else
             {
