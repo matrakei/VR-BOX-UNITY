@@ -136,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 98871600763507532, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_SpotAngle
-      value: 120
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 98871600763507532, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_InnerSpotAngle
@@ -276,7 +276,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2004010045322322599, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_SpotAngle
-      value: 120
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 2004010045322322599, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_InnerSpotAngle
@@ -288,7 +288,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2107438125306009377, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_SpotAngle
-      value: 120
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 2107438125306009377, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_InnerSpotAngle
@@ -564,7 +564,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6307583423791360311, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_SpotAngle
-      value: 120
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 6307583423791360311, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_InnerSpotAngle
@@ -640,11 +640,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7403573918986718125, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: endAngle
-      value: 30
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 7403573918986718125, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: startAngle
-      value: 120
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 7403573918986718125, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: spotLights.Array.size
@@ -2488,7 +2488,7 @@ Transform:
   m_GameObject: {fileID: 931920983}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.70710677, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 1.6, y: 0.685, z: 0}
+  m_LocalPosition: {x: 1.6, y: 0.539, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3055,7 +3055,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1203925402}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 474bbaff2327b0c42b5791dd90108eab, type: 3}
   m_Name: 
@@ -3483,6 +3483,14 @@ PrefabInstance:
       propertyPath: sweatParticlesPrefab
       value: 
       objectReference: {fileID: 7004854843411235408, guid: b048395fee7f8904aa4a235f12fe5075, type: 3}
+    - target: {fileID: 1339373142700992997, guid: 2844ddebaa806244589a24955013e172, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.3796323
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339373142700992997, guid: 2844ddebaa806244589a24955013e172, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0008
+      objectReference: {fileID: 0}
     - target: {fileID: 2703536987674287807, guid: 2844ddebaa806244589a24955013e172, type: 3}
       propertyPath: m_Name
       value: Jero

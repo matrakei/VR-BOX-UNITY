@@ -76,37 +76,38 @@ public class EspecetadoresScript : MonoBehaviour
         {
             // Iniciar el movimiento cíclico de subida y bajada constante
             StartCoroutine(MoveCircleConstantly());
-        }
+        
     }
-    IEnumerator MoveCircleConstantly()
-    {
-        //if (SceneManager.GetActiveScene().name == "Menu Inicio")
-        //{
-        //    yield return new WaitForSeconds(10);
-        //}
-        initialPosition = transform.localPosition;
-        while (true)
+        IEnumerator MoveCircleConstantly()
         {
-            speed = Random.Range(speedMin, speedMax); // Velocidad aleatoria
-            height = Random.Range(minHeight, maxHeight); // Altura aleatoria
-                                                         // Subir progresivamente a la altura máxima
-            yield return StartCoroutine(MoveToPosition(new Vector3(initialPosition.x, initialPosition.y + height, initialPosition.z)));
+            //if (SceneManager.GetActiveScene().name == "Menu Inicio")
+            //{
+            //    yield return new WaitForSeconds(10);
+            //}
+            initialPosition = transform.localPosition;
+            while (true)
+            {
+                speed = Random.Range(speedMin, speedMax); // Velocidad aleatoria
+                height = Random.Range(minHeight, maxHeight); // Altura aleatoria
+                                                             // Subir progresivamente a la altura máxima
+                yield return StartCoroutine(MoveToPosition(new Vector3(initialPosition.x, initialPosition.y + height, initialPosition.z)));
 
-            // Bajar progresivamente a la altura mínima
-            yield return StartCoroutine(MoveToPosition(new Vector3(initialPosition.x, initialPosition.y, initialPosition.z)));
+                // Bajar progresivamente a la altura mínima
+                yield return StartCoroutine(MoveToPosition(new Vector3(initialPosition.x, initialPosition.y, initialPosition.z)));
+            }
         }
-    }
 
-    IEnumerator MoveToPosition(Vector3 targetPosition)
-    {
-        // Movimiento progresivo hacia la posición de destino
-        while (Vector3.Distance(transform.localPosition, targetPosition) > 0.01f)
+        IEnumerator MoveToPosition(Vector3 targetPosition)
         {
-            transform.localPosition = Vector3.Lerp(transform.localPosition, targetPosition, Time.deltaTime * speed);
-            yield return null; // Esperar al siguiente frame
-        }
+            // Movimiento progresivo hacia la posición de destino
+            while (Vector3.Distance(transform.localPosition, targetPosition) > 0.01f)
+            {
+                transform.localPosition = Vector3.Lerp(transform.localPosition, targetPosition, Time.deltaTime * speed);
+                yield return null; // Esperar al siguiente frame
+            }
 
-        // Asegurarse de que la posición final sea exacta
-        transform.localPosition = targetPosition;
-    }
+            // Asegurarse de que la posición final sea exacta
+            transform.localPosition = targetPosition;
+        }
+    } 
 }

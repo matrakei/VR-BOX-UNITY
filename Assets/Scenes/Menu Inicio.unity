@@ -957,7 +957,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f46116987c3e2ab45907cd39f5b34e97, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.819
+      value: 1.648
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f46116987c3e2ab45907cd39f5b34e97, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2070,11 +2070,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7403573918986718125, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: endAngle
-      value: 120
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 7403573918986718125, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: startAngle
-      value: 30
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7403573918986718125, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: spotLights.Array.size
