@@ -5,31 +5,19 @@ public class VisibilityManager : MonoBehaviour
 {
     public Camera mainCamera; // Asigna tu cámara desde el Inspector.
     private List<Renderer> espectadorRenderers = new List<Renderer>(); // Lista para almacenar los renderers de los espectadores.
-    private List<Collider> espectadorColliders = new List<Collider>(); // Lista para almacenar los colliders de los espectadores.
+    public float buffer = 0.1f; // Factor de expansión del frustum. 0.1f es un 10% extra.
 
     private void Awake()
     {
-        // Obtén la cámara si no está asignada.
-        if (mainCamera == null)
-        {
-            mainCamera = GetComponent<Camera>();
-        }
-
         // Encuentra todos los renderers y colliders con la etiqueta "Espectador" al inicio.
         GameObject[] espectadors = GameObject.FindGameObjectsWithTag("Espectador");
         foreach (GameObject espectador in espectadors)
         {
             Renderer renderer = espectador.GetComponent<Renderer>();
-            Collider collider = espectador.GetComponent<Collider>();
 
             if (renderer != null)
             {
                 espectadorRenderers.Add(renderer);
-            }
-
-            if (collider != null)
-            {
-                espectadorColliders.Add(collider);
             }
         }
     }
@@ -40,31 +28,36 @@ public class VisibilityManager : MonoBehaviour
         for (int i = 0; i < espectadorRenderers.Count; i++)
         {
             Renderer renderer = espectadorRenderers[i];
-            Collider collider = espectadorColliders[i];
 
             if (renderer != null) // Verifica que el renderer no sea nulo.
             {
-                // Verificar si el objeto está dentro del frustum de la cámara.
+                // Verificar si el objeto está dentro del frustum de la cámara expandido con buffer.
                 if (IsVisibleFrom(renderer, mainCamera))
                 {
-                    // Activa el Renderer y Collider si está visible, para que sea interactivo y visible.
+                    // Activa el Renderer si está visible, para que sea interactivo y visible.
                     renderer.enabled = true;
-                    if (collider != null) collider.enabled = true;
                 }
                 else
                 {
-                    // Desactiva solo el Renderer y el Collider si no está visible, para ocultar pero mantener la lógica.
+                    // Desactiva solo el Renderer si no está visible, para ocultar pero mantener la lógica.
                     renderer.enabled = false;
-                    if (collider != null) collider.enabled = false;
                 }
             }
         }
     }
 
-    // Función para verificar si el objeto es visible desde la cámara.
+    // Función para verificar si el objeto es visible desde la cámara con un buffer.
     bool IsVisibleFrom(Renderer renderer, Camera camera)
     {
         Plane[] planes = GeometryUtility.CalculateFrustumPlanes(camera);
+
+        // Expandimos el frustum aplicando el buffer a cada plano del frustum.
+        for (int i = 0; i < planes.Length; i++)
+        {
+            planes[i].distance += buffer; // Aplicamos un pequeño desplazamiento en la distancia del plano.
+        }
+
+        // Verificamos si el bounding box del objeto está dentro de los planos del frustum.
         return GeometryUtility.TestPlanesAABB(planes, renderer.bounds);
     }
 }
