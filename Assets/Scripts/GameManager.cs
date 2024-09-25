@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public bool IsCheating = false;
     public float HpLocal;
     public bool IsInvulnerable = false;
+    public bool GuantesNormal = true;
 
 
     // Start is called before the first frame update
