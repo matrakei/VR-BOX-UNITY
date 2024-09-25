@@ -1211,6 +1211,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5614470029495742649, guid: 21c32ca2a6683944f96155c88569f94c, type: 3}
   m_PrefabInstance: {fileID: 567227839}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &567227841 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4148440646590749550, guid: 21c32ca2a6683944f96155c88569f94c, type: 3}
+  m_PrefabInstance: {fileID: 567227839}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &567227842 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2665868582227206739, guid: 21c32ca2a6683944f96155c88569f94c, type: 3}
+  m_PrefabInstance: {fileID: 567227839}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &567227845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2451,6 +2461,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8213612683185885656, guid: 9905095255644254e80a9242981128d0, type: 3}
   m_PrefabInstance: {fileID: 1840113226}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1840113228 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2196267978125719642, guid: 9905095255644254e80a9242981128d0, type: 3}
+  m_PrefabInstance: {fileID: 1840113226}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1840113229 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1357878669411574660, guid: 9905095255644254e80a9242981128d0, type: 3}
+  m_PrefabInstance: {fileID: 1840113226}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1840113232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3186,6 +3206,10 @@ PrefabInstance:
       value: 10.25
       objectReference: {fileID: 0}
     - target: {fileID: 280478709192032677, guid: 877222d26339de24b9efc57e4568b4de, type: 3}
+      propertyPath: Normales.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 280478709192032677, guid: 877222d26339de24b9efc57e4568b4de, type: 3}
       propertyPath: SpectadoresSpeedMax
       value: 18
       objectReference: {fileID: 0}
@@ -3201,6 +3225,26 @@ PrefabInstance:
       propertyPath: SpectadoresMinHeight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 280478709192032677, guid: 877222d26339de24b9efc57e4568b4de, type: 3}
+      propertyPath: Variantes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 280478709192032677, guid: 877222d26339de24b9efc57e4568b4de, type: 3}
+      propertyPath: Normales.Array.data[0]
+      value: 
+      objectReference: {fileID: 567227842}
+    - target: {fileID: 280478709192032677, guid: 877222d26339de24b9efc57e4568b4de, type: 3}
+      propertyPath: Normales.Array.data[1]
+      value: 
+      objectReference: {fileID: 1840113229}
+    - target: {fileID: 280478709192032677, guid: 877222d26339de24b9efc57e4568b4de, type: 3}
+      propertyPath: Variantes.Array.data[0]
+      value: 
+      objectReference: {fileID: 567227841}
+    - target: {fileID: 280478709192032677, guid: 877222d26339de24b9efc57e4568b4de, type: 3}
+      propertyPath: Variantes.Array.data[1]
+      value: 
+      objectReference: {fileID: 1840113228}
     - target: {fileID: 2969081214726950059, guid: 877222d26339de24b9efc57e4568b4de, type: 3}
       propertyPath: m_Name
       value: GAMEMANAGER
