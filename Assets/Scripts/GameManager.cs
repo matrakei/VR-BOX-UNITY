@@ -32,6 +32,16 @@ public class GameManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(this);
         }
+        GuantesNormal(true);
+        Normales = GameObject.FindGameObjectsWithTag("Normales");
+        Variantes = GameObject.FindGameObjectsWithTag("Variantes");
+    }
+
+    public void ChangeScene(string sceneName)
+    {
+        Normales = GameObject.FindGameObjectsWithTag("Normales");
+        Variantes = GameObject.FindGameObjectsWithTag("Variantes");
+        SceneManager.LoadScene(sceneName);
         if (normal)
         {
             GuantesNormal(true);
@@ -40,11 +50,6 @@ public class GameManager : MonoBehaviour
         {
             GuantesNormal(false);
         }
-    }
-
-    public void ChangeScene(string sceneName)
-    {
-        SceneManager.LoadScene(sceneName);
     }
 
     public bool HaRecibidoGolpe()

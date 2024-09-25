@@ -16,6 +16,8 @@ TagManager:
   - Espectador
   - Lights
   - BotonesGuantes
+  - Normales
+  - Variantes
   layers:
   - Default
   - TransparentFX
