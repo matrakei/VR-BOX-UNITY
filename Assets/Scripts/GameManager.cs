@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public bool IsInvulnerable = false;
     public GameObject[] Normales;
     public GameObject[] Variantes;
+    bool normal = true;
 
 
     // Start is called before the first frame update
@@ -30,6 +31,14 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(this);
+        }
+        if (normal)
+        {
+            GuantesNormal(true);
+        }
+        else
+        {
+            GuantesNormal(false);
         }
     }
 
@@ -76,6 +85,7 @@ public class GameManager : MonoBehaviour
     {
         if (GuantesNormal)
         {
+            normal = true;
             foreach (GameObject guante in Normales)
             {
                 guante.SetActive(true);
@@ -87,6 +97,7 @@ public class GameManager : MonoBehaviour
         }
         else if (!GuantesNormal)
         {
+            normal = false;
             foreach (GameObject guante in Normales)
             {
                 guante.SetActive(false);
