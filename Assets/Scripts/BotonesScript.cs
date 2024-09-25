@@ -6,26 +6,27 @@ using UnityEngine.SceneManagement;
 public class BotonesScript : MonoBehaviour
 {
     public AudioClip CROWD;
-    GameObject playButton;
     public GameObject[] botonesGuantes;
+    GameObject playButton;
     GameObject GuantesButton;
     private void Awake()
     {
         playButton = GameObject.Find("Boton Jugar");
         GuantesButton = GameObject.Find("Guantes Button");
-        if (SceneManager.GetActiveScene().name == "Menu Inicio" && gameObject.name == "Boton Jugar")
+        if (SceneManager.GetActiveScene().name == "Menu Inicio")
         {
             playButton.GetComponent<MeshRenderer>().enabled = false;
-            playButton.GetComponent<MeshCollider>().enabled = false;
-            StartCoroutine(WaitToActivate(10));
-        }
-        if (SceneManager.GetActiveScene().name == "Menu Inicio" && gameObject.name == "Boton Jugar")
-        {
             GuantesButton.GetComponent<MeshRenderer>().enabled = false;
-            GuantesButton.GetComponent<BoxCollider>().enabled = false;
+            if (gameObject == playButton)
+            {
+                playButton.GetComponent<MeshCollider>().enabled = false;
+            }
+            else if (gameObject == GuantesButton)
+            {
+                GuantesButton.GetComponent<BoxCollider>().enabled = false;
+            }
             StartCoroutine(WaitToActivate(10));
         }
-
     }
     private void Update()
     {
@@ -57,10 +58,12 @@ public class BotonesScript : MonoBehaviour
         if (gameObject.name == "Guantes Button")
         {
             playButton.SetActive(false);
+            GuantesButton.SetActive(false);
             foreach (GameObject boton in botonesGuantes)
             {
                 boton.SetActive(true);
             }
+
         }
         if (gameObject.name == "Guante Normal")
         {
@@ -90,7 +93,7 @@ public class BotonesScript : MonoBehaviour
         {
             playButton.GetComponent<MeshCollider>().enabled = true;
         }
-        if (gameObject == GuantesButton)
+        else if (gameObject == GuantesButton)
         {
             GuantesButton.GetComponent<BoxCollider>().enabled = true;
         }

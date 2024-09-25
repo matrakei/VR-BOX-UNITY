@@ -790,11 +790,11 @@ GameObject:
   - component: {fileID: 511393349}
   m_Layer: 0
   m_Name: Select Normal
-  m_TagString: BotonesGuantes
+  m_TagString: Boton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &511393348
 Transform:
   m_ObjectHideFlags: 0
@@ -1037,7 +1037,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &525439557
 Transform:
   m_ObjectHideFlags: 0
@@ -1472,7 +1472,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &932388727
 Transform:
   m_ObjectHideFlags: 0
@@ -2324,11 +2324,11 @@ GameObject:
   - component: {fileID: 1935854552}
   m_Layer: 0
   m_Name: Select Variante
-  m_TagString: BotonesGuantes
+  m_TagString: Boton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1935854551
 Transform:
   m_ObjectHideFlags: 0
@@ -2444,7 +2444,7 @@ GameObject:
   - component: {fileID: 1953564306}
   m_Layer: 0
   m_Name: Guantes Button
-  m_TagString: Untagged
+  m_TagString: Boton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
