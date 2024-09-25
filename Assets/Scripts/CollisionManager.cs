@@ -15,7 +15,7 @@ public class CollisionManager : MonoBehaviour
     HealthBarScript healthbar;
     public GameObject sweatParticlesPrefab;  // Prefab de las partículas de sudor
     public float particleLifetime = 1.0f;
-    
+
 
     private void Awake()
     {
@@ -92,54 +92,53 @@ public class CollisionManager : MonoBehaviour
             {
                 healthbar.hp = -1;
             }
-            if (GameManager.Instance.stuned == false)
+        if (GameManager.Instance.stuned == false)
+        {
+            FRENTE.layer = 8;
+            DERECHA.layer = 8;
+            IZQUIERDA.layer = 8;
+        }
+        if (other.gameObject.tag == "Guante")
+        {
+            Debug.Log(gameObject.name);
+            Debug.Log(gameObject.layer);
+            if (gameObject.name == "DERECHA")
             {
-                FRENTE.layer = 8;
-                DERECHA.layer = 8;
-                IZQUIERDA.layer = 8;
+                GameManager.Instance.list.Add(DERECHA);
+                GameManager.Instance.golpeRecibido = true;
             }
-            if (other.gameObject.tag == "Guante")
+            else if (gameObject.name == "IZQUIERDA")
             {
-                Debug.Log(gameObject.name);
-                Debug.Log(gameObject.layer);
-                if (gameObject.name == "DERECHA")
-                {
-                    GameManager.Instance.list.Add(DERECHA);
-                    GameManager.Instance.golpeRecibido = true;
-                }
-                else if (gameObject.name == "IZQUIERDA")
-                {
-                    GameManager.Instance.list.Add(IZQUIERDA);
-                    GameManager.Instance.golpeRecibido = true;
-                }
-                else if (gameObject.name == "FRENTE")
-                {
-                    GameManager.Instance.list.Add(FRENTE);
-                    GameManager.Instance.golpeRecibido = true;
-                }
-                else if (gameObject.name == "IZQUIERDA ABAJO")
-                {
-                    GameManager.Instance.list.Add(IZQUIERDAABAJO);
-                    GameManager.Instance.golpeRecibido = true;
-                }
-                else if (gameObject.name == "DERECHA ABAJO")
-                {
-                    GameManager.Instance.list.Add(DERECHAABAJO);
-                    GameManager.Instance.golpeRecibido = true;
-                }
-                // Obtener el punto de contacto aproximado usando la posición del otro objeto (puño)
-                Vector3 contactPoint = other.ClosestPoint(transform.position);
-
-                // Obtener la dirección del golpe (desde el puño hacia el punto de contacto)
-                Vector3 hitDirection = (contactPoint - other.transform.position).normalized;
-
-                // Instanciar las partículas en el punto de contacto
-                GameObject particles = Instantiate(sweatParticlesPrefab, contactPoint, Quaternion.LookRotation(hitDirection));
-
-                // Destruir las partículas después de un tiempo
-                Destroy(particles, particleLifetime);
-                Debug.Log("Particle generada");
+                GameManager.Instance.list.Add(IZQUIERDA);
+                GameManager.Instance.golpeRecibido = true;
             }
+            else if (gameObject.name == "FRENTE")
+            {
+                GameManager.Instance.list.Add(FRENTE);
+                GameManager.Instance.golpeRecibido = true;
+            }
+            else if (gameObject.name == "IZQUIERDA ABAJO")
+            {
+                GameManager.Instance.list.Add(IZQUIERDAABAJO);
+                GameManager.Instance.golpeRecibido = true;
+            }
+            else if (gameObject.name == "DERECHA ABAJO")
+            {
+                GameManager.Instance.list.Add(DERECHAABAJO);
+                GameManager.Instance.golpeRecibido = true;
+            }
+            // Obtener el punto de contacto aproximado usando la posición del otro objeto (puño)
+            Vector3 contactPoint = other.ClosestPoint(transform.position);
+
+            // Obtener la dirección del golpe (desde el puño hacia el punto de contacto)
+            Vector3 hitDirection = (contactPoint - other.transform.position).normalized;
+
+            // Instanciar las partículas en el punto de contacto
+            GameObject particles = Instantiate(sweatParticlesPrefab, contactPoint, Quaternion.LookRotation(hitDirection));
+
+            // Destruir las partículas después de un tiempo
+            Destroy(particles, particleLifetime);
+            Debug.Log("Particle generada");
         }
     }
     private void OnTriggerExit()
@@ -158,6 +157,6 @@ public class CollisionManager : MonoBehaviour
         DERECHAABAJO.layer = 8;
         IZQUIERDAABAJO.layer = 8;
         Debug.Log("ACTIVADOS");
-        
+
     }
 }

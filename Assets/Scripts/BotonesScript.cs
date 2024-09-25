@@ -97,7 +97,6 @@ public class BotonesScript : MonoBehaviour
         {
             GuantesButton.GetComponent<BoxCollider>().enabled = true;
         }
-
     }
     IEnumerator WaitSeconds(float seconds)
     {
