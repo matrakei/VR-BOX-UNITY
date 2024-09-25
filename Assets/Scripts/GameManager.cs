@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
     public bool stuned = false;
     public bool dead = false;
     public bool IsCheating = false;
+    public float HpLocal;
+    public bool IsInvulnerable = false;
+
 
     // Start is called before the first frame update
     void Awake()
@@ -47,9 +50,9 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C)) 
+        if (Input.GetKeyDown(KeyCode.C))
         {
-            IsCheating = !IsCheating; 
+            IsCheating = !IsCheating;
 
             if (IsCheating)
             {
@@ -60,8 +63,14 @@ public class GameManager : MonoBehaviour
                 Debug.Log("Cheating desactivado");
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            IsInvulnerable = !IsInvulnerable;
+        }
     }
 }
+
 
 
 
