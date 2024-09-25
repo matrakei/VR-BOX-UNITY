@@ -29,8 +29,7 @@ public class EspecetadoresScript : MonoBehaviour
         {
             // Iniciar el movimiento cíclico de subida y bajada constante
             StartCoroutine(MoveCircleConstantly());
-        
-    }
+        }
         IEnumerator MoveCircleConstantly()
         {
             //if (SceneManager.GetActiveScene().name == "Menu Inicio")

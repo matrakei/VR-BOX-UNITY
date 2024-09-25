@@ -26,6 +26,21 @@ public class BotonesScript : MonoBehaviour
                 GuantesButton.GetComponent<BoxCollider>().enabled = false;
             }
             StartCoroutine(WaitToActivate(10));
+            foreach (GameObject boton in botonesGuantes)
+            {
+                ActDiact(boton, false);
+            }
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (gameObject.name == "ExitBox")
+        {
+            foreach (GameObject boton in botonesGuantes)
+            {
+                boton.layer = 0;
+                GuantesButton.layer = 0;
+            }
         }
     }
     private void Update()
@@ -61,25 +76,42 @@ public class BotonesScript : MonoBehaviour
             GuantesButton.SetActive(false);
             foreach (GameObject boton in botonesGuantes)
             {
-                boton.SetActive(true);
+                ActDiact(boton, true);
+            }
+            foreach (GameObject boton in botonesGuantes)
+            {
+                boton.layer = 6;
+                GuantesButton.layer = 6;
             }
 
         }
-        if (gameObject.name == "Guante Normal")
+        if (gameObject.name == "Select Normal")
         {
             playButton.SetActive(true);
+            GuantesButton.SetActive(true);
             foreach (GameObject boton in botonesGuantes)
             {
-                boton.SetActive(false);
+                ActDiact(boton, false);
+            }
+            foreach (GameObject boton in botonesGuantes)
+            {
+                boton.layer = 6;
+                GuantesButton.layer = 6;
             }
             //logica para cambiar el guante
         }
-        if (gameObject.name == "Guante Variante")
+        if (gameObject.name == "Select Variante")
         {
             playButton.SetActive(true);
+            GuantesButton.SetActive(true);
             foreach (GameObject boton in botonesGuantes)
             {
-                boton.SetActive(false);
+                ActDiact(boton, false);
+            }
+            foreach (GameObject boton in botonesGuantes)
+            {
+                boton.layer = 6;
+                GuantesButton.layer = 6;
             }
             //logica para cambiar el guante
         }
@@ -103,5 +135,10 @@ public class BotonesScript : MonoBehaviour
         yield return new WaitForSeconds(seconds);
         gameObject.GetComponent<MeshRenderer>().enabled = true;
         gameObject.GetComponent<BoxCollider>().enabled = true;
+    }
+    void ActDiact(GameObject objeto, bool thebool)
+    {
+        objeto.GetComponent<MeshRenderer>().enabled = thebool;
+        objeto.GetComponent<BoxCollider>().enabled = thebool;
     }
 }
