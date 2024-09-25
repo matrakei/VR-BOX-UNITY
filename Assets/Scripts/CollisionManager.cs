@@ -158,24 +158,25 @@ public class CollisionManager : MonoBehaviour
                 Debug.Log("Particle generada");
             }
         }
-        void OnTriggerExit()
+    }
+    void OnTriggerExit()
+    {
+        if (gameObject.name == "Exit HitBox")
         {
-            if (gameObject.name == "Exit HitBox")
-            {
-                ActivateAll();
-            }
-        }
-
-        void ActivateAll()
-        {
-            IZQUIERDA.layer = 8;
-            DERECHA.layer = 8;
-            FRENTE.layer = 8;
-            DERECHAABAJO.layer = 8;
-            IZQUIERDAABAJO.layer = 8;
-            Debug.Log("ACTIVADOS");
-
+            ActivateAll();
         }
     }
 
+    void ActivateAll()
+    {
+        IZQUIERDA.layer = 8;
+        DERECHA.layer = 8;
+        FRENTE.layer = 8;
+        DERECHAABAJO.layer = 8;
+        IZQUIERDAABAJO.layer = 8;
+        Debug.Log("ACTIVADOS");
+
+    }
 }
+
+
