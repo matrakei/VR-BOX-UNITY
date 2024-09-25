@@ -15,7 +15,7 @@ public class CollisionManager : MonoBehaviour
     HealthBarScript healthbar;
     public GameObject sweatParticlesPrefab;  // Prefab de las partículas de sudor
     public float particleLifetime = 1.0f;
-
+    
 
     private void Awake()
     {
@@ -88,7 +88,10 @@ public class CollisionManager : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (gameObject.name != "Exit HitBox")
-        {
+            if (GameManager.Instance.IsCheating)
+            {
+                healthbar.hp = -1;
+            }
             if (GameManager.Instance.stuned == false)
             {
                 FRENTE.layer = 8;

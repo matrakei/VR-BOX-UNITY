@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public bool IsFinished2 = false;
     public bool stuned = false;
     public bool dead = false;
+    public bool IsCheating = false;
 
     // Start is called before the first frame update
     void Awake()
@@ -44,4 +45,23 @@ public class GameManager : MonoBehaviour
         }
         return false;
     }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.C)) 
+        {
+            IsCheating = !IsCheating; 
+
+            if (IsCheating)
+            {
+                Debug.Log("Cheating activado");
+            }
+            else
+            {
+                Debug.Log("Cheating desactivado");
+            }
+        }
+    }
 }
+
+
+
