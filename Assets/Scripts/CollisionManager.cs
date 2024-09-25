@@ -56,31 +56,46 @@ public class CollisionManager : MonoBehaviour
             {
                 GameManager.Instance.list.Clear();
                 jeroAnimations.anim.SetTrigger("IsRightHeadHit");
-                healthbar.hp -= 10;
+                if (!GameManager.Instance.IsInvulnerable)
+                {
+                    healthbar.hp -= 10;
+                }
             }
             else if (GameManager.Instance.list[0] == IZQUIERDA)
             {
                 GameManager.Instance.list.Clear();
                 jeroAnimations.anim.SetTrigger("IsLeftHeadHit");
-                healthbar.hp -= 10;
+                if (!GameManager.Instance.IsInvulnerable)
+                {
+                    healthbar.hp -= 10;
+                }
             }
             else if (GameManager.Instance.list[0] == FRENTE)
             {
                 GameManager.Instance.list.Clear();
                 jeroAnimations.anim.SetTrigger("IsFrontHeadHit");
-                healthbar.hp -= 7;
+                if (!GameManager.Instance.IsInvulnerable)
+                {
+                    healthbar.hp -= 7;
+                }
             }
             else if (GameManager.Instance.list[0] == DERECHAABAJO)
             {
                 GameManager.Instance.list.Clear();
                 jeroAnimations.anim.SetTrigger("IsTorsoRightHit");
-                healthbar.hp -= 15;
+                if (!GameManager.Instance.IsInvulnerable)
+                {
+                    healthbar.hp -= 15;
+                }
             }
             else if (GameManager.Instance.list[0] == IZQUIERDAABAJO)
             {
                 GameManager.Instance.list.Clear();
                 jeroAnimations.anim.SetTrigger("IsTorsoLeftHit");
-                healthbar.hp -= 15;
+                if (!GameManager.Instance.IsInvulnerable)
+                {
+                    healthbar.hp -= 15;
+                }
             }
             SoundManager.Instance.BasicPunchSFX();
         }
@@ -94,18 +109,6 @@ public class CollisionManager : MonoBehaviour
             {
                 healthbar.hp = -1;
             }
-            if (GameManager.Instance.IsInvulnerable)
-            {
-                GameManager.Instance.HpLocal = healthbar.hp;
-                healthbar.hp = 100000;
-                healthbar.maxhp = 100000;
-            }
-            else if (!GameManager.Instance.IsInvulnerable)
-            {
-                healthbar.hp = GameManager.Instance.HpLocal;
-                healthbar.maxhp = Convert.ToInt32(GameManager.Instance.HpLocal);
-            }
-
             if (GameManager.Instance.stuned == false)
             {
                 FRENTE.layer = 8;
