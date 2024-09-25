@@ -98,7 +98,7 @@ public class BotonesScript : MonoBehaviour
                 boton.layer = 6;
                 GuantesButton.layer = 6;
             }
-            GameManager.Instance.GuantesNormal = true;
+            GameManager.Instance.GuantesNormal(true);
         }
         if (gameObject.name == "Select Variante")
         {
@@ -113,7 +113,7 @@ public class BotonesScript : MonoBehaviour
                 boton.layer = 6;
                 GuantesButton.layer = 6;
             }
-            GameManager.Instance.GuantesNormal = false;
+            GameManager.Instance.GuantesNormal(false);
         }
     }
     IEnumerator WaitToActivate(float seconds)

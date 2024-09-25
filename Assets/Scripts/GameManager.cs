@@ -15,7 +15,8 @@ public class GameManager : MonoBehaviour
     public bool IsCheating = false;
     public float HpLocal;
     public bool IsInvulnerable = false;
-    public bool GuantesNormal = true;
+    public GameObject[] Normales;
+    public GameObject[] Variantes;
 
 
     // Start is called before the first frame update
@@ -68,6 +69,32 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I))
         {
             IsInvulnerable = !IsInvulnerable;
+        }
+    }
+
+    public void GuantesNormal(bool GuantesNormal)
+    {
+        if (GuantesNormal)
+        {
+            foreach (GameObject guante in Normales)
+            {
+                guante.SetActive(true);
+            }
+            foreach (GameObject guante in Variantes)
+            {
+                guante.SetActive(false);
+            }
+        }
+        else if (!GuantesNormal)
+        {
+            foreach (GameObject guante in Normales)
+            {
+                guante.SetActive(false);
+            }
+            foreach (GameObject guante in Variantes)
+            {
+                guante.SetActive(true);
+            }
         }
     }
 }
