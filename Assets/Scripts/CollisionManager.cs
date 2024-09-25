@@ -87,76 +87,92 @@ public class CollisionManager : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+
         if (gameObject.name != "Exit HitBox")
+        {
             if (GameManager.Instance.IsCheating)
             {
                 healthbar.hp = -1;
             }
-        if (GameManager.Instance.stuned == false)
+            if (GameManager.Instance.IsInvulnerable)
+            {
+                GameManager.Instance.HpLocal = healthbar.hp;
+                healthbar.hp = 100000;
+                healthbar.maxhp = 100000;
+            }
+            else if (!GameManager.Instance.IsInvulnerable)
+            {
+                healthbar.hp = GameManager.Instance.HpLocal;
+                healthbar.maxhp = Convert.ToInt32(GameManager.Instance.HpLocal);
+            }
+
+            if (GameManager.Instance.stuned == false)
+            {
+                FRENTE.layer = 8;
+                DERECHA.layer = 8;
+                IZQUIERDA.layer = 8;
+            }
+            if (other.gameObject.tag == "Guante")
+            {
+                Debug.Log(gameObject.name);
+                Debug.Log(gameObject.layer);
+                if (gameObject.name == "DERECHA")
+                {
+                    GameManager.Instance.list.Add(DERECHA);
+                    GameManager.Instance.golpeRecibido = true;
+                }
+                else if (gameObject.name == "IZQUIERDA")
+                {
+                    GameManager.Instance.list.Add(IZQUIERDA);
+                    GameManager.Instance.golpeRecibido = true;
+                }
+                else if (gameObject.name == "FRENTE")
+                {
+                    GameManager.Instance.list.Add(FRENTE);
+                    GameManager.Instance.golpeRecibido = true;
+                }
+                else if (gameObject.name == "IZQUIERDA ABAJO")
+                {
+                    GameManager.Instance.list.Add(IZQUIERDAABAJO);
+                    GameManager.Instance.golpeRecibido = true;
+                }
+                else if (gameObject.name == "DERECHA ABAJO")
+                {
+                    GameManager.Instance.list.Add(DERECHAABAJO);
+                    GameManager.Instance.golpeRecibido = true;
+                }
+                // Obtener el punto de contacto aproximado usando la posición del otro objeto (puño)
+                Vector3 contactPoint = other.ClosestPoint(transform.position);
+
+                // Obtener la dirección del golpe (desde el puño hacia el punto de contacto)
+                Vector3 hitDirection = (contactPoint - other.transform.position).normalized;
+
+                // Instanciar las partículas en el punto de contacto
+                GameObject particles = Instantiate(sweatParticlesPrefab, contactPoint, Quaternion.LookRotation(hitDirection));
+
+                // Destruir las partículas después de un tiempo
+                Destroy(particles, particleLifetime);
+                Debug.Log("Particle generada");
+            }
+        }
+        void OnTriggerExit()
         {
-            FRENTE.layer = 8;
-            DERECHA.layer = 8;
+            if (gameObject.name == "Exit HitBox")
+            {
+                ActivateAll();
+            }
+        }
+
+        void ActivateAll()
+        {
             IZQUIERDA.layer = 8;
-        }
-        if (other.gameObject.tag == "Guante")
-        {
-            Debug.Log(gameObject.name);
-            Debug.Log(gameObject.layer);
-            if (gameObject.name == "DERECHA")
-            {
-                GameManager.Instance.list.Add(DERECHA);
-                GameManager.Instance.golpeRecibido = true;
-            }
-            else if (gameObject.name == "IZQUIERDA")
-            {
-                GameManager.Instance.list.Add(IZQUIERDA);
-                GameManager.Instance.golpeRecibido = true;
-            }
-            else if (gameObject.name == "FRENTE")
-            {
-                GameManager.Instance.list.Add(FRENTE);
-                GameManager.Instance.golpeRecibido = true;
-            }
-            else if (gameObject.name == "IZQUIERDA ABAJO")
-            {
-                GameManager.Instance.list.Add(IZQUIERDAABAJO);
-                GameManager.Instance.golpeRecibido = true;
-            }
-            else if (gameObject.name == "DERECHA ABAJO")
-            {
-                GameManager.Instance.list.Add(DERECHAABAJO);
-                GameManager.Instance.golpeRecibido = true;
-            }
-            // Obtener el punto de contacto aproximado usando la posición del otro objeto (puño)
-            Vector3 contactPoint = other.ClosestPoint(transform.position);
+            DERECHA.layer = 8;
+            FRENTE.layer = 8;
+            DERECHAABAJO.layer = 8;
+            IZQUIERDAABAJO.layer = 8;
+            Debug.Log("ACTIVADOS");
 
-            // Obtener la dirección del golpe (desde el puño hacia el punto de contacto)
-            Vector3 hitDirection = (contactPoint - other.transform.position).normalized;
-
-            // Instanciar las partículas en el punto de contacto
-            GameObject particles = Instantiate(sweatParticlesPrefab, contactPoint, Quaternion.LookRotation(hitDirection));
-
-            // Destruir las partículas después de un tiempo
-            Destroy(particles, particleLifetime);
-            Debug.Log("Particle generada");
-        }
-    }
-    private void OnTriggerExit()
-    {
-        if (gameObject.name == "Exit HitBox")
-        {
-            ActivateAll();
         }
     }
 
-    private void ActivateAll()
-    {
-        IZQUIERDA.layer = 8;
-        DERECHA.layer = 8;
-        FRENTE.layer = 8;
-        DERECHAABAJO.layer = 8;
-        IZQUIERDAABAJO.layer = 8;
-        Debug.Log("ACTIVADOS");
-
-    }
 }
