@@ -38,7 +38,6 @@ public class CollisionManager : MonoBehaviour
         FRENTE.layer = 6;
         DERECHAABAJO.layer = 6;
         IZQUIERDAABAJO.layer = 6;
-        Debug.Log("DESACTIVADOS");
     }
 
     private void Update()
@@ -117,8 +116,6 @@ public class CollisionManager : MonoBehaviour
             }
             if (other.gameObject.tag == "Guante")
             {
-                Debug.Log(gameObject.name);
-                Debug.Log(gameObject.layer);
                 if (gameObject.name == "DERECHA")
                 {
                     GameManager.Instance.list.Add(DERECHA);
@@ -155,7 +152,6 @@ public class CollisionManager : MonoBehaviour
 
                 // Destruir las partículas después de un tiempo
                 Destroy(particles, particleLifetime);
-                Debug.Log("Particle generada");
             }
         }
     }
@@ -174,8 +170,6 @@ public class CollisionManager : MonoBehaviour
         FRENTE.layer = 8;
         DERECHAABAJO.layer = 8;
         IZQUIERDAABAJO.layer = 8;
-        Debug.Log("ACTIVADOS");
-
     }
 }
 

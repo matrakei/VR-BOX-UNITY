@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Loading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -37,11 +38,20 @@ public class GameManager : MonoBehaviour
         Variantes = GameObject.FindGameObjectsWithTag("Variantes");
     }
 
-    public void ChangeScene(string sceneName)
+    void OnEnable()
+    {
+        // Suscribirse al evento de cambio de escena
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+    void OnDisable()
+    {
+        // Desuscribirse del evento de cambio de escena
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Normales = GameObject.FindGameObjectsWithTag("Normales");
         Variantes = GameObject.FindGameObjectsWithTag("Variantes");
-        SceneManager.LoadScene(sceneName);
         if (normal)
         {
             GuantesNormal(true);
@@ -50,6 +60,10 @@ public class GameManager : MonoBehaviour
         {
             GuantesNormal(false);
         }
+    }
+    public void ChangeScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 
     public bool HaRecibidoGolpe()
@@ -64,7 +78,7 @@ public class GameManager : MonoBehaviour
         }
         return false;
     }
-    private void Update()
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.C))
         {
@@ -83,6 +97,14 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I))
         {
             IsInvulnerable = !IsInvulnerable;
+            if (IsInvulnerable)
+            {
+                Debug.Log("Invulnerable activado");
+            }
+            else
+            {
+                Debug.Log("Invulnerable desactivado");
+            }
         }
     }
 
