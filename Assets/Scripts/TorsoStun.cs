@@ -9,7 +9,7 @@ public class TorsoStun : StateMachineBehaviour
     public GameObject izquierda;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        GameManager.Instance.stuned = true;
+        GameManager.Instance.Stun(0.5f);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -19,7 +19,7 @@ public class TorsoStun : StateMachineBehaviour
     //}
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        GameManager.Instance.stuned = false;
+
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

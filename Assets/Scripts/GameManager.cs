@@ -135,6 +135,16 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+    IEnumerator Stuneado(float seconds)
+    {
+        GameManager.Instance.stuned = true;
+        yield return new WaitForSeconds(seconds);
+        GameManager.Instance.stuned = false;
+    }
+    public void Stun(float seconds)
+    {
+        StartCoroutine(Stuneado(seconds));
+    }
 }
 
 

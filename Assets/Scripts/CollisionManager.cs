@@ -15,6 +15,7 @@ public class CollisionManager : MonoBehaviour
     HealthBarScript healthbar;
     public GameObject sweatParticlesPrefab;  // Prefab de las partículas de sudor
     public float particleLifetime = 1.0f;
+    
 
 
     private void Awake()
@@ -55,7 +56,6 @@ public class CollisionManager : MonoBehaviour
             {
                 GameManager.Instance.list.Clear();
                 jeroAnimations.anim.SetTrigger("IsRightHeadHit");
-                Debug.Log("Golpeo");
                 if (!GameManager.Instance.IsInvulnerable)
                 {
                     healthbar.hp -= 10;
@@ -65,7 +65,6 @@ public class CollisionManager : MonoBehaviour
             {
                 GameManager.Instance.list.Clear();
                 jeroAnimations.anim.SetTrigger("IsLeftHeadHit");
-                Debug.Log("Golpeo");
                 if (!GameManager.Instance.IsInvulnerable)
                 {
                     healthbar.hp -= 10;
@@ -75,7 +74,6 @@ public class CollisionManager : MonoBehaviour
             {
                 GameManager.Instance.list.Clear();
                 jeroAnimations.anim.SetTrigger("IsFrontHeadHit");
-                Debug.Log("Golpeo");
                 if (!GameManager.Instance.IsInvulnerable)
                 {
                     healthbar.hp -= 7;
@@ -85,7 +83,6 @@ public class CollisionManager : MonoBehaviour
             {
                 GameManager.Instance.list.Clear();
                 jeroAnimations.anim.SetTrigger("IsTorsoRightHit");
-                Debug.Log("Golpeo");
                 if (!GameManager.Instance.IsInvulnerable)
                 {
                     healthbar.hp -= 15;
@@ -95,7 +92,6 @@ public class CollisionManager : MonoBehaviour
             {
                 GameManager.Instance.list.Clear();
                 jeroAnimations.anim.SetTrigger("IsTorsoLeftHit");
-                Debug.Log("Golpeo");
                 if (!GameManager.Instance.IsInvulnerable)
                 {
                     healthbar.hp -= 15;

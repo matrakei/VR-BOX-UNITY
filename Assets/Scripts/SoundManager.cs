@@ -35,7 +35,6 @@ public class SoundManager : MonoBehaviour
         }
         else if (Audios.clip != menuMusic && SceneManager.GetActiveScene().name == "Menu Inicio")
         {
-            Debug.Log("Menu Music");
             Audios.clip = menuMusic;
             SFX.clip = menucheer;
             Audios.Play();

@@ -40,6 +40,7 @@ public class BotonesScript : MonoBehaviour
             {
                 boton.layer = 0;
                 GuantesButton.layer = 0;
+                playButton.layer = 0;
             }
         }
     }
@@ -82,10 +83,11 @@ public class BotonesScript : MonoBehaviour
             {
                 boton.layer = 6;
                 GuantesButton.layer = 6;
+                playButton.layer = 6;
             }
 
         }
-        if (gameObject.name == "Select Normal")
+        if (gameObject.name == "Guante Normal")
         {
             playButton.SetActive(true);
             GuantesButton.SetActive(true);
@@ -97,10 +99,11 @@ public class BotonesScript : MonoBehaviour
             {
                 boton.layer = 6;
                 GuantesButton.layer = 6;
+                playButton.layer = 6;
             }
             GameManager.Instance.GuantesNormal(true);
         }
-        if (gameObject.name == "Select Variante")
+        if (gameObject.name == "Guante Variante")
         {
             playButton.SetActive(true);
             GuantesButton.SetActive(true);
