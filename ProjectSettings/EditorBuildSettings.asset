@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level.unity
     guid: de4d61881ede185498f8252f31d652f8
+  - enabled: 1
+    path: Assets/Scenes/Menu Past Inicio.unity
+    guid: cc112d2316afc67498f64c44c567127f
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 45a28e1fed3aa384e95c50939f7d794c, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 418719e409834304daf56346b9f708b4, type: 2}

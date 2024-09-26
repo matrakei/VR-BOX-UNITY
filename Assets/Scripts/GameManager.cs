@@ -19,6 +19,11 @@ public class GameManager : MonoBehaviour
     public GameObject[] Normales;
     public GameObject[] Variantes;
     bool normal = true;
+    GameObject DERECHA;
+    GameObject IZQUIERDA;
+    GameObject FRENTE;
+    GameObject IZQUIERDAABAJO;
+    GameObject DERECHAABAJO;
 
 
     // Start is called before the first frame update
@@ -60,6 +65,22 @@ public class GameManager : MonoBehaviour
         {
             GuantesNormal(false);
         }
+        DERECHA = GameObject.Find("DERECHA");
+        IZQUIERDA = GameObject.Find("IZQUIERDA");
+        FRENTE = GameObject.Find("FRENTE");
+        IZQUIERDAABAJO = GameObject.Find("IZQUIERDA ABAJO");
+        DERECHAABAJO = GameObject.Find("DERECHA ABAJO");
+        IsFinished = false;
+        list.Clear();
+        if (IZQUIERDA != null && DERECHA != null && FRENTE != null && IZQUIERDAABAJO != null && DERECHAABAJO != null)
+        {
+            IZQUIERDA.layer = 8;
+            DERECHA.layer = 8;
+            FRENTE.layer = 8;
+            DERECHAABAJO.layer = 8;
+            IZQUIERDAABAJO.layer = 8;
+        }
+
     }
     public void ChangeScene(string sceneName)
     {

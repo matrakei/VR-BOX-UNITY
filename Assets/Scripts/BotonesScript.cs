@@ -31,6 +31,15 @@ public class BotonesScript : MonoBehaviour
                 ActDiact(boton, false);
             }
         }
+        else if (SceneManager.GetActiveScene().name == "Menu Past Inicio")
+        {
+            playButton.SetActive(true);
+            GuantesButton.SetActive(true);
+            foreach (GameObject boton in botonesGuantes)
+            {
+                ActDiact(boton, false);
+            }
+        }
     }
     private void OnTriggerExit(Collider other)
     {
@@ -59,19 +68,19 @@ public class BotonesScript : MonoBehaviour
             GameManager.Instance.ChangeScene("Level");
             SoundManager.Instance.PlayMusic(CROWD);
         }
-
-        if (gameObject.name == "Play Again Button")
+        else if (gameObject.name == "Play Again Button")
         {
-            GameManager.Instance.ChangeScene("Level");
             Debug.Log("Play Again");
+            GameManager.Instance.ChangeScene("Level");
             GameManager.Instance.dead = false;
         }
-        if (gameObject.name == "Boton Salir")
+        else if (gameObject.name == "Boton Salir")
         {
             Debug.Log("Salio");
-            Application.Quit();
+            GameManager.Instance.ChangeScene("Menu Past Inicio");
+            GameManager.Instance.dead = false;
         }
-        if (gameObject.name == "Guantes Button")
+        else if (gameObject.name == "Guantes Button")
         {
             playButton.SetActive(false);
             GuantesButton.SetActive(false);
@@ -115,6 +124,7 @@ public class BotonesScript : MonoBehaviour
             {
                 boton.layer = 6;
                 GuantesButton.layer = 6;
+                playButton.layer = 6;
             }
             GameManager.Instance.GuantesNormal(false);
         }
