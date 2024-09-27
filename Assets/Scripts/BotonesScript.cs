@@ -133,7 +133,14 @@ public class BotonesScript : MonoBehaviour
         if (objeto.GetComponent<BoxCollider>() != null)
             objeto.GetComponent<BoxCollider>().enabled = thebool;
     }
-
+    IEnumerator WaitToColide(float seconds)
+    {
+        GuantesButton.layer = 6;
+        playButton.layer = 6;
+        yield return new WaitForSeconds(seconds);
+        GuantesButton.layer = 0;
+        playButton.layer = 0;
+    }
     private void UnColide(GameObject boton)
     {
         boton.layer = 6;

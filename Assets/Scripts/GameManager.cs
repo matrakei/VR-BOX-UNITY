@@ -80,7 +80,6 @@ public class GameManager : MonoBehaviour
             DERECHAABAJO.layer = 8;
             IZQUIERDAABAJO.layer = 8;
         }
-
     }
     public void ChangeScene(string sceneName)
     {
