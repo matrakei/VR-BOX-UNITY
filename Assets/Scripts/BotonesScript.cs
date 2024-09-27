@@ -15,16 +15,8 @@ public class BotonesScript : MonoBehaviour
         GuantesButton = GameObject.Find("Guantes Button");
         if (SceneManager.GetActiveScene().name == "Menu Inicio")
         {
-            playButton.GetComponent<MeshRenderer>().enabled = false;
-            GuantesButton.GetComponent<MeshRenderer>().enabled = false;
-            if (gameObject == playButton)
-            {
-                playButton.GetComponent<MeshCollider>().enabled = false;
-            }
-            else if (gameObject == GuantesButton)
-            {
-                GuantesButton.GetComponent<BoxCollider>().enabled = false;
-            }
+            ActDiact(playButton, false);
+            ActDiact(GuantesButton, false);
             StartCoroutine(WaitToActivate(10));
             foreach (GameObject boton in botonesGuantes)
             {
@@ -33,8 +25,8 @@ public class BotonesScript : MonoBehaviour
         }
         else if (SceneManager.GetActiveScene().name == "Menu Past Inicio")
         {
-            playButton.SetActive(true);
-            GuantesButton.SetActive(true);
+            ActDiact(playButton, true);
+            ActDiact(GuantesButton, true);
             foreach (GameObject boton in botonesGuantes)
             {
                 ActDiact(boton, false);
@@ -47,9 +39,7 @@ public class BotonesScript : MonoBehaviour
         {
             foreach (GameObject boton in botonesGuantes)
             {
-                boton.layer = 0;
-                GuantesButton.layer = 0;
-                playButton.layer = 0;
+                colide(boton);
             }
         }
     }
@@ -82,49 +72,43 @@ public class BotonesScript : MonoBehaviour
         }
         else if (gameObject.name == "Guantes Button")
         {
-            playButton.SetActive(false);
-            GuantesButton.SetActive(false);
+            ActDiact(playButton, false);
+            ActDiact(GuantesButton, false);
             foreach (GameObject boton in botonesGuantes)
             {
                 ActDiact(boton, true);
             }
             foreach (GameObject boton in botonesGuantes)
             {
-                boton.layer = 6;
-                GuantesButton.layer = 6;
-                playButton.layer = 6;
+                UnColide(boton);
             }
 
         }
         if (gameObject.name == "Guante Normal")
         {
-            playButton.SetActive(true);
-            GuantesButton.SetActive(true);
+            ActDiact(playButton, true);
+            ActDiact(GuantesButton, true);
             foreach (GameObject boton in botonesGuantes)
             {
                 ActDiact(boton, false);
             }
             foreach (GameObject boton in botonesGuantes)
             {
-                boton.layer = 6;
-                GuantesButton.layer = 6;
-                playButton.layer = 6;
+                UnColide(boton);
             }
             GameManager.Instance.GuantesNormal(true);
         }
         if (gameObject.name == "Guante Variante")
         {
-            playButton.SetActive(true);
-            GuantesButton.SetActive(true);
+            ActDiact(playButton, true);
+            ActDiact(GuantesButton, true);
             foreach (GameObject boton in botonesGuantes)
             {
                 ActDiact(boton, false);
             }
             foreach (GameObject boton in botonesGuantes)
             {
-                boton.layer = 6;
-                GuantesButton.layer = 6;
-                playButton.layer = 6;
+                UnColide(boton);
             }
             GameManager.Instance.GuantesNormal(false);
         }
@@ -132,26 +116,36 @@ public class BotonesScript : MonoBehaviour
     IEnumerator WaitToActivate(float seconds)
     {
         yield return new WaitForSeconds(seconds);
-        playButton.GetComponent<MeshRenderer>().enabled = true;
-        GuantesButton.GetComponent<MeshRenderer>().enabled = true;
-        if (gameObject == playButton)
-        {
-            playButton.GetComponent<MeshCollider>().enabled = true;
-        }
-        else if (gameObject == GuantesButton)
-        {
-            GuantesButton.GetComponent<BoxCollider>().enabled = true;
-        }
+        ActDiact(playButton, true);
+        ActDiact(GuantesButton, true);
     }
     IEnumerator WaitSeconds(float seconds)
     {
         yield return new WaitForSeconds(seconds);
-        gameObject.GetComponent<MeshRenderer>().enabled = true;
-        gameObject.GetComponent<BoxCollider>().enabled = true;
+        ActDiact(gameObject, true);
     }
     void ActDiact(GameObject objeto, bool thebool)
     {
-        objeto.GetComponent<MeshRenderer>().enabled = thebool;
-        objeto.GetComponent<BoxCollider>().enabled = thebool;
+        if (objeto.GetComponent<MeshRenderer>() != null)
+            objeto.GetComponent<MeshRenderer>().enabled = thebool;
+        if (objeto.GetComponent<MeshCollider>() != null)
+            objeto.GetComponent<MeshCollider>().enabled = thebool;
+        if (objeto.GetComponent<BoxCollider>() != null)
+            objeto.GetComponent<BoxCollider>().enabled = thebool;
     }
+
+    private void UnColide(GameObject boton)
+    {
+        boton.layer = 6;
+        GuantesButton.layer = 6;
+        playButton.layer = 6;
+    }
+
+    private void colide(GameObject boton)
+    {
+        boton.layer = 0;
+        GuantesButton.layer = 0;
+        playButton.layer = 0;
+    }
+
 }
