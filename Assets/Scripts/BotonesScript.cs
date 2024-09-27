@@ -9,6 +9,11 @@ public class BotonesScript : MonoBehaviour
     public GameObject[] botonesGuantes;
     GameObject playButton;
     GameObject GuantesButton;
+    private string previousScene;
+    private void Start()
+    {
+
+    }
     private void Awake()
     {
         playButton = GameObject.Find("Boton Jugar");
@@ -133,14 +138,6 @@ public class BotonesScript : MonoBehaviour
         if (objeto.GetComponent<BoxCollider>() != null)
             objeto.GetComponent<BoxCollider>().enabled = thebool;
     }
-    IEnumerator WaitToColide(float seconds)
-    {
-        GuantesButton.layer = 6;
-        playButton.layer = 6;
-        yield return new WaitForSeconds(seconds);
-        GuantesButton.layer = 0;
-        playButton.layer = 0;
-    }
     private void UnColide(GameObject boton)
     {
         boton.layer = 6;
@@ -154,5 +151,4 @@ public class BotonesScript : MonoBehaviour
         GuantesButton.layer = 0;
         playButton.layer = 0;
     }
-
 }

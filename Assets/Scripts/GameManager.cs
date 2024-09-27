@@ -24,6 +24,10 @@ public class GameManager : MonoBehaviour
     GameObject FRENTE;
     GameObject IZQUIERDAABAJO;
     GameObject DERECHAABAJO;
+    GameObject playButton;
+    GameObject GuantesButton;
+    string lastScene;
+    string nowScene;
 
 
     // Start is called before the first frame update
@@ -55,6 +59,8 @@ public class GameManager : MonoBehaviour
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        playButton = GameObject.Find("Boton Jugar");
+        GuantesButton = GameObject.Find("Guantes Button");
         Normales = GameObject.FindGameObjectsWithTag("Normales");
         Variantes = GameObject.FindGameObjectsWithTag("Variantes");
         if (normal)
@@ -80,11 +86,25 @@ public class GameManager : MonoBehaviour
             DERECHAABAJO.layer = 8;
             IZQUIERDAABAJO.layer = 8;
         }
+        if (lastScene == "Level" && SceneManager.GetActiveScene().name == "Menu Past Inicio")
+        {
+            playButton.layer = 6;
+            GuantesButton.layer = 6;
+        }
+        
     }
     public void ChangeScene(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        StartCoroutine(SceneChanger(sceneName));
     }
+    //IEnumerator WaitToColide(float seconds)
+    //{
+    //    GuantesButton.layer = 6;
+    //    playButton.layer = 6;
+    //    yield return new WaitForSeconds(seconds);
+    //    GuantesButton.layer = 0;
+    //    playButton.layer = 0;
+    //}
 
     public bool HaRecibidoGolpe()
     {
@@ -126,6 +146,14 @@ public class GameManager : MonoBehaviour
                 Debug.Log("Invulnerable desactivado");
             }
         }
+    }
+    IEnumerator SceneChanger(string sceneName)
+    {
+        lastScene = SceneManager.GetActiveScene().name;
+        yield return new WaitForEndOfFrame();
+        SceneManager.LoadScene(sceneName);
+        yield return new WaitForEndOfFrame();
+        nowScene = SceneManager.GetActiveScene().name;
     }
 
     public void GuantesNormal(bool GuantesNormal)
