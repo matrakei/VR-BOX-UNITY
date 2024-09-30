@@ -11,14 +11,17 @@ public class EspecetadoresScript : MonoBehaviour
     public float speedMin = 0.5f; // Velocidad mínima del movimiento
     public float speed;
     public float height;
-
+    bool Active = false;
     int color = 0;
     public Renderer renderer;
 
     private Vector3 initialPosition; // Guardar la posición original del círculo
     private void Update()
     {
-
+        if (GameManager.Instance.dead == true && Active == false)
+        {
+            StartCoroutine(MoveCircleConstantly());
+        }
     }
     void Start()
     {
@@ -30,12 +33,14 @@ public class EspecetadoresScript : MonoBehaviour
             // Iniciar el movimiento cíclico de subida y bajada constante
             StartCoroutine(MoveCircleConstantly());
         }
+    }
         IEnumerator MoveCircleConstantly()
         {
             //if (SceneManager.GetActiveScene().name == "Menu Inicio")
             //{
             //    yield return new WaitForSeconds(10);
             //}
+            Active = true;
             initialPosition = transform.localPosition;
             while (true)
             {
@@ -61,7 +66,7 @@ public class EspecetadoresScript : MonoBehaviour
             // Asegurarse de que la posición final sea exacta
             transform.localPosition = targetPosition;
         }
-    } 
+    
     Color[] vibrantColors = new Color[]
 {
     new Color(0.13f, 0.55f, 0.13f), // Verde oscuro

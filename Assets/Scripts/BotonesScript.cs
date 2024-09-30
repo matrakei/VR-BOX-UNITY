@@ -40,6 +40,13 @@ public class BotonesScript : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
+        if (gameObject.name == "ExitBox2")
+        {
+            foreach (GameObject boton in botonesGuantes)
+            {
+                colide(boton);
+            }
+        }
         if (gameObject.name == "ExitBox")
         {
             foreach (GameObject boton in botonesGuantes)
