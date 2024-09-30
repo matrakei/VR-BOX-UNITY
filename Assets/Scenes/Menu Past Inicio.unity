@@ -1920,43 +1920,71 @@ PrefabInstance:
     - target: {fileID: 1747900665195775312, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes.Array.data[0]
       value: 
-      objectReference: {fileID: 3587644837140213917}
+      objectReference: {fileID: 0}
     - target: {fileID: 1747900665195775312, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes.Array.data[1]
       value: 
-      objectReference: {fileID: 3587644837140213916}
+      objectReference: {fileID: 0}
     - target: {fileID: 1747900665195775312, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes.Array.data[2]
       value: 
-      objectReference: {fileID: 3587644837140213915}
+      objectReference: {fileID: 0}
     - target: {fileID: 1747900665195775312, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes.Array.data[3]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2004010045322322599, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2004010045322322599, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_SpotAngle
+      value: 179
+      objectReference: {fileID: 0}
+    - target: {fileID: 2004010045322322599, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_InnerSpotAngle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2014118597721999609, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.621
+      objectReference: {fileID: 0}
+    - target: {fileID: 2014118597721999609, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.33900046
+      objectReference: {fileID: 0}
+    - target: {fileID: 2107438125306009377, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2107438125306009377, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_SpotAngle
+      value: 179
+      objectReference: {fileID: 0}
+    - target: {fileID: 2107438125306009377, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_InnerSpotAngle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3036248370021673238, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3036248370021673238, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes.Array.data[0]
+      value: 
+      objectReference: {fileID: 3587644837140213917}
+    - target: {fileID: 3036248370021673238, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes.Array.data[1]
+      value: 
+      objectReference: {fileID: 3587644837140213916}
+    - target: {fileID: 3036248370021673238, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes.Array.data[2]
+      value: 
+      objectReference: {fileID: 3587644837140213915}
+    - target: {fileID: 3036248370021673238, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes.Array.data[3]
+      value: 
       objectReference: {fileID: 3587644837140213914}
-    - target: {fileID: 2004010045322322599, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
-      propertyPath: m_Intensity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2004010045322322599, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
-      propertyPath: m_SpotAngle
-      value: 179
-      objectReference: {fileID: 0}
-    - target: {fileID: 2004010045322322599, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
-      propertyPath: m_InnerSpotAngle
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107438125306009377, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
-      propertyPath: m_Intensity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107438125306009377, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
-      propertyPath: m_SpotAngle
-      value: 179
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107438125306009377, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
-      propertyPath: m_InnerSpotAngle
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3050509604547582057, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes.Array.size
       value: 4
@@ -2024,19 +2052,19 @@ PrefabInstance:
     - target: {fileID: 4299189873351063146, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes.Array.data[0]
       value: 
-      objectReference: {fileID: 3587644837140213917}
+      objectReference: {fileID: 0}
     - target: {fileID: 4299189873351063146, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes.Array.data[1]
       value: 
-      objectReference: {fileID: 3587644837140213916}
+      objectReference: {fileID: 0}
     - target: {fileID: 4299189873351063146, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes.Array.data[2]
       value: 
-      objectReference: {fileID: 3587644837140213915}
+      objectReference: {fileID: 0}
     - target: {fileID: 4299189873351063146, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes.Array.data[3]
       value: 
-      objectReference: {fileID: 3587644837140213914}
+      objectReference: {fileID: 0}
     - target: {fileID: 4602191815122963092, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_LocalPosition.x
       value: 24.2
@@ -2053,6 +2081,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Lights
       objectReference: {fileID: 0}
+    - target: {fileID: 5688019091193946582, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_Name
+      value: Guante Normal
+      objectReference: {fileID: 0}
     - target: {fileID: 6153832533042513296, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes.Array.size
       value: 4
@@ -2060,19 +2092,19 @@ PrefabInstance:
     - target: {fileID: 6153832533042513296, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes.Array.data[0]
       value: 
-      objectReference: {fileID: 3587644837140213917}
+      objectReference: {fileID: 0}
     - target: {fileID: 6153832533042513296, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes.Array.data[1]
       value: 
-      objectReference: {fileID: 3587644837140213916}
+      objectReference: {fileID: 0}
     - target: {fileID: 6153832533042513296, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes.Array.data[2]
       value: 
-      objectReference: {fileID: 3587644837140213915}
+      objectReference: {fileID: 0}
     - target: {fileID: 6153832533042513296, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes.Array.data[3]
       value: 
-      objectReference: {fileID: 3587644837140213914}
+      objectReference: {fileID: 0}
     - target: {fileID: 6307583423791360311, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_Intensity
       value: 1
@@ -2085,9 +2117,25 @@ PrefabInstance:
       propertyPath: m_InnerSpotAngle
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6445894305691348446, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.651
+      objectReference: {fileID: 0}
+    - target: {fileID: 6445894305691348446, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.339
+      objectReference: {fileID: 0}
+    - target: {fileID: 6445894305691348446, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 6566412414148449342, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_TagString
       value: Lights
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615449042886887764, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_Name
+      value: Marco
       objectReference: {fileID: 0}
     - target: {fileID: 6773503754576334606, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_Enabled
@@ -2157,6 +2205,46 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.002000004
       objectReference: {fileID: 0}
+    - target: {fileID: 8127557365653025761, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8127557365653025761, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes.Array.data[0]
+      value: 
+      objectReference: {fileID: 3587644837140213917}
+    - target: {fileID: 8127557365653025761, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes.Array.data[1]
+      value: 
+      objectReference: {fileID: 3587644837140213916}
+    - target: {fileID: 8127557365653025761, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes.Array.data[2]
+      value: 
+      objectReference: {fileID: 3587644837140213915}
+    - target: {fileID: 8127557365653025761, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes.Array.data[3]
+      value: 
+      objectReference: {fileID: 3587644837140213914}
+    - target: {fileID: 9219221961027101035, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9219221961027101035, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes.Array.data[0]
+      value: 
+      objectReference: {fileID: 3587644837140213917}
+    - target: {fileID: 9219221961027101035, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes.Array.data[1]
+      value: 
+      objectReference: {fileID: 3587644837140213916}
+    - target: {fileID: 9219221961027101035, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes.Array.data[2]
+      value: 
+      objectReference: {fileID: 3587644837140213915}
+    - target: {fileID: 9219221961027101035, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes.Array.data[3]
+      value: 
+      objectReference: {fileID: 3587644837140213914}
     m_RemovedComponents:
     - {fileID: 919694461026872792, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
     - {fileID: 7272444878602089833, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
@@ -2363,22 +2451,22 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
 --- !u!1 &3587644837140213914 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 7574576955973504926, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6615449042886887764, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
   m_PrefabInstance: {fileID: 3587644837140213913}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &3587644837140213915 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1892740646032932330, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5688019091193946582, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
   m_PrefabInstance: {fileID: 3587644837140213913}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &3587644837140213916 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4114494256968014411, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2604518759702319412, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
   m_PrefabInstance: {fileID: 3587644837140213913}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &3587644837140213917 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 5351277672484038719, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1727289757931785705, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
   m_PrefabInstance: {fileID: 3587644837140213913}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4619164277945008589
