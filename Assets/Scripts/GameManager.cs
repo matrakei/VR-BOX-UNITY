@@ -149,6 +149,8 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator SceneChanger(string sceneName)
     {
+        IsCheating = false;
+        IsInvulnerable = false;
         Debug.Log("Funcionando");
         lastScene = SceneManager.GetActiveScene().name;
         Debug.Log("lastScene: " + lastScene);
