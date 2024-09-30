@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     string lastScene;
     string nowScene;
 
-
+    //algun vambio
     // Start is called before the first frame update
     void Awake()
     {
