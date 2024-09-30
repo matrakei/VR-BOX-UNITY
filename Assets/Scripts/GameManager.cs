@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     GameObject GuantesButton;
     string lastScene;
     string nowScene;
+    public GameObject Cinturon;
 
     //algun vambio
     // Start is called before the first frame update
@@ -59,6 +60,9 @@ public class GameManager : MonoBehaviour
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        Cinturon = GameObject.Find("Cinturon");
+        if(Cinturon != null)
+        Cinturon.SetActive(false);
         playButton = GameObject.Find("Boton Jugar");
         GuantesButton = GameObject.Find("Guantes Button");
         Normales = GameObject.FindGameObjectsWithTag("Normales");
@@ -144,6 +148,17 @@ public class GameManager : MonoBehaviour
             else
             {
                 Debug.Log("Invulnerable desactivado");
+            }
+        }
+        if (Cinturon != null)
+        {
+            if (dead)
+            {
+                Cinturon.SetActive(true);
+            }
+            else
+            {
+                Cinturon.SetActive(false);
             }
         }
     }
