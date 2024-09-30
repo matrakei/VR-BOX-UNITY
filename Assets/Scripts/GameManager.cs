@@ -149,11 +149,17 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator SceneChanger(string sceneName)
     {
+        Debug.Log("Funcionando");
         lastScene = SceneManager.GetActiveScene().name;
-        yield return new WaitForEndOfFrame();
-        SceneManager.LoadScene(sceneName);
-        yield return new WaitForEndOfFrame();
+        Debug.Log("lastScene: " + lastScene);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+        Debug.Log("Escena cargada");
         nowScene = SceneManager.GetActiveScene().name;
+        Debug.Log("nowScene: " + nowScene);
     }
 
     public void GuantesNormal(bool GuantesNormal)
