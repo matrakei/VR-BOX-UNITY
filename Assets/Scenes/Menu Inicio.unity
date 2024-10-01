@@ -2681,6 +2681,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4481320167752816693, guid: fb1d9e25bd152c04b8a2237e3adb3b41, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4481320167752816693, guid: fb1d9e25bd152c04b8a2237e3adb3b41, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
@@ -2697,6 +2701,10 @@ PrefabInstance:
       value: SOUNDMANAGER
       objectReference: {fileID: 0}
     - target: {fileID: 8196019595932741424, guid: fb1d9e25bd152c04b8a2237e3adb3b41, type: 3}
+      propertyPath: Aplausos
+      value: 
+      objectReference: {fileID: 8300000, guid: c5c0ac9ddeec8d348832881fd944ada5, type: 3}
+    - target: {fileID: 8196019595932741424, guid: fb1d9e25bd152c04b8a2237e3adb3b41, type: 3}
       propertyPath: gameMusic
       value: 
       objectReference: {fileID: 8300000, guid: 7a44a3ad395606a429f31e68909b6302, type: 3}
@@ -2708,6 +2716,18 @@ PrefabInstance:
       propertyPath: menucheer
       value: 
       objectReference: {fileID: 8300000, guid: d1b548c464afe46408e55c0cb9900299, type: 3}
+    - target: {fileID: 8196019595932741424, guid: fb1d9e25bd152c04b8a2237e3adb3b41, type: 3}
+      propertyPath: pastmenuMusic.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8196019595932741424, guid: fb1d9e25bd152c04b8a2237e3adb3b41, type: 3}
+      propertyPath: pastmenuMusic.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9f7096248f4ebda4f8d3bc315e27bf25, type: 3}
+    - target: {fileID: 8196019595932741424, guid: fb1d9e25bd152c04b8a2237e3adb3b41, type: 3}
+      propertyPath: pastmenuMusic.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: e71050baa974b51469d78f529306b3ee, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

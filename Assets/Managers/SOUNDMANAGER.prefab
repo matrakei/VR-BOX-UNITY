@@ -282,6 +282,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 08570126d9710bd439ccd519f9e345c8, type: 3}
   - {fileID: 8300000, guid: 0078c64c38219334d834a1a53384b845, type: 3}
   - {fileID: 8300000, guid: 216efb03c5353944e85aac90c0830004, type: 3}
+  gameMusic: {fileID: 8300000, guid: 7a44a3ad395606a429f31e68909b6302, type: 3}
+  menuMusic: {fileID: 8300000, guid: 93af6247f9d98fd41a0f620023654e30, type: 3}
+  menucheer: {fileID: 8300000, guid: d1b548c464afe46408e55c0cb9900299, type: 3}
+  Aplausos: {fileID: 8300000, guid: c5c0ac9ddeec8d348832881fd944ada5, type: 3}
 --- !u!1 &6661591934574002523
 GameObject:
   m_ObjectHideFlags: 0

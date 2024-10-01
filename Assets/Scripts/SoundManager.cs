@@ -13,7 +13,9 @@ public class SoundManager : MonoBehaviour
     public AudioClip[] Kicks;
     public AudioClip gameMusic;
     public AudioClip menuMusic;
+    public AudioClip[] pastmenuMusic;
     public AudioClip menucheer;
+    public AudioClip Aplausos;
     int random;
 
     // Start is called before the first frame update

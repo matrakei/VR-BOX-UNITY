@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     string lastScene;
     string nowScene;
     public GameObject Cinturon;
-
+    bool Aplausos = false;
     //algun vambio
     // Start is called before the first frame update
     void Awake()
@@ -95,7 +95,26 @@ public class GameManager : MonoBehaviour
             playButton.layer = 6;
             GuantesButton.layer = 6;
         }
-        
+        if (SoundManager.Instance.Audios.clip != SoundManager.Instance.gameMusic && SceneManager.GetActiveScene().name == "Level")
+        {
+            SoundManager.Instance.Audios.clip = SoundManager.Instance.gameMusic;
+            SoundManager.Instance.Audios.Play();
+        }
+        else if (SoundManager.Instance.Audios.clip != SoundManager.Instance.menuMusic && SceneManager.GetActiveScene().name == "Menu Inicio")
+        {
+            SoundManager.Instance.Audios.clip = SoundManager.Instance.menuMusic;
+            SoundManager.Instance.SFX.clip = SoundManager.Instance.menucheer;
+            SoundManager.Instance.Audios.Play();
+            SoundManager.Instance.SFX.Play();
+        }
+        else if (SoundManager.Instance.Audios.clip != SoundManager.Instance.pastmenuMusic[0] && SoundManager.Instance.Audios.clip != SoundManager.Instance.pastmenuMusic[1] && SceneManager.GetActiveScene().name == "Menu Past Inicio")
+        {
+            int random = Random.Range(0, SoundManager.Instance.pastmenuMusic.Length);
+            SoundManager.Instance.Audios.clip = SoundManager.Instance.pastmenuMusic[random];
+            SoundManager.Instance.Audios.Play();
+            SoundManager.Instance.SFX.Stop();
+        }
+
     }
     public void ChangeScene(string sceneName)
     {
@@ -150,6 +169,11 @@ public class GameManager : MonoBehaviour
                 Debug.Log("Invulnerable desactivado");
             }
         }
+        if (dead && !Aplausos)
+        {
+            SoundManager.Instance.PlayMusic(SoundManager.Instance.Aplausos);
+            Aplausos = true;
+        }
         if (Cinturon != null)
         {
             if (dead)
@@ -166,17 +190,13 @@ public class GameManager : MonoBehaviour
     {
         IsCheating = false;
         IsInvulnerable = false;
-        Debug.Log("Funcionando");
         lastScene = SceneManager.GetActiveScene().name;
-        Debug.Log("lastScene: " + lastScene);
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
         while (!asyncLoad.isDone)
         {
             yield return null;
         }
-        Debug.Log("Escena cargada");
         nowScene = SceneManager.GetActiveScene().name;
-        Debug.Log("nowScene: " + nowScene);
     }
 
     public void GuantesNormal(bool GuantesNormal)
