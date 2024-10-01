@@ -939,9 +939,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd9081b4d2c6caf40b03f971050ee0b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 40
-  floatSpeed: 0.125
-  floatHeight: 0.25
+  rotationSpeed: 30
+  floatSpeed: 0.135
+  floatHeight: 0.2
 --- !u!1001 &217157850
 PrefabInstance:
   m_ObjectHideFlags: 0
