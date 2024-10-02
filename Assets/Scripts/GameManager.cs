@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.Loading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
     string lastScene;
     string nowScene;
     public GameObject Cinturon;
+    bool cintu = false;
     bool Aplausos = false;
     //algun vambio
     // Start is called before the first frame update
@@ -60,6 +62,8 @@ public class GameManager : MonoBehaviour
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        cintu = false;
+        Aplausos = false;
         Cinturon = GameObject.Find("Cinturon");
         if(Cinturon != null)
         Cinturon.SetActive(false);
@@ -176,13 +180,10 @@ public class GameManager : MonoBehaviour
         }
         if (Cinturon != null)
         {
-            if (dead)
+            if (dead && !cintu)
             {
-                Cinturon.SetActive(true);
-            }
-            else
-            {
-                Cinturon.SetActive(false);
+                StartCoroutine(WaitForActive(5));
+                cintu = true;
             }
         }
     }
@@ -235,6 +236,11 @@ public class GameManager : MonoBehaviour
     public void Stun(float seconds)
     {
         StartCoroutine(Stuneado(seconds));
+    }
+    IEnumerator WaitForActive(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        Cinturon.SetActive(true);
     }
 }
 

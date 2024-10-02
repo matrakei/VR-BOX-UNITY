@@ -3,7 +3,47 @@ guid: ae310278693f31647ae5f2439b361b7e
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Everlast-logo-10AFCFC702-seeklogo.com
+    second: {fileID: 2100000, guid: 19123d2b759549849843c3cf43da26b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: ce55cc9d6893de248889f91adc66f966, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 3aac387901da93044ab7c98d63bd97a7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: 43db1bb4e255e7748a5f3b85bc6bbd24, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: 062209371968c4f45af8e2f61dc925ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.006
+    second: {fileID: 2100000, guid: 603efe63ae9faab409c7f1a7924b215d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WhatsApp Image 2024-09-26 at 15.09.39
+    second: {fileID: 2100000, guid: 385c2b37901df0e4791e6eca94936927, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: manaos-logo-9782382F3D-seeklogo.com
+    second: {fileID: 2100000, guid: cec334f2cbbc4164cb4c1df181b2e342, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

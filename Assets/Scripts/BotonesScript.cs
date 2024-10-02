@@ -59,7 +59,7 @@ public class BotonesScript : MonoBehaviour
     {
         if (GameManager.Instance.dead)
         {
-            StartCoroutine(WaitSeconds(3));
+            StartCoroutine(WaitSeconds(5));
         }
     }
     private void OnTriggerEnter(Collider other)

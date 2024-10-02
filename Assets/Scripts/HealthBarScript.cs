@@ -7,7 +7,7 @@ using TMPro;
 public class HealthBarScript : MonoBehaviour
 {
     public Slider healthbar;
-    public GameObject bar;
+    public Canvas bar;
     public int maxhp = 1000;
     public float hp;
     public TMP_Text texthp;
@@ -15,6 +15,7 @@ public class HealthBarScript : MonoBehaviour
     public GameObject PlayAgainButton;
     public GameObject Congrats;
     public GameObject BotonSalir;
+    public Animator anim;
 
     // Start is called before the first frame update
     void Start()
@@ -35,9 +36,8 @@ public class HealthBarScript : MonoBehaviour
                 healthbar.value = 0;
                 texthp.text = "0";
                 GameManager.Instance.dead = true;
-                bar.SetActive(false);
-                personaje.SetActive(false);
-                Congrats.SetActive(true);
+                bar.enabled = false;
+                StartCoroutine(Kill());
 
             }
             else
@@ -46,5 +46,12 @@ public class HealthBarScript : MonoBehaviour
                 texthp.text = hp.ToString();
             }
         }
+    }
+    IEnumerator Kill()
+    {
+        anim.SetTrigger("IsDead");
+        yield return new WaitForSeconds(5);
+        personaje.SetActive(false);
+        Congrats.SetActive(true);
     }
 }
