@@ -242,6 +242,15 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(seconds);
         Cinturon.SetActive(true);
     }
+    private void Start()
+    {
+        // Activa los displays si están disponibles
+        if (Display.displays.Length > 1)
+            Display.displays[1].Activate(); // Activa el segundo display
+
+        if (Display.displays.Length > 2)
+            Display.displays[2].Activate(); // Activa el tercer display si hay uno
+    }
 }
 
 

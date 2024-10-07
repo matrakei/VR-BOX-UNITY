@@ -1203,7 +1203,7 @@ Camera:
     m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
+  m_TargetDisplay: 1
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
@@ -2033,6 +2033,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ESCENARIO
       objectReference: {fileID: 0}
+    - target: {fileID: 1026272087638883449, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1335396079854144856, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_TagString
       value: Lights
@@ -2591,6 +2595,23 @@ PrefabInstance:
     - {fileID: 68143373009961615, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
     - {fileID: 1522814719228838886, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
     - {fileID: 2070696294364348611, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+    - {fileID: 7132838459221979943, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+    - {fileID: 5434604235555289979, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+    - {fileID: 17463321815748350, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+    - {fileID: 8439528420551247873, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+    - {fileID: 6527926375078687007, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+    - {fileID: 7602165586587519216, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+    - {fileID: 2885610013244224999, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+    - {fileID: 8212826731403946054, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+    - {fileID: 7844463266380314708, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+    - {fileID: 3880412764085978681, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+    - {fileID: 3997807362061399858, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+    - {fileID: 6874180732808796838, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+    - {fileID: 6016553734927194963, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+    - {fileID: 2316266054578858279, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+    - {fileID: 7149082027476026771, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+    - {fileID: 8712214217783760564, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+    - {fileID: 4664055392342339197, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6633993865054054016, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       insertIndex: -1

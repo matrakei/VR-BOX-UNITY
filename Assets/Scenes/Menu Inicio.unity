@@ -1079,7 +1079,7 @@ Camera:
     m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
+  m_TargetDisplay: 1
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
@@ -2237,6 +2237,34 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 2.209
       objectReference: {fileID: 0}
+    - target: {fileID: 7357689306273708302, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.122756
+      objectReference: {fileID: 0}
+    - target: {fileID: 7357689306273708302, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.7272584
+      objectReference: {fileID: 0}
+    - target: {fileID: 7357689306273708302, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.9498432
+      objectReference: {fileID: 0}
+    - target: {fileID: 7357689306273708302, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.42792523
+      objectReference: {fileID: 0}
+    - target: {fileID: 7357689306273708302, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.13490817
+      objectReference: {fileID: 0}
+    - target: {fileID: 7357689306273708302, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.8523357
+      objectReference: {fileID: 0}
+    - target: {fileID: 7357689306273708302, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.26870757
+      objectReference: {fileID: 0}
     - target: {fileID: 7403573918986718125, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: duration
       value: 10
@@ -2340,6 +2368,10 @@ PrefabInstance:
     - target: {fileID: 8288950918962635488, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 8446782427307340771, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: field of view
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 8847034257809452170, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes.Array.size
