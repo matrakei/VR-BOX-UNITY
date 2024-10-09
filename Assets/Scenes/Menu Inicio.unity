@@ -1757,6 +1757,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CROWD: {fileID: 8300000, guid: 7a44a3ad395606a429f31e68909b6302, type: 3}
   botonesGuantes: []
+  speed: 23
+  moveDuration: 5
 --- !u!1001 &1840113226
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2720,6 +2722,8 @@ MonoBehaviour:
   - {fileID: 3587644837140213916}
   - {fileID: 3587644837140213915}
   - {fileID: 3587644837140213914}
+  speed: 23
+  moveDuration: 5
 --- !u!64 &3587644837140213919
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2837,11 +2841,11 @@ PrefabInstance:
     - target: {fileID: 8196019595932741424, guid: fb1d9e25bd152c04b8a2237e3adb3b41, type: 3}
       propertyPath: pastmenuMusic.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 9f7096248f4ebda4f8d3bc315e27bf25, type: 3}
+      objectReference: {fileID: 8300000, guid: dd31c54d5feee5e46b6ddf77abcd206d, type: 3}
     - target: {fileID: 8196019595932741424, guid: fb1d9e25bd152c04b8a2237e3adb3b41, type: 3}
       propertyPath: pastmenuMusic.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: e71050baa974b51469d78f529306b3ee, type: 3}
+      objectReference: {fileID: 8300000, guid: cb016aa848c95674e885b18d4b119e6c, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

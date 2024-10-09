@@ -18,6 +18,7 @@ TagManager:
   - BotonesGuantes
   - Normales
   - Variantes
+  - Estrellas
   layers:
   - Default
   - TransparentFX

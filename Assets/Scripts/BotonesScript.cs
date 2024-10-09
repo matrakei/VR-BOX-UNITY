@@ -15,7 +15,7 @@ public class BotonesScript : MonoBehaviour
     private Vector3 initialPosition;  // Posición inicial del objeto
     private Vector3 targetPosition;   // Posición destino basada en la velocidad y tiempo
     public float moveDuration = 5f;  // Duración del movimiento en segundos
-    private float elapsedTime = 0f;   // Tiempo transcurrido
+    private float elapsedTime = 0f;// Tiempo transcurrido
     private void Start()
     {
 
@@ -141,7 +141,7 @@ public class BotonesScript : MonoBehaviour
             {
                 UnColide(boton);
             }
-            GameManager.Instance.GuantesNormal(true);
+            GameManager.Instance.Guantes(1);
         }
         if (gameObject.name == "Guante Variante")
         {
@@ -155,7 +155,7 @@ public class BotonesScript : MonoBehaviour
             {
                 UnColide(boton);
             }
-            GameManager.Instance.GuantesNormal(false);
+            GameManager.Instance.Guantes(2);
         }
     }
     IEnumerator WaitToActivate(float seconds)

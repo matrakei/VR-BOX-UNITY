@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.Loading;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,7 +20,10 @@ public class GameManager : MonoBehaviour
     public bool IsInvulnerable = false;
     public GameObject[] Normales;
     public GameObject[] Variantes;
+    public GameObject[] Estrellas;
     bool normal = true;
+    bool variante = false;
+    bool estrella = false;
     GameObject DERECHA;
     GameObject IZQUIERDA;
     GameObject FRENTE;
@@ -45,7 +49,7 @@ public class GameManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(this);
         }
-        GuantesNormal(true);
+        Guantes(1);
         Normales = GameObject.FindGameObjectsWithTag("Normales");
         Variantes = GameObject.FindGameObjectsWithTag("Variantes");
     }
@@ -71,13 +75,18 @@ public class GameManager : MonoBehaviour
         GuantesButton = GameObject.Find("Guantes Button");
         Normales = GameObject.FindGameObjectsWithTag("Normales");
         Variantes = GameObject.FindGameObjectsWithTag("Variantes");
+        Estrellas = GameObject.FindGameObjectsWithTag("Estrellas");
         if (normal)
         {
-            GuantesNormal(true);
+            Guantes(1);
         }
-        else
+        else if (variante)
         {
-            GuantesNormal(false);
+            Guantes(2);
+        }
+        else if (estrella)
+        {
+            Guantes(3);
         }
         DERECHA = GameObject.Find("DERECHA");
         IZQUIERDA = GameObject.Find("IZQUIERDA");
@@ -200,11 +209,13 @@ public class GameManager : MonoBehaviour
         nowScene = SceneManager.GetActiveScene().name;
     }
 
-    public void GuantesNormal(bool GuantesNormal)
+    public void Guantes(int numeroGuante)
     {
-        if (GuantesNormal)
+        if (numeroGuante == 1)
         {
             normal = true;
+            variante = false;
+            estrella = false;
             foreach (GameObject guante in Normales)
             {
                 guante.SetActive(true);
@@ -213,15 +224,43 @@ public class GameManager : MonoBehaviour
             {
                 guante.SetActive(false);
             }
+            foreach (GameObject guante in Estrellas)
+            {
+                guante.SetActive(false);
+            }
         }
-        else if (!GuantesNormal)
+        else if (numeroGuante == 2)
         {
             normal = false;
+            variante = true;
+            estrella = false;
             foreach (GameObject guante in Normales)
             {
                 guante.SetActive(false);
             }
             foreach (GameObject guante in Variantes)
+            {
+                guante.SetActive(true);
+            }
+            foreach (GameObject guante in Estrellas)
+            {
+                guante.SetActive(false);
+            }
+        }
+        else if (numeroGuante == 3)
+        {
+            normal = false;
+            variante = false;
+            estrella = true;
+            foreach (GameObject guante in Normales)
+            {
+                guante.SetActive(false);
+            }
+            foreach (GameObject guante in Variantes)
+            {
+                guante.SetActive(false);
+            }
+            foreach (GameObject guante in Estrellas)
             {
                 guante.SetActive(true);
             }
