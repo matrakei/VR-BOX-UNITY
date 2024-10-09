@@ -2229,7 +2229,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 22b0bbd7f6618764eb6bc5c1afb943ad, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 22b0bbd7f6618764eb6bc5c1afb943ad, type: 3}
       propertyPath: m_Name
@@ -2268,7 +2268,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -2287,6 +2287,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CROWD: {fileID: 8300000, guid: 7a44a3ad395606a429f31e68909b6302, type: 3}
   botonesGuantes: []
+  speed: 3
+  moveDuration: 5
 --- !u!1 &881571142
 GameObject:
   m_ObjectHideFlags: 0
@@ -3627,7 +3629,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 522e06ede9859124598b49ddba1febdd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3659,6 +3661,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CROWD: {fileID: 8300000, guid: 7a44a3ad395606a429f31e68909b6302, type: 3}
   botonesGuantes: []
+  speed: 3
+  moveDuration: 5
 --- !u!64 &1845394273
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3731,7 +3735,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 596f582719e16e8449fad71258c46349, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 596f582719e16e8449fad71258c46349, type: 3}
       propertyPath: m_Name
@@ -3774,7 +3778,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -3793,6 +3797,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CROWD: {fileID: 8300000, guid: 7a44a3ad395606a429f31e68909b6302, type: 3}
   botonesGuantes: []
+  speed: 3
+  moveDuration: 5
 --- !u!1 &1944778436
 GameObject:
   m_ObjectHideFlags: 0

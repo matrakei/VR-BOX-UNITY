@@ -10,12 +10,40 @@ public class BotonesScript : MonoBehaviour
     GameObject playButton;
     GameObject GuantesButton;
     private string previousScene;
+
+    public float speed = 23f;  // Velocidad del movimiento
+    private Vector3 initialPosition;  // Posición inicial del objeto
+    private Vector3 targetPosition;   // Posición destino basada en la velocidad y tiempo
+    public float moveDuration = 5f;  // Duración del movimiento en segundos
+    private float elapsedTime = 0f;   // Tiempo transcurrido
     private void Start()
     {
 
     }
     private void Awake()
     {
+        // Calcular la distancia de movimiento basada en la velocidad y el tiempo
+        float distance = speed * moveDuration;
+
+        // Mover el objeto en sentido contrario según su nombre
+        if (gameObject.name == "Play Again Button")
+        {
+            initialPosition = transform.position;
+            targetPosition = initialPosition - new Vector3(0, 0, distance);  // Retroceder en Z
+            transform.position = targetPosition;
+        }
+        else if (gameObject.name == "Congrats Text")
+        {
+            initialPosition = transform.position;
+            targetPosition = initialPosition - new Vector3(distance, 0, 0);  // Retroceder en X
+            transform.position = targetPosition;
+        }
+        else if (gameObject.name == "Boton Salir")
+        {
+            initialPosition = transform.position;
+            targetPosition = initialPosition + new Vector3(0, 0, distance);  // Avanzar en Z
+            transform.position = targetPosition;
+        }
         playButton = GameObject.Find("Boton Jugar");
         GuantesButton = GameObject.Find("Guantes Button");
         if (SceneManager.GetActiveScene().name == "Menu Inicio")
@@ -59,7 +87,12 @@ public class BotonesScript : MonoBehaviour
     {
         if (GameManager.Instance.dead)
         {
-            StartCoroutine(WaitSeconds(5));
+            elapsedTime += Time.deltaTime;
+            if (elapsedTime <= moveDuration)
+            {
+                // Lerp para suavizar el movimiento hacia la posición objetivo en 5 segundos
+                transform.position = Vector3.Lerp(targetPosition, initialPosition, elapsedTime / moveDuration);
+            }
         }
     }
     private void OnTriggerEnter(Collider other)
