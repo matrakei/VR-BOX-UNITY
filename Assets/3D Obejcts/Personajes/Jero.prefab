@@ -817,6 +817,10 @@ MonoBehaviour:
   hp: 0
   texthp: {fileID: 3906314786969874698}
   personaje: {fileID: 2703536987674287807}
+  PlayAgainButton: {fileID: 0}
+  Congrats: {fileID: 0}
+  BotonSalir: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &5609543288971648617
 GameObject:
   m_ObjectHideFlags: 0
@@ -1828,7 +1832,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9dac60505e087854882c0e8a36b465ee, type: 3}
       propertyPath: m_Name
-      value: Jero 1
+      value: Jero
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9dac60505e087854882c0e8a36b465ee, type: 3}
       propertyPath: m_IsActive
