@@ -21,9 +21,11 @@ public class GameManager : MonoBehaviour
     public GameObject[] Normales;
     public GameObject[] Variantes;
     public GameObject[] Estrellas;
+    public GameObject[] Supremes;
     bool normal = true;
     bool variante = false;
     bool estrella = false;
+    bool supreme = false;
     GameObject DERECHA;
     GameObject IZQUIERDA;
     GameObject FRENTE;
@@ -52,6 +54,8 @@ public class GameManager : MonoBehaviour
         Guantes(1);
         Normales = GameObject.FindGameObjectsWithTag("Normales");
         Variantes = GameObject.FindGameObjectsWithTag("Variantes");
+        Estrellas = GameObject.FindGameObjectsWithTag("Estrellas");
+        Supremes = GameObject.FindGameObjectsWithTag("Supremes");
     }
 
     void OnEnable()
@@ -76,6 +80,7 @@ public class GameManager : MonoBehaviour
         Normales = GameObject.FindGameObjectsWithTag("Normales");
         Variantes = GameObject.FindGameObjectsWithTag("Variantes");
         Estrellas = GameObject.FindGameObjectsWithTag("Estrellas");
+        Supremes = GameObject.FindGameObjectsWithTag("Supremes");
         if (normal)
         {
             Guantes(1);
@@ -87,6 +92,10 @@ public class GameManager : MonoBehaviour
         else if (estrella)
         {
             Guantes(3);
+        }
+        else if (supreme)
+        {
+             Guantes(4);
         }
         DERECHA = GameObject.Find("DERECHA");
         IZQUIERDA = GameObject.Find("IZQUIERDA");
@@ -216,6 +225,7 @@ public class GameManager : MonoBehaviour
             normal = true;
             variante = false;
             estrella = false;
+            supreme = false;
             foreach (GameObject guante in Normales)
             {
                 guante.SetActive(true);
@@ -225,6 +235,10 @@ public class GameManager : MonoBehaviour
                 guante.SetActive(false);
             }
             foreach (GameObject guante in Estrellas)
+            {
+                guante.SetActive(false);
+            }
+            foreach (GameObject guante in Supremes)
             {
                 guante.SetActive(false);
             }
@@ -234,6 +248,7 @@ public class GameManager : MonoBehaviour
             normal = false;
             variante = true;
             estrella = false;
+            supreme = false;
             foreach (GameObject guante in Normales)
             {
                 guante.SetActive(false);
@@ -246,12 +261,17 @@ public class GameManager : MonoBehaviour
             {
                 guante.SetActive(false);
             }
+            foreach (GameObject guante in Supremes)
+            {
+                guante.SetActive(false);
+            }
         }
         else if (numeroGuante == 3)
         {
             normal = false;
             variante = false;
             estrella = true;
+            supreme = false;
             foreach (GameObject guante in Normales)
             {
                 guante.SetActive(false);
@@ -261,6 +281,33 @@ public class GameManager : MonoBehaviour
                 guante.SetActive(false);
             }
             foreach (GameObject guante in Estrellas)
+            {
+                guante.SetActive(true);
+            }
+            foreach (GameObject guante in Supremes)
+            {
+                guante.SetActive(false);
+            }
+        }
+        else if (numeroGuante == 4)
+        {
+            normal = false;
+            variante = false;
+            estrella = false;
+            supreme = true;
+            foreach (GameObject guante in Normales)
+            {
+                guante.SetActive(false);
+            }
+            foreach (GameObject guante in Variantes)
+            {
+                guante.SetActive(false);
+            }
+            foreach (GameObject guante in Estrellas)
+            {
+                guante.SetActive(false);
+            }
+            foreach (GameObject guante in Supremes)
             {
                 guante.SetActive(true);
             }

@@ -231,6 +231,23 @@ public class BotonesScript : MonoBehaviour
             GuantesButton.layer = 6;
             GameManager.Instance.Guantes(3);
         }
+        else if (gameObject.name == "Guante Supreme")
+        {
+            ActDiact(playButton, true);
+            ActDiact(GuantesButton, true);
+            ActDiact(CambiarButton, false);
+            foreach (GameObject boton in botonesGuantes1)
+            {
+                ActDiact(boton, false);
+            }
+            foreach (GameObject boton in botonesGuantes2)
+            {
+                ActDiact(boton, false);
+            }
+            playButton.layer = 6;
+            GuantesButton.layer = 6;
+            GameManager.Instance.Guantes(4);
+        }
     }
     IEnumerator WaitToActivate(float seconds)
     {

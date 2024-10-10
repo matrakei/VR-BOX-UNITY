@@ -193,6 +193,8 @@ MonoBehaviour:
   botonesGuantes2:
   - {fileID: 666183081}
   - {fileID: 666183080}
+  - {fileID: 1029243516}
+  - {fileID: 1029243515}
   speed: 23
   moveDuration: 5
 --- !u!65 &344772426
@@ -1159,6 +1161,8 @@ MonoBehaviour:
   botonesGuantes2:
   - {fileID: 666183081}
   - {fileID: 666183080}
+  - {fileID: 1029243516}
+  - {fileID: 1029243515}
   speed: 23
   moveDuration: 5
 --- !u!1 &830510935
@@ -1275,6 +1279,16 @@ Camera:
 --- !u!108 &964657037 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 98871600763507532, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+  m_PrefabInstance: {fileID: 3587644837140213913}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1029243515 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8715167262504079215, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+  m_PrefabInstance: {fileID: 3587644837140213913}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1029243516 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5417815587256488882, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
   m_PrefabInstance: {fileID: 3587644837140213913}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1223426439
@@ -2074,7 +2088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 28138300587415034, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes2.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 28138300587415034, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes1.Array.data[0]
@@ -2100,6 +2114,14 @@ PrefabInstance:
       propertyPath: botonesGuantes2.Array.data[1]
       value: 
       objectReference: {fileID: 666183080}
+    - target: {fileID: 28138300587415034, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes2.Array.data[2]
+      value: 
+      objectReference: {fileID: 1029243516}
+    - target: {fileID: 28138300587415034, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes2.Array.data[3]
+      value: 
+      objectReference: {fileID: 1029243515}
     - target: {fileID: 98871600763507532, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_Intensity
       value: 1
@@ -2258,7 +2280,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3036248370021673238, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes2.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3036248370021673238, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes.Array.data[0]
@@ -2300,6 +2322,14 @@ PrefabInstance:
       propertyPath: botonesGuantes2.Array.data[1]
       value: 
       objectReference: {fileID: 666183080}
+    - target: {fileID: 3036248370021673238, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes2.Array.data[2]
+      value: 
+      objectReference: {fileID: 1029243516}
+    - target: {fileID: 3036248370021673238, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes2.Array.data[3]
+      value: 
+      objectReference: {fileID: 1029243515}
     - target: {fileID: 3050509604547582057, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes.Array.size
       value: 4
@@ -2310,7 +2340,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3050509604547582057, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes2.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3050509604547582057, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes.Array.data[0]
@@ -2352,6 +2382,22 @@ PrefabInstance:
       propertyPath: botonesGuantes2.Array.data[1]
       value: 
       objectReference: {fileID: 666183080}
+    - target: {fileID: 3050509604547582057, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes2.Array.data[2]
+      value: 
+      objectReference: {fileID: 1029243516}
+    - target: {fileID: 3050509604547582057, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes2.Array.data[3]
+      value: 
+      objectReference: {fileID: 1029243515}
+    - target: {fileID: 3469450358150472958, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 3469450358150472958, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.334
+      objectReference: {fileID: 0}
     - target: {fileID: 3528482932486145026, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.087
@@ -2536,6 +2582,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Lights
       objectReference: {fileID: 0}
+    - target: {fileID: 7012984614244820569, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes2.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012984614244820569, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes2.Array.data[2]
+      value: 
+      objectReference: {fileID: 1029243516}
+    - target: {fileID: 7012984614244820569, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes2.Array.data[3]
+      value: 
+      objectReference: {fileID: 1029243515}
     - target: {fileID: 7403573918986718125, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: duration
       value: 10
@@ -2582,7 +2640,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926393925937479905, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes2.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7926393925937479905, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes.Array.data[0]
@@ -2624,6 +2682,14 @@ PrefabInstance:
       propertyPath: botonesGuantes2.Array.data[1]
       value: 
       objectReference: {fileID: 666183080}
+    - target: {fileID: 7926393925937479905, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes2.Array.data[2]
+      value: 
+      objectReference: {fileID: 1029243516}
+    - target: {fileID: 7926393925937479905, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes2.Array.data[3]
+      value: 
+      objectReference: {fileID: 1029243515}
     - target: {fileID: 8062135983770895426, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.002000004
@@ -2638,7 +2704,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8127557365653025761, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes2.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8127557365653025761, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes.Array.data[0]
@@ -2680,6 +2746,14 @@ PrefabInstance:
       propertyPath: botonesGuantes2.Array.data[1]
       value: 
       objectReference: {fileID: 666183080}
+    - target: {fileID: 8127557365653025761, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes2.Array.data[2]
+      value: 
+      objectReference: {fileID: 1029243516}
+    - target: {fileID: 8127557365653025761, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes2.Array.data[3]
+      value: 
+      objectReference: {fileID: 1029243515}
     - target: {fileID: 8421285401088684152, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -3016,6 +3090,8 @@ MonoBehaviour:
   botonesGuantes2:
   - {fileID: 666183081}
   - {fileID: 666183080}
+  - {fileID: 1029243516}
+  - {fileID: 1029243515}
   speed: 23
   moveDuration: 5
 --- !u!1001 &4619164277945008589
