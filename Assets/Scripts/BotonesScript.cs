@@ -6,10 +6,14 @@ using UnityEngine.SceneManagement;
 public class BotonesScript : MonoBehaviour
 {
     public AudioClip CROWD;
-    public GameObject[] botonesGuantes;
+    public GameObject[] botonesGuantes1;
+    public GameObject[] botonesGuantes2;
     GameObject playButton;
+    GameObject CambiarButton;
     GameObject GuantesButton;
     private string previousScene;
+    bool uno = true;
+    bool waited = false;
 
     public float speed = 23f;  // Velocidad del movimiento
     private Vector3 initialPosition;  // Posición inicial del objeto
@@ -46,21 +50,33 @@ public class BotonesScript : MonoBehaviour
         }
         playButton = GameObject.Find("Boton Jugar");
         GuantesButton = GameObject.Find("Guantes Button");
+        CambiarButton = GameObject.Find("Cambiar");
         if (SceneManager.GetActiveScene().name == "Menu Inicio")
         {
             ActDiact(playButton, false);
             ActDiact(GuantesButton, false);
-            StartCoroutine(WaitToActivate(10));
-            foreach (GameObject boton in botonesGuantes)
+            ActDiact(CambiarButton, false);
+            foreach (GameObject boton in botonesGuantes1)
             {
                 ActDiact(boton, false);
             }
+            foreach (GameObject boton in botonesGuantes2)
+            {
+                ActDiact(boton, false);
+            }
+            if(!waited)
+            StartCoroutine(WaitToActivate(10));
         }
         else if (SceneManager.GetActiveScene().name == "Menu Past Inicio")
         {
             ActDiact(playButton, true);
             ActDiact(GuantesButton, true);
-            foreach (GameObject boton in botonesGuantes)
+            ActDiact(CambiarButton, false);
+            foreach (GameObject boton in botonesGuantes1)
+            {
+                ActDiact(boton, false);                          
+            }
+            foreach (GameObject boton in botonesGuantes2)
             {
                 ActDiact(boton, false);
             }
@@ -70,14 +86,16 @@ public class BotonesScript : MonoBehaviour
     {
         if (gameObject.name == "ExitBox2")
         {
-            foreach (GameObject boton in botonesGuantes)
-            {
-                colide(boton);
-            }
+            playButton.layer = 0;
+            GuantesButton.layer = 0;
         }
         if (gameObject.name == "ExitBox")
         {
-            foreach (GameObject boton in botonesGuantes)
+            foreach (GameObject boton in botonesGuantes1)
+            {
+                colide(boton);
+            }
+            foreach (GameObject boton in botonesGuantes2)
             {
                 colide(boton);
             }
@@ -97,7 +115,6 @@ public class BotonesScript : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-
         if (gameObject.name == "Boton Jugar")
         {
             GameManager.Instance.ChangeScene("Level");
@@ -119,43 +136,100 @@ public class BotonesScript : MonoBehaviour
         {
             ActDiact(playButton, false);
             ActDiact(GuantesButton, false);
-            foreach (GameObject boton in botonesGuantes)
+            ActDiact(CambiarButton, true);
+            foreach (GameObject boton in botonesGuantes1)
             {
                 ActDiact(boton, true);
             }
-            foreach (GameObject boton in botonesGuantes)
+            foreach (GameObject boton in botonesGuantes1)
             {
                 UnColide(boton);
             }
-
         }
-        if (gameObject.name == "Guante Normal")
+        else if (gameObject.name == "Cambiar")
+        {
+            if (uno)
+            {
+                foreach (GameObject boton in botonesGuantes1)
+                {
+                    ActDiact(boton, false);
+                }
+                foreach (GameObject boton in botonesGuantes2)
+                {
+                    ActDiact(boton, true);  
+                }
+                foreach (GameObject boton in botonesGuantes2)
+                {
+                    UnColide(boton);
+                }
+            }
+            else if (!uno)
+            {
+                foreach (GameObject boton in botonesGuantes2)
+                {
+                    ActDiact(boton, false);
+                }
+                foreach (GameObject boton in botonesGuantes1)
+                {
+                    ActDiact(boton, true);
+                }
+                foreach (GameObject boton in botonesGuantes1)
+                {
+                    UnColide(boton);
+                }
+            }
+            uno = !uno;
+        }
+        else if (gameObject.name == "Guante Normal")
         {
             ActDiact(playButton, true);
             ActDiact(GuantesButton, true);
-            foreach (GameObject boton in botonesGuantes)
+            ActDiact(CambiarButton, false);
+            foreach (GameObject boton in botonesGuantes1)
             {
                 ActDiact(boton, false);
             }
-            foreach (GameObject boton in botonesGuantes)
+            foreach (GameObject boton in botonesGuantes2)
             {
-                UnColide(boton);
+                ActDiact(boton, false);
             }
+            playButton.layer = 6;
+            GuantesButton.layer = 6;
             GameManager.Instance.Guantes(1);
         }
-        if (gameObject.name == "Guante Variante")
+        else if (gameObject.name == "Guante Variante")
         {
             ActDiact(playButton, true);
             ActDiact(GuantesButton, true);
-            foreach (GameObject boton in botonesGuantes)
+            ActDiact(CambiarButton, false);
+            foreach (GameObject boton in botonesGuantes1)
             {
                 ActDiact(boton, false);
             }
-            foreach (GameObject boton in botonesGuantes)
+            foreach (GameObject boton in botonesGuantes2)
             {
-                UnColide(boton);
+                ActDiact(boton, false);
             }
+            playButton.layer = 6;
+            GuantesButton.layer = 6;
             GameManager.Instance.Guantes(2);
+        }
+        else if (gameObject.name == "Guante Estrellas")
+        {
+            ActDiact(playButton, true);
+            ActDiact(GuantesButton, true);
+            ActDiact(CambiarButton, false);
+            foreach (GameObject boton in botonesGuantes1)
+            {
+                ActDiact(boton, false);
+            }
+            foreach (GameObject boton in botonesGuantes2)
+            {
+                ActDiact(boton, false);
+            }
+            playButton.layer = 6;
+            GuantesButton.layer = 6;
+            GameManager.Instance.Guantes(3);
         }
     }
     IEnumerator WaitToActivate(float seconds)
@@ -163,6 +237,7 @@ public class BotonesScript : MonoBehaviour
         yield return new WaitForSeconds(seconds);
         ActDiact(playButton, true);
         ActDiact(GuantesButton, true);
+        waited = true;
     }
     IEnumerator WaitSeconds(float seconds)
     {

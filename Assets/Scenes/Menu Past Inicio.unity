@@ -185,11 +185,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CROWD: {fileID: 0}
-  botonesGuantes:
+  botonesGuantes1:
   - {fileID: 3587644837140213917}
   - {fileID: 3587644837140213916}
   - {fileID: 3587644837140213915}
   - {fileID: 3587644837140213914}
+  botonesGuantes2:
+  - {fileID: 666183081}
+  - {fileID: 666183080}
   speed: 23
   moveDuration: 5
 --- !u!65 &344772426
@@ -1103,6 +1106,61 @@ MonoBehaviour:
   velocidadMinimaGolpe: 1
   posicionAnterior: {x: 0, y: 0, z: 0}
   velocidadActual: 0
+--- !u!1 &666183080 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2309633094841027939, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+  m_PrefabInstance: {fileID: 3587644837140213913}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &666183081 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 563913036465945137, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+  m_PrefabInstance: {fileID: 3587644837140213913}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &666183082
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666183081}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3883445952168827091, guid: c5c47d48063eaf343aa07f64ff35e725, type: 3}
+--- !u!114 &666183083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666183081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: becaccb78e8a9e44787d3807b0a7ab6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CROWD: {fileID: 0}
+  botonesGuantes1:
+  - {fileID: 3587644837140213917}
+  - {fileID: 3587644837140213916}
+  - {fileID: 3587644837140213915}
+  - {fileID: 3587644837140213914}
+  botonesGuantes2:
+  - {fileID: 666183081}
+  - {fileID: 666183080}
+  speed: 23
+  moveDuration: 5
 --- !u!1 &830510935
 GameObject:
   m_ObjectHideFlags: 0
@@ -1882,7 +1940,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CROWD: {fileID: 8300000, guid: 7a44a3ad395606a429f31e68909b6302, type: 3}
-  botonesGuantes: []
+  botonesGuantes1: []
+  botonesGuantes2: []
   speed: 23
   moveDuration: 5
 --- !u!1001 &1840113226
@@ -2009,6 +2068,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 28138300587415034, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes1.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 28138300587415034, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes2.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 28138300587415034, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes1.Array.data[0]
+      value: 
+      objectReference: {fileID: 3587644837140213917}
+    - target: {fileID: 28138300587415034, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes1.Array.data[1]
+      value: 
+      objectReference: {fileID: 3587644837140213916}
+    - target: {fileID: 28138300587415034, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes1.Array.data[2]
+      value: 
+      objectReference: {fileID: 3587644837140213915}
+    - target: {fileID: 28138300587415034, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes1.Array.data[3]
+      value: 
+      objectReference: {fileID: 3587644837140213914}
+    - target: {fileID: 28138300587415034, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes2.Array.data[0]
+      value: 
+      objectReference: {fileID: 666183081}
+    - target: {fileID: 28138300587415034, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes2.Array.data[1]
+      value: 
+      objectReference: {fileID: 666183080}
     - target: {fileID: 98871600763507532, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_Intensity
       value: 1
@@ -2020,6 +2111,42 @@ PrefabInstance:
     - target: {fileID: 98871600763507532, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_InnerSpotAngle
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 126984945313303055, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes1.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 126984945313303055, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes2.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 126984945313303055, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes1.Array.data[0]
+      value: 
+      objectReference: {fileID: 3587644837140213917}
+    - target: {fileID: 126984945313303055, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes1.Array.data[1]
+      value: 
+      objectReference: {fileID: 3587644837140213916}
+    - target: {fileID: 126984945313303055, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes1.Array.data[2]
+      value: 
+      objectReference: {fileID: 3587644837140213915}
+    - target: {fileID: 126984945313303055, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes1.Array.data[3]
+      value: 
+      objectReference: {fileID: 3587644837140213914}
+    - target: {fileID: 126984945313303055, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes2.Array.data[0]
+      value: 
+      objectReference: {fileID: 666183081}
+    - target: {fileID: 126984945313303055, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes2.Array.data[1]
+      value: 
+      objectReference: {fileID: 666183080}
+    - target: {fileID: 563913036465945137, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_Name
+      value: Guante Estrellas
       objectReference: {fileID: 0}
     - target: {fileID: 640506272735762215, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_LocalScale.x
@@ -2049,6 +2176,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guante Variante
       objectReference: {fileID: 0}
+    - target: {fileID: 1727289757931785705, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1747900665195775312, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes.Array.size
       value: 4
@@ -2068,6 +2199,10 @@ PrefabInstance:
     - target: {fileID: 1747900665195775312, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes.Array.data[3]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1751232447012029277, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2004010045322322599, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_Intensity
@@ -2101,6 +2236,14 @@ PrefabInstance:
       propertyPath: m_InnerSpotAngle
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2309633094841027939, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_Name
+      value: Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309633094841027939, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2604518759702319412, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_Name
       value: Cube
@@ -2110,6 +2253,14 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3036248370021673238, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes1.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3036248370021673238, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes2.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3036248370021673238, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes.Array.data[0]
       value: 
       objectReference: {fileID: 3587644837140213917}
@@ -2125,9 +2276,41 @@ PrefabInstance:
       propertyPath: botonesGuantes.Array.data[3]
       value: 
       objectReference: {fileID: 3587644837140213914}
+    - target: {fileID: 3036248370021673238, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes1.Array.data[0]
+      value: 
+      objectReference: {fileID: 3587644837140213917}
+    - target: {fileID: 3036248370021673238, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes1.Array.data[1]
+      value: 
+      objectReference: {fileID: 3587644837140213916}
+    - target: {fileID: 3036248370021673238, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes1.Array.data[2]
+      value: 
+      objectReference: {fileID: 3587644837140213915}
+    - target: {fileID: 3036248370021673238, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes1.Array.data[3]
+      value: 
+      objectReference: {fileID: 3587644837140213914}
+    - target: {fileID: 3036248370021673238, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes2.Array.data[0]
+      value: 
+      objectReference: {fileID: 666183081}
+    - target: {fileID: 3036248370021673238, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes2.Array.data[1]
+      value: 
+      objectReference: {fileID: 666183080}
     - target: {fileID: 3050509604547582057, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes.Array.size
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3050509604547582057, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes1.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3050509604547582057, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes2.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3050509604547582057, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes.Array.data[0]
@@ -2145,6 +2328,42 @@ PrefabInstance:
       propertyPath: botonesGuantes.Array.data[3]
       value: 
       objectReference: {fileID: 3587644837140213914}
+    - target: {fileID: 3050509604547582057, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes1.Array.data[0]
+      value: 
+      objectReference: {fileID: 3587644837140213917}
+    - target: {fileID: 3050509604547582057, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes1.Array.data[1]
+      value: 
+      objectReference: {fileID: 3587644837140213916}
+    - target: {fileID: 3050509604547582057, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes1.Array.data[2]
+      value: 
+      objectReference: {fileID: 3587644837140213915}
+    - target: {fileID: 3050509604547582057, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes1.Array.data[3]
+      value: 
+      objectReference: {fileID: 3587644837140213914}
+    - target: {fileID: 3050509604547582057, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes2.Array.data[0]
+      value: 
+      objectReference: {fileID: 666183081}
+    - target: {fileID: 3050509604547582057, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes2.Array.data[1]
+      value: 
+      objectReference: {fileID: 666183080}
+    - target: {fileID: 3528482932486145026, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.087
+      objectReference: {fileID: 0}
+    - target: {fileID: 3528482932486145026, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.251
+      objectReference: {fileID: 0}
+    - target: {fileID: 3528482932486145026, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 3724698319354209012, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2184,6 +2403,10 @@ PrefabInstance:
     - target: {fileID: 3724698319354209012, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3738501117934198891, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4083078593648671441, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2228,6 +2451,14 @@ PrefabInstance:
     - target: {fileID: 5688019091193946582, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_Name
       value: Guante Normal
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688019091193946582, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5836577670165055933, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6153832533042513296, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes.Array.size
@@ -2276,6 +2507,10 @@ PrefabInstance:
     - target: {fileID: 6566412414148449342, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_TagString
       value: Lights
+      objectReference: {fileID: 0}
+    - target: {fileID: 6608013047855977223, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.331
       objectReference: {fileID: 0}
     - target: {fileID: 6615449042886887764, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_Name
@@ -2342,6 +2577,14 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7926393925937479905, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes1.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926393925937479905, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes2.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926393925937479905, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes.Array.data[0]
       value: 
       objectReference: {fileID: 3587644837140213917}
@@ -2357,6 +2600,30 @@ PrefabInstance:
       propertyPath: botonesGuantes.Array.data[3]
       value: 
       objectReference: {fileID: 3587644837140213914}
+    - target: {fileID: 7926393925937479905, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes1.Array.data[0]
+      value: 
+      objectReference: {fileID: 3587644837140213917}
+    - target: {fileID: 7926393925937479905, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes1.Array.data[1]
+      value: 
+      objectReference: {fileID: 3587644837140213916}
+    - target: {fileID: 7926393925937479905, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes1.Array.data[2]
+      value: 
+      objectReference: {fileID: 3587644837140213915}
+    - target: {fileID: 7926393925937479905, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes1.Array.data[3]
+      value: 
+      objectReference: {fileID: 3587644837140213914}
+    - target: {fileID: 7926393925937479905, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes2.Array.data[0]
+      value: 
+      objectReference: {fileID: 666183081}
+    - target: {fileID: 7926393925937479905, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes2.Array.data[1]
+      value: 
+      objectReference: {fileID: 666183080}
     - target: {fileID: 8062135983770895426, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.002000004
@@ -2366,6 +2633,14 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8127557365653025761, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes1.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8127557365653025761, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes2.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8127557365653025761, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes.Array.data[0]
       value: 
       objectReference: {fileID: 3587644837140213917}
@@ -2381,6 +2656,34 @@ PrefabInstance:
       propertyPath: botonesGuantes.Array.data[3]
       value: 
       objectReference: {fileID: 3587644837140213914}
+    - target: {fileID: 8127557365653025761, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes1.Array.data[0]
+      value: 
+      objectReference: {fileID: 3587644837140213917}
+    - target: {fileID: 8127557365653025761, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes1.Array.data[1]
+      value: 
+      objectReference: {fileID: 3587644837140213916}
+    - target: {fileID: 8127557365653025761, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes1.Array.data[2]
+      value: 
+      objectReference: {fileID: 3587644837140213915}
+    - target: {fileID: 8127557365653025761, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes1.Array.data[3]
+      value: 
+      objectReference: {fileID: 3587644837140213914}
+    - target: {fileID: 8127557365653025761, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes2.Array.data[0]
+      value: 
+      objectReference: {fileID: 666183081}
+    - target: {fileID: 8127557365653025761, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: botonesGuantes2.Array.data[1]
+      value: 
+      objectReference: {fileID: 666183080}
+    - target: {fileID: 8421285401088684152, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9193459654689204930, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.026999801
@@ -2411,6 +2714,7 @@ PrefabInstance:
     - {fileID: 1747900665195775312, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
     - {fileID: 9219221961027101035, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
     - {fileID: 4430688393733407184, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+    - {fileID: 126984945313303055, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
     m_RemovedGameObjects:
     - {fileID: 9119097668444422544, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
     - {fileID: 7048480742859327650, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
@@ -2631,6 +2935,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 344772424}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 563913036465945137, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 666183083}
+    - targetCorrespondingSourceObject: {fileID: 563913036465945137, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 666183082}
     - targetCorrespondingSourceObject: {fileID: 1727289757931785705, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3587644837140213920}
@@ -2698,11 +3008,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CROWD: {fileID: 0}
-  botonesGuantes:
+  botonesGuantes1:
   - {fileID: 3587644837140213917}
   - {fileID: 3587644837140213916}
   - {fileID: 3587644837140213915}
   - {fileID: 3587644837140213914}
+  botonesGuantes2:
+  - {fileID: 666183081}
+  - {fileID: 666183080}
   speed: 23
   moveDuration: 5
 --- !u!1001 &4619164277945008589
