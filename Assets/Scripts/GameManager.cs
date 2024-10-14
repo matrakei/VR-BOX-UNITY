@@ -114,8 +114,8 @@ public class GameManager : MonoBehaviour
         }
         if (lastScene == "Level" && SceneManager.GetActiveScene().name == "Menu Past Inicio")
         {
-            playButton.layer = 6;
-            GuantesButton.layer = 6;
+            //playButton.layer = 6;
+            //GuantesButton.layer = 6;
         }
         if (SoundManager.Instance.Audios.clip != SoundManager.Instance.gameMusic && SceneManager.GetActiveScene().name == "Level")
         {

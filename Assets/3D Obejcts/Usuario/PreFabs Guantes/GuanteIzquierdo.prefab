@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 124385256409940620}
   - component: {fileID: 4653378567387366233}
   m_Layer: 0
-  m_Name: Normal
+  m_Name: Normal Izq
   m_TagString: Normales
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 428387025087027777}
   - component: {fileID: 4224919366436310127}
   m_Layer: 0
-  m_Name: Variante
+  m_Name: Variante Izq
   m_TagString: Variantes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -256,6 +256,72 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &615511848347946631
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5614470029495742649}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 4c8ffda00431a9a4ea5325b5a66d2cb7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4c8ffda00431a9a4ea5325b5a66d2cb7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4c8ffda00431a9a4ea5325b5a66d2cb7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4c8ffda00431a9a4ea5325b5a66d2cb7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4c8ffda00431a9a4ea5325b5a66d2cb7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4c8ffda00431a9a4ea5325b5a66d2cb7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4c8ffda00431a9a4ea5325b5a66d2cb7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4c8ffda00431a9a4ea5325b5a66d2cb7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4c8ffda00431a9a4ea5325b5a66d2cb7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4c8ffda00431a9a4ea5325b5a66d2cb7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c8ffda00431a9a4ea5325b5a66d2cb7, type: 3}
+      propertyPath: m_Name
+      value: Supreme Izq
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c8ffda00431a9a4ea5325b5a66d2cb7, type: 3}
+      propertyPath: m_TagString
+      value: Supremes
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4c8ffda00431a9a4ea5325b5a66d2cb7, type: 3}
+--- !u!4 &1080870227080620396 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4c8ffda00431a9a4ea5325b5a66d2cb7, type: 3}
+  m_PrefabInstance: {fileID: 615511848347946631}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5359322880227596114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -330,6 +396,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1fdd910a24e65794383f4b8af4c41665, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1143835001692741298}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1fdd910a24e65794383f4b8af4c41665, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1080870227080620396}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1fdd910a24e65794383f4b8af4c41665, type: 3}
       insertIndex: -1

@@ -2286,7 +2286,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CROWD: {fileID: 8300000, guid: 7a44a3ad395606a429f31e68909b6302, type: 3}
-  botonesGuantes: []
+  botonesGuantes1: []
+  botonesGuantes2: []
   speed: 3
   moveDuration: 5
 --- !u!1 &881571142
@@ -3672,7 +3673,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CROWD: {fileID: 8300000, guid: 7a44a3ad395606a429f31e68909b6302, type: 3}
-  botonesGuantes: []
+  botonesGuantes1: []
+  botonesGuantes2: []
   speed: 3
   moveDuration: 5
 --- !u!64 &1845394273
@@ -3808,7 +3810,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CROWD: {fileID: 8300000, guid: 7a44a3ad395606a429f31e68909b6302, type: 3}
-  botonesGuantes: []
+  botonesGuantes1: []
+  botonesGuantes2: []
   speed: 3
   moveDuration: 5
 --- !u!1 &1944778436
@@ -4024,15 +4027,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 360916603803268365, guid: 2844ddebaa806244589a24955013e172, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 0.21555711
       objectReference: {fileID: 0}
     - target: {fileID: 360916603803268365, guid: 2844ddebaa806244589a24955013e172, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 0.21555711
       objectReference: {fileID: 0}
     - target: {fileID: 360916603803268365, guid: 2844ddebaa806244589a24955013e172, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 0.26415092
       objectReference: {fileID: 0}
     - target: {fileID: 360916603803268365, guid: 2844ddebaa806244589a24955013e172, type: 3}
       propertyPath: m_RaycastPadding.x
