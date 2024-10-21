@@ -12,6 +12,7 @@ public class BotonesScript : MonoBehaviour
     GameObject CambiarButton;
     GameObject GuantesButton;
     GameObject PracticaButton;
+    GameObject DesafioButton;
     private string previousScene;
     bool uno = true;
     bool waited = false;
@@ -53,12 +54,14 @@ public class BotonesScript : MonoBehaviour
         GuantesButton = GameObject.Find("Guantes Button");
         CambiarButton = GameObject.Find("Cambiar");
         PracticaButton = GameObject.Find("Boton Practica");
+        DesafioButton = GameObject.Find("Boton Desafio");
         if (SceneManager.GetActiveScene().name == "Menu Inicio")
         {
             ActDiact(playButton, false);
             ActDiact(GuantesButton, false);
             ActDiact(CambiarButton, false);
             ActDiact(PracticaButton, false);
+            ActDiact(DesafioButton, false); 
             foreach (GameObject boton in botonesGuantes1)
             {
                 ActDiact(boton, false);
@@ -76,6 +79,7 @@ public class BotonesScript : MonoBehaviour
             ActDiact(GuantesButton, true);
             ActDiact(CambiarButton, false);
             ActDiact(PracticaButton, true);
+            ActDiact(DesafioButton, true);
             foreach (GameObject boton in botonesGuantes1)
             {
                 ActDiact(boton, false);                          
@@ -93,6 +97,7 @@ public class BotonesScript : MonoBehaviour
             playButton.layer = 0;
             GuantesButton.layer = 0;
             PracticaButton.layer = 0;
+            DesafioButton.layer = 0;
         }
         if (gameObject.name == "ExitBox")
         {
@@ -142,12 +147,18 @@ public class BotonesScript : MonoBehaviour
             Debug.Log("Practica");
             GameManager.Instance.ChangeScene("Bolsa");
         }
+        else if (gameObject.name == "Boton Desafio")
+        {
+            Debug.Log("Desafio");
+            GameManager.Instance.ChangeScene("Desafio");
+        }
         else if (gameObject.name == "Guantes Button")
         {
             ActDiact(playButton, false);
             ActDiact(GuantesButton, false);
             ActDiact(CambiarButton, true);
             ActDiact(PracticaButton, false);
+            ActDiact(DesafioButton, false);
 
             foreach (GameObject boton in botonesGuantes1)
             {
@@ -199,6 +210,7 @@ public class BotonesScript : MonoBehaviour
             ActDiact(GuantesButton, true);
             ActDiact(CambiarButton, false);
             ActDiact(PracticaButton, true);
+            ActDiact(DesafioButton, true);
             foreach (GameObject boton in botonesGuantes1)
             {
                 ActDiact(boton, false);
@@ -210,6 +222,7 @@ public class BotonesScript : MonoBehaviour
             playButton.layer = 6;
             GuantesButton.layer = 6;
             PracticaButton.layer = 6;
+            DesafioButton.layer = 6;
             GameManager.Instance.Guantes(1);
         }
         else if (gameObject.name == "Guante Variante")
@@ -218,6 +231,7 @@ public class BotonesScript : MonoBehaviour
             ActDiact(GuantesButton, true);
             ActDiact(CambiarButton, false);
             ActDiact(PracticaButton, true);
+            ActDiact(DesafioButton, true);
             foreach (GameObject boton in botonesGuantes1)
             {
                 ActDiact(boton, false);
@@ -229,6 +243,7 @@ public class BotonesScript : MonoBehaviour
             playButton.layer = 6;
             GuantesButton.layer = 6;
             PracticaButton.layer = 6;
+            DesafioButton.layer = 6;
             GameManager.Instance.Guantes(2);
         }
         else if (gameObject.name == "Guante Estrellas")
@@ -237,6 +252,7 @@ public class BotonesScript : MonoBehaviour
             ActDiact(GuantesButton, true);
             ActDiact(CambiarButton, false);
             ActDiact(PracticaButton, true);
+            ActDiact(DesafioButton, true);
             foreach (GameObject boton in botonesGuantes1)
             {
                 ActDiact(boton, false);
@@ -248,6 +264,7 @@ public class BotonesScript : MonoBehaviour
             playButton.layer = 6;
             GuantesButton.layer = 6;
             PracticaButton.layer = 6;
+            DesafioButton.layer = 6;
             GameManager.Instance.Guantes(3);
         }
         else if (gameObject.name == "Guante Supreme")
@@ -256,6 +273,7 @@ public class BotonesScript : MonoBehaviour
             ActDiact(GuantesButton, true);
             ActDiact(CambiarButton, false);
             ActDiact(PracticaButton, true);
+            ActDiact(DesafioButton, true);
             foreach (GameObject boton in botonesGuantes1)
             {
                 ActDiact(boton, false);
@@ -267,6 +285,7 @@ public class BotonesScript : MonoBehaviour
             playButton.layer = 6;
             GuantesButton.layer = 6;
             PracticaButton.layer = 6;
+            DesafioButton.layer = 6;
             GameManager.Instance.Guantes(4);
         }
     }
@@ -278,6 +297,7 @@ public class BotonesScript : MonoBehaviour
         ActDiact(GuantesButton, true);
         ActDiact(CambiarButton, false);
         ActDiact(PracticaButton, true);
+        ActDiact(DesafioButton, true);
         waited = true;
     }
     IEnumerator WaitSeconds(float seconds)
@@ -300,6 +320,7 @@ public class BotonesScript : MonoBehaviour
         GuantesButton.layer = 6;
         playButton.layer = 6;
         PracticaButton.layer = 6;
+        DesafioButton.layer = 6;    
     }
 
     private void colide(GameObject boton)
@@ -308,5 +329,6 @@ public class BotonesScript : MonoBehaviour
         GuantesButton.layer = 0;
         playButton.layer = 0;
         PracticaButton.layer = 0;
+        DesafioButton.layer = 0;
     }
 }

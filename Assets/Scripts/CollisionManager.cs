@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.SceneManagement;
 
 public class CollisionManager : MonoBehaviour
 {
@@ -26,10 +27,10 @@ public class CollisionManager : MonoBehaviour
         IZQUIERDAABAJO = GameObject.Find("IZQUIERDA ABAJO");
         DERECHAABAJO = GameObject.Find("DERECHA ABAJO");
         jeroAnimations = GameObject.Find("Jero").GetComponent<JeroAnimations>();
-        healthbar = GameObject.Find("HealthBar").GetComponent<HealthBarScript>();
-        if (healthbar == null)
+        if (SceneManager.GetActiveScene().name != "Desafio")
         {
-            Debug.LogError("HealthBarScript no encontrado");
+            healthbar = GameObject.Find("HealthBar").GetComponent<HealthBarScript>();
+
         }
     }
     private void DeactivateAll()
