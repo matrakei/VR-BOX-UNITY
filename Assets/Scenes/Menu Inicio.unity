@@ -2267,6 +2267,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: bb5badc4800003b42bde27828bdc50c8, type: 2}
+    - target: {fileID: 293909988781554669, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_Name
+      value: Rastas_TXT
+      objectReference: {fileID: 0}
+    - target: {fileID: 293909988781554669, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 563913036465945137, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_Name
       value: Guante Estrellas

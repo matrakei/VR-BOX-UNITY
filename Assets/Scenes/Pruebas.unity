@@ -297,12 +297,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 244605501}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.70710707, z: -0, w: 0.70710653}
-  m_LocalPosition: {x: -2.1083643, y: 2.683, z: 0.6088933}
-  m_LocalScale: {x: 0.07466285, y: 0.07466285, z: 0.07466285}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.6593201, z: 0}
+  m_LocalScale: {x: 0.13379002, y: 0.13379002, z: 0.13379002}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1969627980}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &427543468
 GameObject:
@@ -479,7 +479,7 @@ GameObject:
   - component: {fileID: 643624746}
   - component: {fileID: 643624745}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Bolsa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -639,12 +639,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643624744}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.70710707, z: -0, w: 0.70710653}
-  m_LocalPosition: {x: -2.1083643, y: 1.757, z: 0.6088933}
-  m_LocalScale: {x: 0.55806, y: 0.55806, z: 0.55806}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1969627980}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -2873,12 +2873,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1619426930}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.70710707, z: -0, w: 0.70710653}
-  m_LocalPosition: {x: -2.1083643, y: 2.5333, z: 0.6088933}
-  m_LocalScale: {x: 0.07466285, y: 0.07466285, z: 0.07466285}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.391069, z: 0}
+  m_LocalScale: {x: 0.13379002, y: 0.13379002, z: 0.13379002}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1969627980}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1802783465
 GameObject:
@@ -3233,6 +3233,41 @@ MonoBehaviour:
   FRENTE: {fileID: 1802783465}
   IZQUIERDAABAJO: {fileID: 1944778436}
   DERECHAABAJO: {fileID: 981516415}
+--- !u!1 &1969627979
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1969627980}
+  m_Layer: 0
+  m_Name: Bolsa De Boxeo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1969627980
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969627979}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.70710707, z: -0, w: 0.70710653}
+  m_LocalPosition: {x: -2.1083643, y: 1.757, z: 0.6088933}
+  m_LocalScale: {x: 0.55806, y: 0.55806, z: 0.55806}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 643624750}
+  - {fileID: 2014426659}
+  - {fileID: 1619426936}
+  - {fileID: 244605507}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2014426653
 GameObject:
   m_ObjectHideFlags: 0
@@ -3408,12 +3443,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2014426653}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.70710707, z: -0, w: 0.70710653}
-  m_LocalPosition: {x: -2.1083643, y: 2.379, z: 0.6088933}
-  m_LocalScale: {x: 0.07466285, y: 0.07466285, z: 0.07466285}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.1145755, z: 0}
+  m_LocalScale: {x: 0.13379002, y: 0.13379002, z: 0.13379002}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1969627980}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &2137899775 stripped
 Transform:
@@ -3589,9 +3624,6 @@ SceneRoots:
   - {fileID: 1089256399}
   - {fileID: 931920985}
   - {fileID: 974976715}
-  - {fileID: 643624750}
-  - {fileID: 2014426659}
-  - {fileID: 1619426936}
-  - {fileID: 244605507}
+  - {fileID: 1969627980}
   - {fileID: 887701674}
   - {fileID: 1833389820}

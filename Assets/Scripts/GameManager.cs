@@ -153,18 +153,23 @@ public class GameManager : MonoBehaviour
 
     public bool HaRecibidoGolpe()
     {
-        if (golpeRecibido)
+        if (golpeRecibido && IsFinished)
         {
-            if (IsFinished == true)
-            {
-                golpeRecibido = false;  // Resetear el estado después de detectar el golpe
-            }
+            golpeRecibido = false;
             return true;
         }
-        return false;
+        else
+        {
+
+            return false;
+        }
     }
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            SceneManager.LoadScene("Bolsa");
+        }
         if (Input.GetKeyDown(KeyCode.C))
         {
             IsCheating = !IsCheating;

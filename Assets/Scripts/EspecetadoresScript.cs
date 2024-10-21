@@ -28,10 +28,14 @@ public class EspecetadoresScript : MonoBehaviour
         color = Random.Range(0, vibrantColors.Length);
         // Asignar un color aleatorio al círculo
         renderer.material.color = vibrantColors[color];
-        if (SceneManager.GetActiveScene().name != "Level")
+        if (SceneManager.GetActiveScene().name != "Level" && SceneManager.GetActiveScene().name != "Bolsa")
         {
             // Iniciar el movimiento cíclico de subida y bajada constante
             StartCoroutine(MoveCircleConstantly());
+        }
+        if(SceneManager.GetActiveScene().name == "Bolsa")
+        {
+            gameObject.SetActive(false);
         }
     }
         IEnumerator MoveCircleConstantly()

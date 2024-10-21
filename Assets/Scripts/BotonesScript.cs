@@ -42,7 +42,7 @@ public class BotonesScript : MonoBehaviour
             targetPosition = initialPosition - new Vector3(distance, 0, 0);  // Retroceder en X
             transform.position = targetPosition;
         }
-        else if (gameObject.name == "Boton Salir")
+        else if (gameObject.name == "Boton Salir" && SceneManager.GetActiveScene().name != "Bolsa")
         {
             initialPosition = transform.position;
             targetPosition = initialPosition + new Vector3(0, 0, distance);  // Avanzar en Z
