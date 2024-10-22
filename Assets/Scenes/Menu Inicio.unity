@@ -2568,8 +2568,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4083078593648671441, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.321
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083078593648671441, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.479
+      value: 0.282
       objectReference: {fileID: 0}
     - target: {fileID: 4299189873351063146, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes.Array.size
@@ -3005,7 +3009,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9193459654689204930, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.06000009
+      value: -0.116
       objectReference: {fileID: 0}
     - target: {fileID: 9219221961027101035, guid: 9c58dd2c29d3bcb4f87e57fa9fad1b68, type: 3}
       propertyPath: botonesGuantes.Array.size

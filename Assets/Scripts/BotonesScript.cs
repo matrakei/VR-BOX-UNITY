@@ -11,6 +11,7 @@ public class BotonesScript : MonoBehaviour
     GameObject playButton;
     GameObject CambiarButton;
     GameObject GuantesButton;
+    GameObject PracticaButton;
     private string previousScene;
     bool uno = true;
     bool waited = false;
@@ -51,11 +52,13 @@ public class BotonesScript : MonoBehaviour
         playButton = GameObject.Find("Boton Jugar");
         GuantesButton = GameObject.Find("Guantes Button");
         CambiarButton = GameObject.Find("Cambiar");
+        PracticaButton = GameObject.Find("Boton Practica");
         if (SceneManager.GetActiveScene().name == "Menu Inicio")
         {
             ActDiact(playButton, false);
             ActDiact(GuantesButton, false);
             ActDiact(CambiarButton, false);
+            ActDiact(PracticaButton, false);
             foreach (GameObject boton in botonesGuantes1)
             {
                 ActDiact(boton, false);
@@ -72,6 +75,7 @@ public class BotonesScript : MonoBehaviour
             ActDiact(playButton, true);
             ActDiact(GuantesButton, true);
             ActDiact(CambiarButton, false);
+            ActDiact(PracticaButton, true);
             foreach (GameObject boton in botonesGuantes1)
             {
                 ActDiact(boton, false);                          
@@ -88,6 +92,7 @@ public class BotonesScript : MonoBehaviour
         {
             playButton.layer = 0;
             GuantesButton.layer = 0;
+            PracticaButton.layer = 0;
         }
         if (gameObject.name == "ExitBox")
         {
@@ -132,11 +137,18 @@ public class BotonesScript : MonoBehaviour
             GameManager.Instance.ChangeScene("Menu Past Inicio");
             GameManager.Instance.dead = false;
         }
+        else if (gameObject.name == "Boton Practica")
+        {
+            Debug.Log("Practica");
+            GameManager.Instance.ChangeScene("Bolsa");
+        }
         else if (gameObject.name == "Guantes Button")
         {
             ActDiact(playButton, false);
             ActDiact(GuantesButton, false);
             ActDiact(CambiarButton, true);
+            ActDiact(PracticaButton, false);
+
             foreach (GameObject boton in botonesGuantes1)
             {
                 ActDiact(boton, true);
@@ -156,12 +168,13 @@ public class BotonesScript : MonoBehaviour
                 }
                 foreach (GameObject boton in botonesGuantes2)
                 {
-                    ActDiact(boton, true);  
+                    ActDiact(boton, true);
                 }
                 foreach (GameObject boton in botonesGuantes2)
                 {
                     UnColide(boton);
                 }
+                uno = !uno;
             }
             else if (!uno)
             {
@@ -177,14 +190,15 @@ public class BotonesScript : MonoBehaviour
                 {
                     UnColide(boton);
                 }
+                uno = !uno;
             }
-            uno = !uno;
         }
         else if (gameObject.name == "Guante Normal")
         {
             ActDiact(playButton, true);
             ActDiact(GuantesButton, true);
             ActDiact(CambiarButton, false);
+            ActDiact(PracticaButton, true);
             foreach (GameObject boton in botonesGuantes1)
             {
                 ActDiact(boton, false);
@@ -195,6 +209,7 @@ public class BotonesScript : MonoBehaviour
             }
             playButton.layer = 6;
             GuantesButton.layer = 6;
+            PracticaButton.layer = 6;
             GameManager.Instance.Guantes(1);
         }
         else if (gameObject.name == "Guante Variante")
@@ -202,6 +217,7 @@ public class BotonesScript : MonoBehaviour
             ActDiact(playButton, true);
             ActDiact(GuantesButton, true);
             ActDiact(CambiarButton, false);
+            ActDiact(PracticaButton, true);
             foreach (GameObject boton in botonesGuantes1)
             {
                 ActDiact(boton, false);
@@ -212,6 +228,7 @@ public class BotonesScript : MonoBehaviour
             }
             playButton.layer = 6;
             GuantesButton.layer = 6;
+            PracticaButton.layer = 6;
             GameManager.Instance.Guantes(2);
         }
         else if (gameObject.name == "Guante Estrellas")
@@ -219,6 +236,7 @@ public class BotonesScript : MonoBehaviour
             ActDiact(playButton, true);
             ActDiact(GuantesButton, true);
             ActDiact(CambiarButton, false);
+            ActDiact(PracticaButton, true);
             foreach (GameObject boton in botonesGuantes1)
             {
                 ActDiact(boton, false);
@@ -229,6 +247,7 @@ public class BotonesScript : MonoBehaviour
             }
             playButton.layer = 6;
             GuantesButton.layer = 6;
+            PracticaButton.layer = 6;
             GameManager.Instance.Guantes(3);
         }
         else if (gameObject.name == "Guante Supreme")
@@ -236,6 +255,7 @@ public class BotonesScript : MonoBehaviour
             ActDiact(playButton, true);
             ActDiact(GuantesButton, true);
             ActDiact(CambiarButton, false);
+            ActDiact(PracticaButton, true);
             foreach (GameObject boton in botonesGuantes1)
             {
                 ActDiact(boton, false);
@@ -246,14 +266,18 @@ public class BotonesScript : MonoBehaviour
             }
             playButton.layer = 6;
             GuantesButton.layer = 6;
+            PracticaButton.layer = 6;
             GameManager.Instance.Guantes(4);
         }
     }
+    
     IEnumerator WaitToActivate(float seconds)
     {
         yield return new WaitForSeconds(seconds);
         ActDiact(playButton, true);
         ActDiact(GuantesButton, true);
+        ActDiact(CambiarButton, false);
+        ActDiact(PracticaButton, true);
         waited = true;
     }
     IEnumerator WaitSeconds(float seconds)
@@ -275,6 +299,7 @@ public class BotonesScript : MonoBehaviour
         boton.layer = 6;
         GuantesButton.layer = 6;
         playButton.layer = 6;
+        PracticaButton.layer = 6;
     }
 
     private void colide(GameObject boton)
@@ -282,5 +307,6 @@ public class BotonesScript : MonoBehaviour
         boton.layer = 0;
         GuantesButton.layer = 0;
         playButton.layer = 0;
+        PracticaButton.layer = 0;
     }
 }
