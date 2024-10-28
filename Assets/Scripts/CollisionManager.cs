@@ -30,7 +30,6 @@ public class CollisionManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name != "Desafio")
         {
             healthbar = GameObject.Find("HealthBar").GetComponent<HealthBarScript>();
-
         }
     }
     private void DeactivateAll()
@@ -57,7 +56,7 @@ public class CollisionManager : MonoBehaviour
             {
                 GameManager.Instance.list.Clear();
                 jeroAnimations.anim.SetTrigger("IsRightHeadHit");
-                if (!GameManager.Instance.IsInvulnerable)
+                if (!GameManager.Instance.IsInvulnerable && SceneManager.GetActiveScene().name != "Desafio")
                 {
                     healthbar.hp -= 10;
                 }
@@ -66,7 +65,7 @@ public class CollisionManager : MonoBehaviour
             {
                 GameManager.Instance.list.Clear();
                 jeroAnimations.anim.SetTrigger("IsLeftHeadHit");
-                if (!GameManager.Instance.IsInvulnerable)
+                if (!GameManager.Instance.IsInvulnerable && SceneManager.GetActiveScene().name != "Desafio")
                 {
                     healthbar.hp -= 10;
                 }
@@ -75,7 +74,7 @@ public class CollisionManager : MonoBehaviour
             {
                 GameManager.Instance.list.Clear();
                 jeroAnimations.anim.SetTrigger("IsFrontHeadHit");
-                if (!GameManager.Instance.IsInvulnerable)
+                if (!GameManager.Instance.IsInvulnerable && SceneManager.GetActiveScene().name != "Desafio")
                 {
                     healthbar.hp -= 7;
                 }
@@ -84,7 +83,7 @@ public class CollisionManager : MonoBehaviour
             {
                 GameManager.Instance.list.Clear();
                 jeroAnimations.anim.SetTrigger("IsTorsoRightHit");
-                if (!GameManager.Instance.IsInvulnerable)
+                if (!GameManager.Instance.IsInvulnerable && SceneManager.GetActiveScene().name != "Desafio")
                 {
                     healthbar.hp -= 15;
                 }
@@ -93,7 +92,7 @@ public class CollisionManager : MonoBehaviour
             {
                 GameManager.Instance.list.Clear();
                 jeroAnimations.anim.SetTrigger("IsTorsoLeftHit");
-                if (!GameManager.Instance.IsInvulnerable)
+                if (!GameManager.Instance.IsInvulnerable && SceneManager.GetActiveScene().name != "Desafio")
                 {
                     healthbar.hp -= 15;
                 }

@@ -89,6 +89,22 @@ public class BotonesScript : MonoBehaviour
                 ActDiact(boton, false);
             }
         }
+        else if (SceneManager.GetActiveScene().name == "Desafio" && gameObject.name == "Play Again Button")
+        {
+            gameObject.GetComponent<MeshRenderer>().enabled = false;
+            if (gameObject.GetComponent<MeshCollider>() != null)
+                gameObject.GetComponent<MeshCollider>().enabled = false;
+            if (gameObject.GetComponent<BoxCollider>() != null)
+                gameObject.GetComponent<BoxCollider>().enabled = false;
+        }
+        if (SceneManager.GetActiveScene().name == "Desafio" && gameObject.name == "Boton Salir")
+        {
+            gameObject.GetComponent<MeshRenderer>().enabled = false;
+            if (gameObject.GetComponent<MeshCollider>() != null)
+                gameObject.GetComponent<MeshCollider>().enabled = false;
+            if (gameObject.GetComponent<BoxCollider>() != null)
+                gameObject.GetComponent<BoxCollider>().enabled = false;
+        }
     }
     private void OnTriggerExit(Collider other)
     {
@@ -115,11 +131,17 @@ public class BotonesScript : MonoBehaviour
     {
         if (GameManager.Instance.dead)
         {
+            
             elapsedTime += Time.deltaTime;
             if (elapsedTime <= moveDuration)
             {
                 // Lerp para suavizar el movimiento hacia la posición objetivo en 5 segundos
                 transform.position = Vector3.Lerp(targetPosition, initialPosition, elapsedTime / moveDuration);
+                gameObject.GetComponent<MeshRenderer>().enabled = true;
+                if (gameObject.GetComponent<MeshCollider>() != null)
+                    gameObject.GetComponent<MeshCollider>().enabled = true;
+                if (gameObject.GetComponent<BoxCollider>() != null)
+                    gameObject.GetComponent<BoxCollider>().enabled = true;
             }
         }
     }
@@ -133,7 +155,14 @@ public class BotonesScript : MonoBehaviour
         else if (gameObject.name == "Play Again Button")
         {
             Debug.Log("Play Again");
-            GameManager.Instance.ChangeScene("Level");
+            if (SceneManager.GetActiveScene().name == "Desafio")
+            {
+                GameManager.Instance.ChangeScene("Desafio");
+            }
+            else if (SceneManager.GetActiveScene().name == "Level")
+            {
+                GameManager.Instance.ChangeScene("Level");
+            }
             GameManager.Instance.dead = false;
         }
         else if (gameObject.name == "Boton Salir")

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DesafioCollisionScript : MonoBehaviour
 {
-    DesafioScript desafioScript;
+    public DesafioScript desafioScript;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +16,7 @@ public class DesafioCollisionScript : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collider)
     {
         //falta mejorar la comptibilidad con la escena, osea que no se bugueo con funcionalidades no usadas
         desafioScript.DetectoColision(gameObject);

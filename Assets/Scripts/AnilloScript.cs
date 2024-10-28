@@ -15,12 +15,13 @@ public class AnilloScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.localScale.magnitude > 0.01f)
+        if (transform.localScale.x > 0.01f)
         {
             transform.localScale -= Vector3.one * speed * Time.deltaTime;
         }
         else
         {
+            Debug.Log("Perdiste 1");
             desafioScript.PerdioVida();
         }
     }
