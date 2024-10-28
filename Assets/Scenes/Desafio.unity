@@ -3858,8 +3858,8 @@ MonoBehaviour:
   CROWD: {fileID: 8300000, guid: 7a44a3ad395606a429f31e68909b6302, type: 3}
   botonesGuantes1: []
   botonesGuantes2: []
-  speed: 3
-  moveDuration: 5
+  speed: 1
+  moveDuration: 1
 --- !u!1001 &1608132032
 PrefabInstance:
   m_ObjectHideFlags: 0
