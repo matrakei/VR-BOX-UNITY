@@ -16,8 +16,18 @@ public class CollisionManager : MonoBehaviour
     HealthBarScript healthbar;
     public GameObject sweatParticlesPrefab;  // Prefab de las partículas de sudor
     public float particleLifetime = 1.0f;
-    
 
+    private void OnEnable()
+    {
+        // Suscribirse al evento
+        GameManager.Instance.OnStunedChanged += HandleStunedChange;
+    }
+
+    private void OnDisable()
+    {
+        // Cancelar suscripción al evento
+        GameManager.Instance.OnStunedChanged -= HandleStunedChange;
+    }
 
     private void Awake()
     {
@@ -43,12 +53,6 @@ public class CollisionManager : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.Instance.stuned == true)
-        {
-            FRENTE.layer = 6;
-            DERECHA.layer = 6;
-            IZQUIERDA.layer = 6;
-        }
         if (GameManager.Instance.list.Count > 0)
         {
             DeactivateAll();
@@ -109,12 +113,6 @@ public class CollisionManager : MonoBehaviour
             {
                 healthbar.hp = -1;
             }
-            if (GameManager.Instance.stuned == false)
-            {
-                FRENTE.layer = 8;
-                DERECHA.layer = 8;
-                IZQUIERDA.layer = 8;
-            }
             if (other.gameObject.tag == "Guante")
             {
                 if (gameObject.name == "DERECHA")
@@ -171,6 +169,21 @@ public class CollisionManager : MonoBehaviour
         FRENTE.layer = 8;
         DERECHAABAJO.layer = 8;
         IZQUIERDAABAJO.layer = 8;
+    }
+    private void HandleStunedChange(bool cambio)
+    {
+        if (cambio)
+        {
+            FRENTE.layer = 6;
+            DERECHA.layer = 6;
+            IZQUIERDA.layer = 6;
+        }
+        else if (!cambio)
+        {
+            FRENTE.layer = 8;
+            DERECHA.layer = 8;
+            IZQUIERDA.layer = 8;
+        }
     }
 }
 

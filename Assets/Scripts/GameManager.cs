@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -38,6 +39,8 @@ public class GameManager : MonoBehaviour
     public GameObject Cinturon;
     bool cintu = false;
     bool Aplausos = false;
+    public event Action<bool> OnStunedChanged;
+    public float stunedTime = 0.5f;
     //algun vambio
     // Start is called before the first frame update
     void Awake()
@@ -131,7 +134,7 @@ public class GameManager : MonoBehaviour
         }
         else if (SoundManager.Instance.Audios.clip != SoundManager.Instance.pastmenuMusic[0] && SoundManager.Instance.Audios.clip != SoundManager.Instance.pastmenuMusic[1] && SceneManager.GetActiveScene().name == "Menu Past Inicio")
         {
-            int random = Random.Range(0, SoundManager.Instance.pastmenuMusic.Length);
+            int random = UnityEngine.Random.Range(0, SoundManager.Instance.pastmenuMusic.Length);
             SoundManager.Instance.Audios.clip = SoundManager.Instance.pastmenuMusic[random];
             SoundManager.Instance.Audios.Play();
             SoundManager.Instance.SFX.Stop();
@@ -320,9 +323,9 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator Stuneado(float seconds)
     {
-        GameManager.Instance.stuned = true;
+        GameManager.Instance.IsStuned = true;
         yield return new WaitForSeconds(seconds);
-        GameManager.Instance.stuned = false;
+        GameManager.Instance.IsStuned = false;
     }
     public void Stun(float seconds)
     {
@@ -341,6 +344,18 @@ public class GameManager : MonoBehaviour
 
         if (Display.displays.Length > 2)
             Display.displays[2].Activate(); // Activa el tercer display si hay uno
+    }
+    public bool IsStuned
+    {
+        get { return stuned; }
+        set
+        {
+            if (stuned != value)
+            {
+                stuned = value;
+                OnStunedChanged?.Invoke(stuned); // Llamar al evento
+            }
+        }
     }
 }
 

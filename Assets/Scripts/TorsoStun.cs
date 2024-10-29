@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class TorsoStun : StateMachineBehaviour
 {
-    public GameObject frente;
-    public GameObject derecha;
-    public GameObject izquierda;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        GameManager.Instance.Stun(0.5f);
+        GameManager.Instance.Stun(GameManager.Instance.stunedTime);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
