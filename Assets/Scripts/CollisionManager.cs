@@ -174,12 +174,14 @@ public class CollisionManager : MonoBehaviour
     {
         if (cambio)
         {
+            Debug.Log("Stuned");
             FRENTE.layer = 6;
             DERECHA.layer = 6;
             IZQUIERDA.layer = 6;
         }
         else if (!cambio)
         {
+            Debug.Log("Not Stuned");
             FRENTE.layer = 8;
             DERECHA.layer = 8;
             IZQUIERDA.layer = 8;

@@ -1224,6 +1224,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 280478709192032677, guid: 877222d26339de24b9efc57e4568b4de, type: 3}
+      propertyPath: stunedTime
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 2969081214726950059, guid: 877222d26339de24b9efc57e4568b4de, type: 3}
       propertyPath: m_Name
       value: GAMEMANAGER

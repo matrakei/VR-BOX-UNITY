@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.XR.CoreUtils;
 using UnityEngine;
+using TMPro;
+using System;
 
 public class DesafioScript : MonoBehaviour
 {
@@ -18,13 +20,18 @@ public class DesafioScript : MonoBehaviour
     static GameObject CIRCULOIZQUIERDAABAJO;
     static GameObject CIRCULODERECHAABAJO;
     GameObject Circle;
+    public float puntaje = 0f;
     GameObject ParteCuerpo;
     public float maxScaleSpeed = 5f;
     public float scaleSpeed = 1f;
-    public float increaseAmount = 0.01f;
+    public float increaseAmount = 0.05f;
     bool IsActiveCircle = false;
     GameObject[] PartesCuerpo;
     int random;
+    public TMP_Text TXT_Puntaje;
+    public float duracion = 60f; // Duración del temporizador en segundos
+    private float tiempoRestante;
+    private bool temporizadorActivo = false;
     private Dictionary<GameObject, GameObject> CirculoDict;
     // Start is called before the first frame update
     void Awake()
@@ -52,7 +59,10 @@ public class DesafioScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //FALTA HACER QUE A MEDIDA QUE PASA EL TIEMPO EL ANILLO ACHIQUE MAS RAPIDO CON UN MAXIMO DE VELOCIDAD
+        if (Input.GetKeyDown(KeyCode.K) && IsActiveCircle)
+        {
+            DetectoColision(ParteCuerpo);
+        }
         if (!IsActiveCircle)
         {
             AumentarScaleSpeed();
@@ -67,13 +77,15 @@ public class DesafioScript : MonoBehaviour
         IsActiveCircle = true;
         GameManager.Instance.dead = true;
         Destroy(Jero.gameObject);
+        Debug.Log("Puntaje Reiniciado");
+        puntaje = 0;
         
     }
 
     void CrearAnillo()
     {
         IsActiveCircle = true;
-        random = Random.Range(0, PartesCuerpo.Length);
+        random = UnityEngine.Random.Range(0, PartesCuerpo.Length);
         ParteCuerpo = PartesCuerpo[random];
         Circle = Instantiate(AnilloPreFab, CirculoDict[PartesCuerpo[random]].transform.position, CirculoDict[PartesCuerpo[random]].transform.rotation, PartesCuerpo[random].transform);
         Circle.transform.localScale = CirculoDict[PartesCuerpo[random]].transform.localScale;
@@ -89,11 +101,62 @@ public class DesafioScript : MonoBehaviour
             //sigue jugando
             Destroy(Circle.gameObject);
             IsActiveCircle = false;
+            puntaje += 100;
+            TXT_Puntaje.text = puntaje.ToString();
+            Debug.Log("Puntaje establecido");
         }
     }
     public void AumentarScaleSpeed()
     {
         if (scaleSpeed < maxScaleSpeed)
         scaleSpeed += increaseAmount;
+    }
+
+    public void IniciarTemporizador()
+    {
+        if (!temporizadorActivo)
+        {
+            tiempoRestante = duracion;
+            temporizadorActivo = true;
+            StartCoroutine(TemporizadorCoroutine());
+        }
+    }
+
+    // Detiene el temporizador
+    public void DetenerTemporizador()
+    {
+        if (temporizadorActivo)
+        {
+            temporizadorActivo = false;
+            StopCoroutine(TemporizadorCoroutine());
+            Debug.Log("Temporizador detenido");
+        }
+    }
+    private void Start()
+    {
+        IniciarTemporizador();
+        TXT_Puntaje.text = puntaje.ToString();
+    }
+
+    // La función que se ejecuta cuando el temporizador llega a 60 segundos
+    private void RealizarAccionFinal()
+    {
+        PerdioVida();
+    }
+
+    // Coroutine para el temporizador
+    private IEnumerator TemporizadorCoroutine()
+    {
+        while (temporizadorActivo && tiempoRestante > 0)
+        {
+            tiempoRestante -= Time.deltaTime;
+            yield return null; // Espera al siguiente frame
+        }
+
+        if (tiempoRestante <= 0 && temporizadorActivo)
+        {
+            RealizarAccionFinal();
+            temporizadorActivo = false;
+        }
     }
 }

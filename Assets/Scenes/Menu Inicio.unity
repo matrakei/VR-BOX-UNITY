@@ -3452,6 +3452,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 280478709192032677, guid: 877222d26339de24b9efc57e4568b4de, type: 3}
+      propertyPath: stunedTime
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 280478709192032677, guid: 877222d26339de24b9efc57e4568b4de, type: 3}
       propertyPath: escenarioSpeed
       value: 1
       objectReference: {fileID: 0}

@@ -110,6 +110,7 @@ public class BotonesScript : MonoBehaviour
     {
         if (gameObject.name == "ExitBox2")
         {
+            CambiarButton.layer = 0;
             playButton.layer = 0;
             GuantesButton.layer = 0;
             PracticaButton.layer = 0;
@@ -125,6 +126,7 @@ public class BotonesScript : MonoBehaviour
             {
                 colide(boton);
             }
+            CambiarButton.layer = 0;   
         }
     }
     private void Update()
@@ -197,6 +199,7 @@ public class BotonesScript : MonoBehaviour
             {
                 UnColide(boton);
             }
+            UnColide(CambiarButton);
         }
         else if (gameObject.name == "Cambiar")
         {

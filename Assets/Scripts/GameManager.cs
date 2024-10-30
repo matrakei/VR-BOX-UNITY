@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
     bool cintu = false;
     bool Aplausos = false;
     public event Action<bool> OnStunedChanged;
-    public float stunedTime = 0.5f;
+    public float stunedTime = 0.8f;
     //algun vambio
     // Start is called before the first frame update
     void Awake()
@@ -225,7 +225,6 @@ public class GameManager : MonoBehaviour
         }
         nowScene = SceneManager.GetActiveScene().name;
     }
-
     public void Guantes(int numeroGuante)
     {
         if (numeroGuante == 1)
@@ -338,6 +337,7 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
+
         // Activa los displays si están disponibles
         if (Display.displays.Length > 1)
             Display.displays[1].Activate(); // Activa el segundo display
