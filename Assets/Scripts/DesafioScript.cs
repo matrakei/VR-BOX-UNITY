@@ -20,6 +20,7 @@ public class DesafioScript : MonoBehaviour
     static GameObject CIRCULOIZQUIERDAABAJO;
     static GameObject CIRCULODERECHAABAJO;
     GameObject Circle;
+    public bool Termino = false;
     public float puntaje = 0f;
     GameObject ParteCuerpo;
     public float maxScaleSpeed = 5f;
@@ -29,7 +30,7 @@ public class DesafioScript : MonoBehaviour
     GameObject[] PartesCuerpo;
     int random;
     public TMP_Text TXT_Puntaje;
-    public float duracion = 60f; // Duración del temporizador en segundos
+    public float duracion = 10f; // Duración del temporizador en segundos
     private float tiempoRestante;
     private bool temporizadorActivo = false;
     private Dictionary<GameObject, GameObject> CirculoDict;
@@ -63,7 +64,7 @@ public class DesafioScript : MonoBehaviour
         {
             DetectoColision(ParteCuerpo);
         }
-        if (!IsActiveCircle)
+        if (!IsActiveCircle && !Termino)
         {
             AumentarScaleSpeed();
             CrearAnillo();
@@ -74,7 +75,7 @@ public class DesafioScript : MonoBehaviour
         //pierde vida
         Debug.Log("Perdiste 2");
         Destroy(Circle.gameObject);
-        IsActiveCircle = true;
+        Termino = true;
         GameManager.Instance.dead = true;
         Destroy(Jero.gameObject);
         Debug.Log("Puntaje Reiniciado");
@@ -156,6 +157,7 @@ public class DesafioScript : MonoBehaviour
         if (tiempoRestante <= 0 && temporizadorActivo)
         {
             RealizarAccionFinal();
+            IsActiveCircle = false;
             temporizadorActivo = false;
         }
     }
