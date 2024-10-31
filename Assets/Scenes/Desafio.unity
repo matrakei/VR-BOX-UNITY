@@ -1270,8 +1270,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Jero: {fileID: 602323329}
   AnilloPreFab: {fileID: 7551703411688371064, guid: 0f24ed36379dd4043839504abcb11fbd, type: 3}
+  Termino: 0
   puntaje: 0
-  maxScaleSpeed: 5
+  maxScaleSpeed: 7
   scaleSpeed: 2
   increaseAmount: 0.1
   TXT_Puntaje: {fileID: 1873508354}

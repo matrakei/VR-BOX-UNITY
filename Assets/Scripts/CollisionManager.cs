@@ -107,7 +107,7 @@ public class CollisionManager : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if (gameObject.name != "Exit HitBox")
+        if (gameObject.name != "Exit HitBox" && gameObject.name != "Exit HitBox Stun")
         {
             if (GameManager.Instance.IsCheating)
             {
@@ -160,6 +160,10 @@ public class CollisionManager : MonoBehaviour
         {
             ActivateAll();
         }
+        if (gameObject.name == "Exit Hitbox Stun")
+        {
+            ActivateAll();
+        }
     }
 
     void ActivateAll()
@@ -178,6 +182,8 @@ public class CollisionManager : MonoBehaviour
             FRENTE.layer = 6;
             DERECHA.layer = 6;
             IZQUIERDA.layer = 6;
+            GameObject.Find("Exit Hitbox Stun").layer = 0;
+            GameObject.Find("Exit HitBox").layer = 6;
         }
         else if (!cambio)
         {
@@ -185,6 +191,8 @@ public class CollisionManager : MonoBehaviour
             FRENTE.layer = 8;
             DERECHA.layer = 8;
             IZQUIERDA.layer = 8;
+            GameObject.Find("Exit Hitbox Stun").layer = 6;
+            GameObject.Find("Exit HitBox").layer = 0;
         }
     }
 }
