@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class BotonesScript : MonoBehaviour
 {
+    bool MovioDespuesDeMuerte = false;
     public AudioClip CROWD;
     public GameObject[] botonesGuantes1;
     public GameObject[] botonesGuantes2;
@@ -70,8 +71,10 @@ public class BotonesScript : MonoBehaviour
             {
                 ActDiact(boton, false);
             }
-            if(!waited)
-            StartCoroutine(WaitToActivate(10));
+            if (!waited)
+            {
+                StartCoroutine(WaitToActivate(10));
+            }
         }
         else if (SceneManager.GetActiveScene().name == "Menu Past Inicio")
         {
@@ -131,9 +134,8 @@ public class BotonesScript : MonoBehaviour
     }
     private void Update()
     {
-        if (GameManager.Instance.dead)
+        if (GameManager.Instance.dead && !MovioDespuesDeMuerte)
         {
-            
             elapsedTime += Time.deltaTime;
             if (elapsedTime <= moveDuration)
             {
@@ -145,18 +147,28 @@ public class BotonesScript : MonoBehaviour
                 if (gameObject.GetComponent<BoxCollider>() != null)
                     gameObject.GetComponent<BoxCollider>().enabled = true;
             }
+            else
+            {
+                // Una vez que termine de mover los objetos
+                MovioDespuesDeMuerte = true;
+                elapsedTime = 0f; // Resetear elapsedTime a su valor predeterminado
+            }
         }
     }
     private void OnTriggerEnter(Collider other)
     {
         if (gameObject.name == "Boton Jugar")
         {
+            GameManager.Instance.dead = false;
+            MovioDespuesDeMuerte = false;
             GameManager.Instance.ChangeScene("Level");
             SoundManager.Instance.PlayMusic(CROWD);
         }
         else if (gameObject.name == "Play Again Button")
         {
             Debug.Log("Play Again");
+            GameManager.Instance.dead = false;
+            MovioDespuesDeMuerte = false;
             if (SceneManager.GetActiveScene().name == "Desafio")
             {
                 GameManager.Instance.ChangeScene("Desafio");
@@ -165,13 +177,13 @@ public class BotonesScript : MonoBehaviour
             {
                 GameManager.Instance.ChangeScene("Level");
             }
-            GameManager.Instance.dead = false;
         }
         else if (gameObject.name == "Boton Salir")
         {
             Debug.Log("Salio");
-            GameManager.Instance.ChangeScene("Menu Past Inicio");
             GameManager.Instance.dead = false;
+            MovioDespuesDeMuerte = false;
+            GameManager.Instance.ChangeScene("Menu Past Inicio");
         }
         else if (gameObject.name == "Boton Practica")
         {
@@ -181,6 +193,8 @@ public class BotonesScript : MonoBehaviour
         else if (gameObject.name == "Boton Desafio")
         {
             Debug.Log("Desafio");
+            GameManager.Instance.dead = false;
+            MovioDespuesDeMuerte = false;
             GameManager.Instance.ChangeScene("Desafio");
         }
         else if (gameObject.name == "Guantes Button")
