@@ -31,13 +31,17 @@ public class HealthBarScript : MonoBehaviour
     {
         if (healthbar.value != hp)
         {
-            if (hp <= 0)
+            if (hp <= 0 && GameManager.Instance.dead != true)
             {
                 healthbar.value = 0;
                 texthp.text = "0";
                 GameManager.Instance.dead = true;
                 bar.enabled = false;
                 StartCoroutine(Kill());
+
+            }
+            else if (GameManager.Instance.dead == true)
+            {
 
             }
             else
